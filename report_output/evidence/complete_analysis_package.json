@@ -454,7 +454,7 @@
       "Patient age is missing in 8.52% of records."
     ],
     "validation_status": "WARNING",
-    "validated_at": "2026-08-15T17:04:29.969086+00:00"
+    "validated_at": "2026-08-15T17:41:16.106282+00:00"
   },
   "sections": {
     "case_analysis": {
@@ -792,7 +792,7 @@
       "metadata": {
         "total_cases_analyzed": 1024
       },
-      "computed_at": "2026-08-15T17:04:30.006576+00:00"
+      "computed_at": "2026-08-15T17:41:16.146956+00:00"
     },
     "demographic_analysis": {
       "section_id": "demographic_analysis",
@@ -1148,7 +1148,7 @@
           "800 (decade)"
         ]
       },
-      "computed_at": "2026-08-15T17:04:30.018268+00:00"
+      "computed_at": "2026-08-15T17:41:16.157389+00:00"
     },
     "reaction_analysis": {
       "section_id": "reaction_analysis",
@@ -1907,7 +1907,7 @@
         "total_reaction_records": 3429,
         "soc_field_present": false
       },
-      "computed_at": "2026-08-15T17:04:30.064464+00:00"
+      "computed_at": "2026-08-15T17:41:16.206042+00:00"
     },
     "outcome_analysis": {
       "section_id": "outcome_analysis",
@@ -2060,7 +2060,7 @@
           "fatal"
         ]
       },
-      "computed_at": "2026-08-15T17:04:30.125168+00:00"
+      "computed_at": "2026-08-15T17:41:16.275881+00:00"
     },
     "trend_analysis": {
       "section_id": "trend_analysis",
@@ -2242,7 +2242,7 @@
         "reporting_end": "2025-12-26",
         "duration_days": 364
       },
-      "computed_at": "2026-08-15T17:04:30.177933+00:00"
+      "computed_at": "2026-08-15T17:41:16.330498+00:00"
     },
     "alert_analysis": {
       "section_id": "alert_and_regulatory_analysis",
@@ -2369,8 +2369,8 @@
       "metadata": {
         "total_expedited_cases": 1023
       },
-      "computed_at": "2026-08-15T17:04:30.189780+00:00"
+      "computed_at": "2026-08-15T17:41:16.340095+00:00"
     }
   },
-  "generated_at": "2026-08-15T17:04:30.190081+00:00"
+  "generated_at": "2026-08-15T17:41:16.340636+00:00"
 }

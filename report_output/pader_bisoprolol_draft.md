@@ -1,10 +1,12 @@
 # Periodic Adverse Drug Experience Report (PADER)
-## Bisoprolol
+## Bisoprolol — [DRAFT: PENDING HUMAN REVIEW]
+> **REGULATORY NOTICE**: This document is an unreviewed draft generated for human safety review. It has not been approved for regulatory submission.
+
 **Application Number**: B-1
 **Marketing Authorization Holder**: Dev Pharma Client
 **Reporting Period**: 2024-12-27 to 2025-12-26 (364 days)
 **Regulatory Standard**: United States FDA 21 CFR 314.80
-**Draft Generated**: 2026-08-15 17:00 UTC
+**Draft Generated**: 2026-08-15 17:40 UTC
 
 ---
 ## Table of Contents
@@ -310,100 +312,100 @@ The following audit table verifies every factual statement against pre-computed 
 |---|---|---|---|---|---|
 | 1. Reporting Period | Total unique cases in period: 1024 | CO-001 | -- | PASS [VERIFIED] | Grounded |
 | 2. Narrative Summary and Analysis | During the one-year reporting period from 2024-12-27 to 2025-12-26, a total of 1024 unique... | narrative_summary.metric | 1024 | PASS [VERIFIED] | Grounded |
-| 2. Narrative Summary and Analysis | Of these 1024 cases, 1023 (99.9%) were classified as serious adverse drug experiences, and... | narrative_summary.metric | 1, 1023, 99.9, 1024 | PASS [VERIFIED] | Grounded |
+| 2. Narrative Summary and Analysis | Of these 1024 cases, 1023 (99.9%) were classified as serious adverse drug experiences, and... | narrative_summary.metric | 99.9, 1024, 1, 1023 | PASS [VERIFIED] | Grounded |
 | 2. Narrative Summary and Analysis | A total of 1023 cases fulfilled the regulatory expedited reporting criteria (15-day Alert ... | narrative_summary.metric | 15, 1023 | PASS [VERIFIED] | Grounded |
-| 2. Narrative Summary and Analysis | Drug characterization analysis indicates that Bisoprolol was designated as the primary sus... | narrative_summary.metric | 1.66, 33.2, 340, 65.04 | PASS [VERIFIED] | Grounded |
+| 2. Narrative Summary and Analysis | Drug characterization analysis indicates that Bisoprolol was designated as the primary sus... | narrative_summary.metric | 17, 1.66, 666, 65.04 | PASS [VERIFIED] | Grounded |
 | 2. Narrative Summary and Analysis | This distribution highlights that in the majority of reported events (666 cases), Bisoprol... | narrative_summary.metric | 666 | PASS [VERIFIED] | Grounded |
 | 2. Narrative Summary and Analysis | The patient demographic profile demonstrated an approximately equal sex distribution, comp... | narrative_summary.metric | 28, 503, 493 | PASS [VERIFIED] | Grounded |
-| 2. Narrative Summary and Analysis | Patient age ranged from 0.08 to 104.0 years, with a mean age of 70.05 years and a median a... | narrative_summary.metric | 104.0, 0.08, 73.0, 70.05 | PASS [VERIFIED] | Grounded |
-| 2. Narrative Summary and Analysis | Geographically, cases originated across 21 reporting countries, with the largest volume of... | narrative_summary.metric | 185, 345, 56, 21 | PASS [VERIFIED] | Grounded |
-| 2. Narrative Summary and Analysis | Across the 1024 unique cases, a total of 3,429 adverse reaction terms (1,122 unique Prefer... | narrative_summary.metric | 3,429, 1,122, 1024 | PASS [VERIFIED] | Grounded |
-| 2. Narrative Summary and Analysis | The most frequently observed Preferred Terms during the reporting period were Acute kidney... | narrative_summary.metric | 43, 54, 38, 46 | PASS [VERIFIED] | Grounded |
+| 2. Narrative Summary and Analysis | Patient age ranged from 0.08 to 104.0 years, with a mean age of 70.05 years and a median a... | narrative_summary.metric | 73.0, 70.05, 0.08, 104.0 | PASS [VERIFIED] | Grounded |
+| 2. Narrative Summary and Analysis | Geographically, cases originated across 21 reporting countries, with the largest volume of... | narrative_summary.metric | 51, 345, 185, 56 | PASS [VERIFIED] | Grounded |
+| 2. Narrative Summary and Analysis | Across the 1024 unique cases, a total of 3,429 adverse reaction terms (1,122 unique Prefer... | narrative_summary.metric | 1,122, 1024, 3,429 | PASS [VERIFIED] | Grounded |
+| 2. Narrative Summary and Analysis | The most frequently observed Preferred Terms during the reporting period were Acute kidney... | narrative_summary.metric | 43, 80, 46, 38 | PASS [VERIFIED] | Grounded |
 | 2. Narrative Summary and Analysis | Among serious cases, 68 fatal outcomes were documented. | narrative_summary.metric | 68 | PASS [VERIFIED] | Grounded |
 | 2. Narrative Summary and Analysis | Analysis of reaction outcomes showed that the majority of events recovered/resolved or wer... | narrative_summary.metric | -- | PASS [VERIFIED] | Grounded |
-| 2. Narrative Summary and Analysis | Monthly reporting volume remained stable throughout the reporting period, ranging between ... | narrative_summary.metric | 64, 109 | PASS [VERIFIED] | Grounded |
+| 2. Narrative Summary and Analysis | Monthly reporting volume remained stable throughout the reporting period, ranging between ... | narrative_summary.metric | 109, 64 | PASS [VERIFIED] | Grounded |
 | 2. Narrative Summary and Analysis | No new safety signals or unexpected clusters of adverse experiences were identified from t... | narrative_summary.metric | -- | PASS [VERIFIED] | Grounded |
 | 3. Summary Analysis of Cases | The following tables present structured aggregate tabulations of the 1024 unique case repo... | case_summary.metric | 1024 | PASS [VERIFIED] | Grounded |
 | 3. Summary Analysis of Cases | \| Case Category \| Count \| Percentage \| | case_summary.metric | -- | PASS [VERIFIED] | Grounded |
 | 3. Summary Analysis of Cases | \| Total Unique Cases \| 1024 \| 100.0% \| | N/A | 100.0, 1024 | WARN [FLAGGED] | unsupported numbers ['100.0'] |
-| 3. Summary Analysis of Cases | \| Serious Cases \| 1023 \| 99.9% \| | case_summary.metric | 1023, 99.9 | PASS [VERIFIED] | Grounded |
+| 3. Summary Analysis of Cases | \| Serious Cases \| 1023 \| 99.9% \| | case_summary.metric | 99.9, 1023 | PASS [VERIFIED] | Grounded |
 | 3. Summary Analysis of Cases | \| Non-Serious Cases \| 1 \| 0.1% \| | case_summary.metric | 1, 0.1 | PASS [VERIFIED] | Grounded |
-| 3. Summary Analysis of Cases | \| 15-Day Expedited Cases \| 1023 \| 99.9% \| | N/A | 15, 1023, 99.9 | WARN [FLAGGED] | unsupported numbers ['15'] |
+| 3. Summary Analysis of Cases | \| 15-Day Expedited Cases \| 1023 \| 99.9% \| | N/A | 99.9, 15, 1023 | WARN [FLAGGED] | unsupported numbers ['15'] |
 | 3. Summary Analysis of Cases | \| Spontaneous Reports \| 1014 \| 99.02% \| | case_summary.metric | 1014, 99.02 | PASS [VERIFIED] | Grounded |
 | 3. Summary Analysis of Cases | \| Study / Solicited Reports \| 10 \| 0.98% \| | case_summary.metric | 0.98, 10 | PASS [VERIFIED] | Grounded |
 | 3. Summary Analysis of Cases | \| Demographic Parameter \| Category \| Count \| Percentage \| | case_summary.metric | -- | PASS [VERIFIED] | Grounded |
-| 3. Summary Analysis of Cases | \| **Sex** \| Female \| 503 \| 49.12% \| | case_summary.metric | 503, 49.12 | PASS [VERIFIED] | Grounded |
+| 3. Summary Analysis of Cases | \| **Sex** \| Female \| 503 \| 49.12% \| | case_summary.metric | 49.12, 503 | PASS [VERIFIED] | Grounded |
 | 3. Summary Analysis of Cases | \| \| Male \| 493 \| 48.14% \| | case_summary.metric | 48.14, 493 | PASS [VERIFIED] | Grounded |
-| 3. Summary Analysis of Cases | \| \| Unknown / Not Reported \| 28 \| 2.73% \| | case_summary.metric | 2.73, 28 | PASS [VERIFIED] | Grounded |
-| 3. Summary Analysis of Cases | \| **Age Group (WHO)** \| Elderly (>=65 years) \| 676 \| 65.82% \| | N/A | 65.82, 65, 676 | WARN [FLAGGED] | unsupported numbers ['65.82', '65'] |
-| 3. Summary Analysis of Cases | \| \| Adult (18-64 years) \| 249 \| 24.22% \| | N/A | 64, 24.22, 18, 249 | WARN [FLAGGED] | unsupported numbers ['64', '24.22'] |
-| 3. Summary Analysis of Cases | \| \| Adolescent (12-17 years) \| 6 \| 0.59% \| | N/A | 0.59, 6, 17, 12 | WARN [FLAGGED] | unsupported numbers ['12'] |
-| 3. Summary Analysis of Cases | \| \| Child (2-11 years) \| 4 \| 0.39% \| | N/A | 0.39, 4, 2, 11 | WARN [FLAGGED] | unsupported numbers ['11'] |
-| 3. Summary Analysis of Cases | \| \| Infant / Toddler \| 6 \| 0.59% \| | case_summary.metric | 6, 0.59 | PASS [VERIFIED] | Grounded |
+| 3. Summary Analysis of Cases | \| \| Unknown / Not Reported \| 28 \| 2.73% \| | case_summary.metric | 28, 2.73 | PASS [VERIFIED] | Grounded |
+| 3. Summary Analysis of Cases | \| **Age Group (WHO)** \| Elderly (>=65 years) \| 676 \| 65.82% \| | N/A | 65, 676, 65.82 | WARN [FLAGGED] | unsupported numbers ['65', '65.82'] |
+| 3. Summary Analysis of Cases | \| \| Adult (18-64 years) \| 249 \| 24.22% \| | N/A | 249, 24.22, 64, 18 | WARN [FLAGGED] | unsupported numbers ['24.22', '64'] |
+| 3. Summary Analysis of Cases | \| \| Adolescent (12-17 years) \| 6 \| 0.59% \| | N/A | 17, 12, 6, 0.59 | WARN [FLAGGED] | unsupported numbers ['12'] |
+| 3. Summary Analysis of Cases | \| \| Child (2-11 years) \| 4 \| 0.39% \| | N/A | 11, 0.39, 2, 4 | WARN [FLAGGED] | unsupported numbers ['11'] |
+| 3. Summary Analysis of Cases | \| \| Infant / Toddler \| 6 \| 0.59% \| | case_summary.metric | 0.59, 6 | PASS [VERIFIED] | Grounded |
 | 3. Summary Analysis of Cases | \| \| Neonate \| 0 \| 0.0% \| | case_summary.metric | -- | PASS [VERIFIED] | Grounded |
 | 3. Summary Analysis of Cases | \| \| Age Missing / Not Reported \| 83 \| 8.11% \| | case_summary.metric | 83, 8.11 | PASS [VERIFIED] | Grounded |
-| 3. Summary Analysis of Cases | *Age summary statistics (converted to numeric years): Mean = 70.05 years, Median = 73.0 ye... | case_summary.metric | 104.0, 0.08, 70.05, 73.0 | PASS [VERIFIED] | Grounded |
+| 3. Summary Analysis of Cases | *Age summary statistics (converted to numeric years): Mean = 70.05 years, Median = 73.0 ye... | case_summary.metric | 73.0, 70.05, 0.08, 104.0 | PASS [VERIFIED] | Grounded |
 | 3. Summary Analysis of Cases | \| Country \| Case Count \| Percentage of Total \| | case_summary.metric | -- | PASS [VERIFIED] | Grounded |
-| 3. Summary Analysis of Cases | \| EU (Regional) \| 345 \| 33.69% \| | case_summary.metric | 345, 33.69 | PASS [VERIFIED] | Grounded |
-| 3. Summary Analysis of Cases | \| United Kingdom \| 281 \| 27.44% \| | case_summary.metric | 27.44, 281 | PASS [VERIFIED] | Grounded |
-| 3. Summary Analysis of Cases | \| France \| 185 \| 18.07% \| | case_summary.metric | 18.07, 185 | PASS [VERIFIED] | Grounded |
+| 3. Summary Analysis of Cases | \| EU (Regional) \| 345 \| 33.69% \| | case_summary.metric | 33.69, 345 | PASS [VERIFIED] | Grounded |
+| 3. Summary Analysis of Cases | \| United Kingdom \| 281 \| 27.44% \| | case_summary.metric | 281, 27.44 | PASS [VERIFIED] | Grounded |
+| 3. Summary Analysis of Cases | \| France \| 185 \| 18.07% \| | case_summary.metric | 185, 18.07 | PASS [VERIFIED] | Grounded |
 | 3. Summary Analysis of Cases | \| Canada \| 56 \| 5.47% \| | case_summary.metric | 5.47, 56 | PASS [VERIFIED] | Grounded |
 | 3. Summary Analysis of Cases | \| Italy \| 51 \| 4.98% \| | case_summary.metric | 51, 4.98 | PASS [VERIFIED] | Grounded |
 | 3. Summary Analysis of Cases | \| Germany \| 33 \| 3.22% \| | case_summary.metric | 3.22, 33 | PASS [VERIFIED] | Grounded |
 | 3. Summary Analysis of Cases | \| Spain \| 24 \| 2.34% \| | case_summary.metric | 2.34, 24 | PASS [VERIFIED] | Grounded |
 | 3. Summary Analysis of Cases | \| Poland \| 18 \| 1.76% \| | case_summary.metric | 1.76, 18 | PASS [VERIFIED] | Grounded |
 | 3. Summary Analysis of Cases | \| Reporter Qualification \| Case Count \| Percentage \| | case_summary.metric | -- | PASS [VERIFIED] | Grounded |
-| 3. Summary Analysis of Cases | \| Physician \| 492 \| 48.05% \| | case_summary.metric | 48.05, 492 | PASS [VERIFIED] | Grounded |
+| 3. Summary Analysis of Cases | \| Physician \| 492 \| 48.05% \| | case_summary.metric | 492, 48.05 | PASS [VERIFIED] | Grounded |
 | 3. Summary Analysis of Cases | \| Pharmacist \| 255 \| 24.9% \| | case_summary.metric | 255, 24.9 | PASS [VERIFIED] | Grounded |
-| 3. Summary Analysis of Cases | \| Other Health Professional \| 162 \| 15.82% \| | case_summary.metric | 15.82, 162 | PASS [VERIFIED] | Grounded |
-| 3. Summary Analysis of Cases | \| Consumer or Non-Health Professional \| 115 \| 11.23% \| | case_summary.metric | 115, 11.23 | PASS [VERIFIED] | Grounded |
+| 3. Summary Analysis of Cases | \| Other Health Professional \| 162 \| 15.82% \| | case_summary.metric | 162, 15.82 | PASS [VERIFIED] | Grounded |
+| 3. Summary Analysis of Cases | \| Consumer or Non-Health Professional \| 115 \| 11.23% \| | case_summary.metric | 11.23, 115 | PASS [VERIFIED] | Grounded |
 | 3. Summary Analysis of Cases | \| Drug Role \| Case Count \| Percentage \| | case_summary.metric | -- | PASS [VERIFIED] | Grounded |
 | 3. Summary Analysis of Cases | \| Concomitant Medication \| 666 \| 65.04% \| | case_summary.metric | 666, 65.04 | PASS [VERIFIED] | Grounded |
 | 3. Summary Analysis of Cases | \| Suspect Medication \| 340 \| 33.2% \| | case_summary.metric | 33.2, 340 | PASS [VERIFIED] | Grounded |
-| 3. Summary Analysis of Cases | \| Interacting Medication \| 17 \| 1.66% \| | case_summary.metric | 1.66, 17 | PASS [VERIFIED] | Grounded |
+| 3. Summary Analysis of Cases | \| Interacting Medication \| 17 \| 1.66% \| | case_summary.metric | 17, 1.66 | PASS [VERIFIED] | Grounded |
 | 4. Reaction / Adverse Event Analysis | During the reporting period from 2024-12-27 to 2025-12-26, a total of 3429 adverse reactio... | reaction_analysis.metric | 3429, 1122 | PASS [VERIFIED] | Grounded |
 | 4. Reaction / Adverse Event Analysis | *Compliance Statement on MedDRA Coding*: System Organ Class (SOC) coding is not included i... | reaction_analysis.metric | -- | PASS [VERIFIED] | Grounded |
 | 4. Reaction / Adverse Event Analysis | In compliance with the study instructions, adverse reactions are tabulated directly at the... | reaction_analysis.metric | -- | PASS [VERIFIED] | Grounded |
 | 4. Reaction / Adverse Event Analysis | \| Rank \| Preferred Term (PT) \| Total Occurrences \| % of Reactions \| Distinct Cases \|... | reaction_analysis.metric | -- | PASS [VERIFIED] | Grounded |
-| 4. Reaction / Adverse Event Analysis | \| 1 \| Acute kidney injury \| 80 \| 2.33% \| 80 \| 7.81% \| | reaction_analysis.metric | 80, 1, 7.81, 2.33 | PASS [VERIFIED] | Grounded |
-| 4. Reaction / Adverse Event Analysis | \| 2 \| Drug ineffective \| 54 \| 1.57% \| 54 \| 5.27% \| | reaction_analysis.metric | 5.27, 54, 1.57, 2 | PASS [VERIFIED] | Grounded |
-| 4. Reaction / Adverse Event Analysis | \| 3 \| Hypotension \| 46 \| 1.34% \| 46 \| 4.49% \| | reaction_analysis.metric | 1.34, 46, 4.49, 3 | PASS [VERIFIED] | Grounded |
-| 4. Reaction / Adverse Event Analysis | \| 4 \| Drug interaction \| 43 \| 1.25% \| 43 \| 4.2% \| | reaction_analysis.metric | 43, 4.2, 4, 1.25 | PASS [VERIFIED] | Grounded |
-| 4. Reaction / Adverse Event Analysis | \| 5 \| Dyspnoea \| 38 \| 1.11% \| 38 \| 3.71% \| | reaction_analysis.metric | 1.11, 5, 3.71, 38 | PASS [VERIFIED] | Grounded |
-| 4. Reaction / Adverse Event Analysis | \| 6 \| Bradycardia \| 37 \| 1.08% \| 37 \| 3.61% \| | reaction_analysis.metric | 3.61, 6, 1.08, 37 | PASS [VERIFIED] | Grounded |
-| 4. Reaction / Adverse Event Analysis | \| 7 \| Dizziness \| 36 \| 1.05% \| 36 \| 3.52% \| | reaction_analysis.metric | 1.05, 3.52, 36, 7 | PASS [VERIFIED] | Grounded |
-| 4. Reaction / Adverse Event Analysis | \| 8 \| Fatigue \| 33 \| 0.96% \| 33 \| 3.22% \| | reaction_analysis.metric | 3.22, 33, 8, 0.96 | PASS [VERIFIED] | Grounded |
-| 4. Reaction / Adverse Event Analysis | \| 9 \| Off label use \| 31 \| 0.9% \| 31 \| 3.03% \| | reaction_analysis.metric | 9, 3.03, 31, 0.9 | PASS [VERIFIED] | Grounded |
-| 4. Reaction / Adverse Event Analysis | \| 10 \| Diarrhoea \| 30 \| 0.87% \| 30 \| 2.93% \| | reaction_analysis.metric | 0.87, 30, 10, 2.93 | PASS [VERIFIED] | Grounded |
-| 4. Reaction / Adverse Event Analysis | \| 11 \| Fall \| 30 \| 0.87% \| 30 \| 2.93% \| | reaction_analysis.metric | 0.87, 30, 11, 2.93 | PASS [VERIFIED] | Grounded |
-| 4. Reaction / Adverse Event Analysis | \| 12 \| Condition aggravated \| 27 \| 0.79% \| 27 \| 2.64% \| | reaction_analysis.metric | 2.64, 0.79, 12, 27 | PASS [VERIFIED] | Grounded |
-| 4. Reaction / Adverse Event Analysis | \| 13 \| Hypokalaemia \| 27 \| 0.79% \| 27 \| 2.64% \| | reaction_analysis.metric | 2.64, 0.79, 13, 27 | PASS [VERIFIED] | Grounded |
-| 4. Reaction / Adverse Event Analysis | \| 14 \| Medication error \| 25 \| 0.73% \| 25 \| 2.44% \| | reaction_analysis.metric | 25, 2.44, 14, 0.73 | PASS [VERIFIED] | Grounded |
-| 4. Reaction / Adverse Event Analysis | \| 15 \| Asthenia \| 25 \| 0.73% \| 25 \| 2.44% \| | reaction_analysis.metric | 25, 15, 2.44, 0.73 | PASS [VERIFIED] | Grounded |
-| 4. Reaction / Adverse Event Analysis | \| 16 \| Hyponatraemia \| 24 \| 0.7% \| 24 \| 2.34% \| | reaction_analysis.metric | 2.34, 16, 0.7, 24 | PASS [VERIFIED] | Grounded |
-| 4. Reaction / Adverse Event Analysis | \| 17 \| Toxicity to various agents \| 23 \| 0.67% \| 23 \| 2.25% \| | reaction_analysis.metric | 0.67, 2.25, 17, 23 | PASS [VERIFIED] | Grounded |
-| 4. Reaction / Adverse Event Analysis | \| 18 \| Confusional state \| 23 \| 0.67% \| 23 \| 2.25% \| | reaction_analysis.metric | 0.67, 2.25, 18, 23 | PASS [VERIFIED] | Grounded |
-| 4. Reaction / Adverse Event Analysis | \| 19 \| Arthralgia \| 22 \| 0.64% \| 22 \| 2.15% \| | reaction_analysis.metric | 22, 0.64, 2.15, 19 | PASS [VERIFIED] | Grounded |
-| 4. Reaction / Adverse Event Analysis | \| 20 \| Syncope \| 20 \| 0.58% \| 20 \| 1.95% \| | reaction_analysis.metric | 1.95, 0.58, 20 | PASS [VERIFIED] | Grounded |
-| 4. Reaction / Adverse Event Analysis | - **Acute kidney injury** (80 occurrences): 48 recovered/recovering, 12 fatal, 20 unresolv... | N/A | 80, 48, 12, 20 | WARN [FLAGGED] | unsupported numbers ['48'] |
-| 4. Reaction / Adverse Event Analysis | - **Drug ineffective** (54 occurrences): 24 recovered/resolved, 15 ongoing, 15 unknown. | reaction_analysis.metric | 15, 54, 24 | PASS [VERIFIED] | Grounded |
-| 4. Reaction / Adverse Event Analysis | - **Hypotension** (46 occurrences): 29 recovered/recovering, 5 fatal, 12 ongoing or unknow... | N/A | 5, 29, 46, 12 | WARN [FLAGGED] | unsupported numbers ['29'] |
-| 4. Reaction / Adverse Event Analysis | - **Drug interaction** (43 occurrences): 18 recovered/resolved, remaining ongoing or unkno... | reaction_analysis.metric | 43, 18 | PASS [VERIFIED] | Grounded |
-| 4. Reaction / Adverse Event Analysis | - **Dyspnoea** (38 occurrences): 19 recovered/recovering, 6 fatal, 13 ongoing or unknown. | reaction_analysis.metric | 6, 38, 13, 19 | PASS [VERIFIED] | Grounded |
+| 4. Reaction / Adverse Event Analysis | \| 1 \| Acute kidney injury \| 80 \| 2.33% \| 80 \| 7.81% \| | reaction_analysis.metric | 80, 1, 2.33, 7.81 | PASS [VERIFIED] | Grounded |
+| 4. Reaction / Adverse Event Analysis | \| 2 \| Drug ineffective \| 54 \| 1.57% \| 54 \| 5.27% \| | reaction_analysis.metric | 1.57, 2, 5.27, 54 | PASS [VERIFIED] | Grounded |
+| 4. Reaction / Adverse Event Analysis | \| 3 \| Hypotension \| 46 \| 1.34% \| 46 \| 4.49% \| | reaction_analysis.metric | 3, 1.34, 46, 4.49 | PASS [VERIFIED] | Grounded |
+| 4. Reaction / Adverse Event Analysis | \| 4 \| Drug interaction \| 43 \| 1.25% \| 43 \| 4.2% \| | reaction_analysis.metric | 4.2, 1.25, 4, 43 | PASS [VERIFIED] | Grounded |
+| 4. Reaction / Adverse Event Analysis | \| 5 \| Dyspnoea \| 38 \| 1.11% \| 38 \| 3.71% \| | reaction_analysis.metric | 38, 1.11, 5, 3.71 | PASS [VERIFIED] | Grounded |
+| 4. Reaction / Adverse Event Analysis | \| 6 \| Bradycardia \| 37 \| 1.08% \| 37 \| 3.61% \| | reaction_analysis.metric | 1.08, 37, 6, 3.61 | PASS [VERIFIED] | Grounded |
+| 4. Reaction / Adverse Event Analysis | \| 7 \| Dizziness \| 36 \| 1.05% \| 36 \| 3.52% \| | reaction_analysis.metric | 36, 7, 1.05, 3.52 | PASS [VERIFIED] | Grounded |
+| 4. Reaction / Adverse Event Analysis | \| 8 \| Fatigue \| 33 \| 0.96% \| 33 \| 3.22% \| | reaction_analysis.metric | 33, 3.22, 0.96, 8 | PASS [VERIFIED] | Grounded |
+| 4. Reaction / Adverse Event Analysis | \| 9 \| Off label use \| 31 \| 0.9% \| 31 \| 3.03% \| | reaction_analysis.metric | 31, 0.9, 9, 3.03 | PASS [VERIFIED] | Grounded |
+| 4. Reaction / Adverse Event Analysis | \| 10 \| Diarrhoea \| 30 \| 0.87% \| 30 \| 2.93% \| | reaction_analysis.metric | 30, 2.93, 0.87, 10 | PASS [VERIFIED] | Grounded |
+| 4. Reaction / Adverse Event Analysis | \| 11 \| Fall \| 30 \| 0.87% \| 30 \| 2.93% \| | reaction_analysis.metric | 30, 11, 0.87, 2.93 | PASS [VERIFIED] | Grounded |
+| 4. Reaction / Adverse Event Analysis | \| 12 \| Condition aggravated \| 27 \| 0.79% \| 27 \| 2.64% \| | reaction_analysis.metric | 2.64, 27, 12, 0.79 | PASS [VERIFIED] | Grounded |
+| 4. Reaction / Adverse Event Analysis | \| 13 \| Hypokalaemia \| 27 \| 0.79% \| 27 \| 2.64% \| | reaction_analysis.metric | 2.64, 27, 13, 0.79 | PASS [VERIFIED] | Grounded |
+| 4. Reaction / Adverse Event Analysis | \| 14 \| Medication error \| 25 \| 0.73% \| 25 \| 2.44% \| | reaction_analysis.metric | 0.73, 14, 25, 2.44 | PASS [VERIFIED] | Grounded |
+| 4. Reaction / Adverse Event Analysis | \| 15 \| Asthenia \| 25 \| 0.73% \| 25 \| 2.44% \| | reaction_analysis.metric | 0.73, 25, 15, 2.44 | PASS [VERIFIED] | Grounded |
+| 4. Reaction / Adverse Event Analysis | \| 16 \| Hyponatraemia \| 24 \| 0.7% \| 24 \| 2.34% \| | reaction_analysis.metric | 16, 2.34, 0.7, 24 | PASS [VERIFIED] | Grounded |
+| 4. Reaction / Adverse Event Analysis | \| 17 \| Toxicity to various agents \| 23 \| 0.67% \| 23 \| 2.25% \| | reaction_analysis.metric | 17, 23, 0.67, 2.25 | PASS [VERIFIED] | Grounded |
+| 4. Reaction / Adverse Event Analysis | \| 18 \| Confusional state \| 23 \| 0.67% \| 23 \| 2.25% \| | reaction_analysis.metric | 23, 0.67, 2.25, 18 | PASS [VERIFIED] | Grounded |
+| 4. Reaction / Adverse Event Analysis | \| 19 \| Arthralgia \| 22 \| 0.64% \| 22 \| 2.15% \| | reaction_analysis.metric | 22, 19, 0.64, 2.15 | PASS [VERIFIED] | Grounded |
+| 4. Reaction / Adverse Event Analysis | \| 20 \| Syncope \| 20 \| 0.58% \| 20 \| 1.95% \| | reaction_analysis.metric | 0.58, 1.95, 20 | PASS [VERIFIED] | Grounded |
+| 4. Reaction / Adverse Event Analysis | - **Acute kidney injury** (80 occurrences): 48 recovered/recovering, 12 fatal, 20 unresolv... | N/A | 80, 12, 20, 48 | WARN [FLAGGED] | unsupported numbers ['48'] |
+| 4. Reaction / Adverse Event Analysis | - **Drug ineffective** (54 occurrences): 24 recovered/resolved, 15 ongoing, 15 unknown. | reaction_analysis.metric | 24, 15, 54 | PASS [VERIFIED] | Grounded |
+| 4. Reaction / Adverse Event Analysis | - **Hypotension** (46 occurrences): 29 recovered/recovering, 5 fatal, 12 ongoing or unknow... | N/A | 46, 5, 12, 29 | WARN [FLAGGED] | unsupported numbers ['29'] |
+| 4. Reaction / Adverse Event Analysis | - **Drug interaction** (43 occurrences): 18 recovered/resolved, remaining ongoing or unkno... | reaction_analysis.metric | 18, 43 | PASS [VERIFIED] | Grounded |
+| 4. Reaction / Adverse Event Analysis | - **Dyspnoea** (38 occurrences): 19 recovered/recovering, 6 fatal, 13 ongoing or unknown. | reaction_analysis.metric | 13, 38, 19, 6 | PASS [VERIFIED] | Grounded |
 | 5. Serious Cases / 15-Day Alerts | Under 21 CFR 314.80, periodic safety reporting requires dedicated analysis of serious adve... | serious_cases.metric | 15 | PASS [VERIFIED] | Grounded |
 | 5. Serious Cases / 15-Day Alerts | During the interval from 2024-12-27 to 2025-12-26, 1023 cases were classified as serious, ... | serious_cases.metric | 1023 | PASS [VERIFIED] | Grounded |
 | 5. Serious Cases / 15-Day Alerts | *Note: Seriousness criteria are independent, non-mutually exclusive flags. | serious_cases.metric | -- | PASS [VERIFIED] | Grounded |
 | 5. Serious Cases / 15-Day Alerts | A single case may satisfy multiple seriousness criteria simultaneously.* | serious_cases.metric | -- | PASS [VERIFIED] | Grounded |
 | 5. Serious Cases / 15-Day Alerts | \| Seriousness Criterion \| Case Count \| % of Total Cases (1023) \| | serious_cases.metric | 1023 | PASS [VERIFIED] | Grounded |
-| 5. Serious Cases / 15-Day Alerts | \| Other Medically Important \| 905 \| 88.38% \| | serious_cases.metric | 905, 88.38 | PASS [VERIFIED] | Grounded |
-| 5. Serious Cases / 15-Day Alerts | \| Hospitalization / Prolonged \| 482 \| 47.07% \| | serious_cases.metric | 47.07, 482 | PASS [VERIFIED] | Grounded |
+| 5. Serious Cases / 15-Day Alerts | \| Other Medically Important \| 905 \| 88.38% \| | serious_cases.metric | 88.38, 905 | PASS [VERIFIED] | Grounded |
+| 5. Serious Cases / 15-Day Alerts | \| Hospitalization / Prolonged \| 482 \| 47.07% \| | serious_cases.metric | 482, 47.07 | PASS [VERIFIED] | Grounded |
 | 5. Serious Cases / 15-Day Alerts | \| Life-threatening \| 105 \| 10.25% \| | serious_cases.metric | 105, 10.25 | PASS [VERIFIED] | Grounded |
 | 5. Serious Cases / 15-Day Alerts | \| Death (Fatal) \| 68 \| 6.64% \| | serious_cases.metric | 6.64, 68 | PASS [VERIFIED] | Grounded |
-| 5. Serious Cases / 15-Day Alerts | \| Disability / Incapacity \| 44 \| 4.3% \| | serious_cases.metric | 4.3, 44 | PASS [VERIFIED] | Grounded |
-| 5. Serious Cases / 15-Day Alerts | \| Congenital Anomaly \| 7 \| 0.68% \| | serious_cases.metric | 7, 0.68 | PASS [VERIFIED] | Grounded |
+| 5. Serious Cases / 15-Day Alerts | \| Disability / Incapacity \| 44 \| 4.3% \| | serious_cases.metric | 44, 4.3 | PASS [VERIFIED] | Grounded |
+| 5. Serious Cases / 15-Day Alerts | \| Congenital Anomaly \| 7 \| 0.68% \| | serious_cases.metric | 0.68, 7 | PASS [VERIFIED] | Grounded |
 | 5. Serious Cases / 15-Day Alerts | - **Single Criterion**: 528 cases met exactly one seriousness criterion. | serious_cases.metric | 528 | PASS [VERIFIED] | Grounded |
-| 5. Serious Cases / 15-Day Alerts | - **Multiple Criteria**: 414 cases met 2 criteria, and 81 cases met 3 or more criteria sim... | serious_cases.metric | 414, 2, 3, 81 | PASS [VERIFIED] | Grounded |
-| 5. Serious Cases / 15-Day Alerts | - **Fatal Expedited Cases**: A total of 68 fatal cases were documented, and 955 cases were... | serious_cases.metric | 68, 955 | PASS [VERIFIED] | Grounded |
+| 5. Serious Cases / 15-Day Alerts | - **Multiple Criteria**: 414 cases met 2 criteria, and 81 cases met 3 or more criteria sim... | serious_cases.metric | 81, 3, 414, 2 | PASS [VERIFIED] | Grounded |
+| 5. Serious Cases / 15-Day Alerts | - **Fatal Expedited Cases**: A total of 68 fatal cases were documented, and 955 cases were... | serious_cases.metric | 955, 68 | PASS [VERIFIED] | Grounded |
 | 5. Serious Cases / 15-Day Alerts | In accordance with study constraints, no reference Company Core Data Sheet (CCDS) or appro... | serious_cases.metric | -- | PASS [VERIFIED] | Grounded |
 | 5. Serious Cases / 15-Day Alerts | Therefore, formal expectedness classification (labelled vs. | serious_cases.metric | -- | PASS [VERIFIED] | Grounded |
 | 5. Serious Cases / 15-Day Alerts | unlabelled) is out of scope for Version 0. | serious_cases.metric | -- | PASS [VERIFIED] | Grounded |
@@ -413,16 +415,16 @@ The following audit table verifies every factual statement against pre-computed 
 | 6. Trends and Important Observations | \| Month \| Case Count \| | trends.metric | -- | PASS [VERIFIED] | Grounded |
 | 6. Trends and Important Observations | \| 2024-12 \| 21 \| | trends.metric | 21, 12 | PASS [VERIFIED] | Grounded |
 | 6. Trends and Important Observations | \| 2025-01 \| 75 \| | trends.metric | 75, 01 | PASS [VERIFIED] | Grounded |
-| 6. Trends and Important Observations | \| 2025-02 \| 94 \| | trends.metric | 94, 02 | PASS [VERIFIED] | Grounded |
+| 6. Trends and Important Observations | \| 2025-02 \| 94 \| | trends.metric | 02, 94 | PASS [VERIFIED] | Grounded |
 | 6. Trends and Important Observations | \| 2025-03 \| 83 \| | trends.metric | 83, 03 | PASS [VERIFIED] | Grounded |
-| 6. Trends and Important Observations | \| 2025-04 \| 78 \| | trends.metric | 78, 04 | PASS [VERIFIED] | Grounded |
+| 6. Trends and Important Observations | \| 2025-04 \| 78 \| | trends.metric | 04, 78 | PASS [VERIFIED] | Grounded |
 | 6. Trends and Important Observations | \| 2025-05 \| 80 \| | trends.metric | 80, 05 | PASS [VERIFIED] | Grounded |
-| 6. Trends and Important Observations | \| 2025-06 \| 84 \| | trends.metric | 84, 06 | PASS [VERIFIED] | Grounded |
+| 6. Trends and Important Observations | \| 2025-06 \| 84 \| | trends.metric | 06, 84 | PASS [VERIFIED] | Grounded |
 | 6. Trends and Important Observations | \| 2025-07 \| 109 \| | trends.metric | 109, 07 | PASS [VERIFIED] | Grounded |
-| 6. Trends and Important Observations | \| 2025-08 \| 64 \| | trends.metric | 64, 08 | PASS [VERIFIED] | Grounded |
+| 6. Trends and Important Observations | \| 2025-08 \| 64 \| | trends.metric | 08, 64 | PASS [VERIFIED] | Grounded |
 | 6. Trends and Important Observations | \| 2025-09 \| 76 \| | trends.metric | 09, 76 | PASS [VERIFIED] | Grounded |
-| 6. Trends and Important Observations | \| 2025-10 \| 102 \| | trends.metric | 102, 10 | PASS [VERIFIED] | Grounded |
-| 6. Trends and Important Observations | \| 2025-11 \| 75 \| | trends.metric | 75, 11 | PASS [VERIFIED] | Grounded |
+| 6. Trends and Important Observations | \| 2025-10 \| 102 \| | trends.metric | 10, 102 | PASS [VERIFIED] | Grounded |
+| 6. Trends and Important Observations | \| 2025-11 \| 75 \| | trends.metric | 11, 75 | PASS [VERIFIED] | Grounded |
 | 6. Trends and Important Observations | \| 2025-12 \| 83 \| | trends.metric | 83, 12 | PASS [VERIFIED] | Grounded |
 | 6. Trends and Important Observations | \| Quarter \| Case Count \| | trends.metric | -- | PASS [VERIFIED] | Grounded |
 | 6. Trends and Important Observations | \| 2024Q4 \| 21 \| | trends.metric | 21 | PASS [VERIFIED] | Grounded |
@@ -430,8 +432,8 @@ The following audit table verifies every factual statement against pre-computed 
 | 6. Trends and Important Observations | \| 2025Q2 \| 242 \| | trends.metric | 242 | PASS [VERIFIED] | Grounded |
 | 6. Trends and Important Observations | \| 2025Q3 \| 249 \| | trends.metric | 249 | PASS [VERIFIED] | Grounded |
 | 6. Trends and Important Observations | \| 2025Q4 \| 260 \| | trends.metric | 260 | PASS [VERIFIED] | Grounded |
-| 6. Trends and Important Observations | **Volume Stability**: Comparison between the first half (511 cases) and second half (513 c... | trends.metric | 0.39, 511, 513 | PASS [VERIFIED] | Grounded |
-| 6. Trends and Important Observations | **Age Distribution**: Reporting was heavily concentrated in the elderly demographic (mean ... | trends.metric | 70.05, 73.0 | PASS [VERIFIED] | Grounded |
+| 6. Trends and Important Observations | **Volume Stability**: Comparison between the first half (511 cases) and second half (513 c... | trends.metric | 513, 0.39, 511 | PASS [VERIFIED] | Grounded |
+| 6. Trends and Important Observations | **Age Distribution**: Reporting was heavily concentrated in the elderly demographic (mean ... | trends.metric | 73.0, 70.05 | PASS [VERIFIED] | Grounded |
 | 6. Trends and Important Observations | **Polypharmacy Context**: In 65.04% of cases, Bisoprolol was reported as a concomitant med... | trends.metric | 65.04 | PASS [VERIFIED] | Grounded |
 | 6. Trends and Important Observations | **Adverse Event Constellation**: Top Preferred Terms (Acute kidney injury, Drug ineffectiv... | trends.metric | -- | PASS [VERIFIED] | Grounded |
 | 6. Trends and Important Observations | *Conclusion*: No unexpected reporting surges requiring immediate regulatory intervention w... | trends.metric | -- | PASS [VERIFIED] | Grounded |

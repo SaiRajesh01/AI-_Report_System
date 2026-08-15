@@ -1,85 +1,315 @@
 {
   "started_at": "2026-08-15T15:56:50.063778+00:00",
-  "decisions": [
-    {
+  "last_updated": "2026-08-15T17:41:22.201916+00:00",
+  "all_approved": true,
+  "total_sections": 8,
+  "approved_count": 8,
+  "flagged_count": 0,
+  "pending_count": 0,
+  "sections": {
+    "reporting_period": {
       "section_id": "reporting_period",
       "section_title": "1. Reporting Period",
+      "status": "APPROVED",
       "decision": "approve",
-      "reason": "auto-approved (non-interactive mode)",
-      "reviewer": "auto",
-      "timestamp": "2026-08-15T15:56:50.063815+00:00",
-      "evidence_hash": "77a6a215c7176b43",
-      "generated_text_hash": "ea20a3ee3d44d24a"
+      "reviewer_comment": "Automated batch review approval (CI Mode)",
+      "reviewer": "Automated CI Reviewer",
+      "timestamp": "2026-08-15T17:41:22.189254+00:00",
+      "evidence_hash": "73c5cd706e19d486",
+      "generated_text_hash": "33dc54c376214024",
+      "generation_version": 1,
+      "grounding_status": "PASS",
+      "grounding_score": 1.0,
+      "history": [
+        {
+          "generation_version": 1,
+          "generated_text_hash": "33dc54c376214024",
+          "evidence_hash": "73c5cd706e19d486",
+          "grounding_status": "PASS",
+          "grounding_score": 1.0,
+          "human_status": "APPROVED",
+          "reviewer": "Automated CI Reviewer",
+          "reviewer_comment": "Automated batch review approval (CI Mode)",
+          "timestamp": "2026-08-15T17:27:28.308973+00:00"
+        },
+        {
+          "generation_version": 1,
+          "generated_text_hash": "33dc54c376214024",
+          "evidence_hash": "eb30d51e3a7a3bcb",
+          "grounding_status": "PASS",
+          "grounding_score": 1.0,
+          "human_status": "APPROVED",
+          "reviewer": "Automated CI Reviewer",
+          "reviewer_comment": "Approved compliant by safety reviewer",
+          "timestamp": "2026-08-15T17:38:27.297584+00:00"
+        },
+        {
+          "generation_version": 1,
+          "generated_text_hash": "33dc54c376214024",
+          "evidence_hash": "eb30d51e3a7a3bcb",
+          "grounding_status": "PASS",
+          "grounding_score": 1.0,
+          "human_status": "APPROVED",
+          "reviewer": "Automated CI Reviewer",
+          "reviewer_comment": "Approved compliant by safety reviewer",
+          "timestamp": "2026-08-15T17:40:17.614202+00:00"
+        },
+        {
+          "generation_version": 1,
+          "generated_text_hash": "33dc54c376214024",
+          "evidence_hash": "eb30d51e3a7a3bcb",
+          "grounding_status": "PASS",
+          "grounding_score": 1.0,
+          "human_status": "APPROVED",
+          "reviewer": "Automated CI Reviewer",
+          "reviewer_comment": "Approved compliant by safety reviewer",
+          "timestamp": "2026-08-15T17:40:22.835456+00:00"
+        },
+        {
+          "generation_version": 1,
+          "generated_text_hash": "33dc54c376214024",
+          "evidence_hash": "eb30d51e3a7a3bcb",
+          "grounding_status": "PASS",
+          "grounding_score": 1.0,
+          "human_status": "APPROVED",
+          "reviewer": "Automated CI Reviewer",
+          "reviewer_comment": "Approved compliant by safety reviewer",
+          "timestamp": "2026-08-15T17:40:23.149431+00:00"
+        },
+        {
+          "generation_version": 1,
+          "generated_text_hash": "33dc54c376214024",
+          "evidence_hash": "eb30d51e3a7a3bcb",
+          "grounding_status": "PASS",
+          "grounding_score": 1.0,
+          "human_status": "APPROVED",
+          "reviewer": "Automated CI Reviewer",
+          "reviewer_comment": "Approved compliant by safety reviewer",
+          "timestamp": "2026-08-15T17:40:23.794376+00:00"
+        }
+      ]
     },
-    {
+    "narrative_summary": {
       "section_id": "narrative_summary",
       "section_title": "2. Narrative Summary and Analysis",
+      "status": "APPROVED",
       "decision": "approve",
-      "reason": "auto-approved (non-interactive mode)",
-      "reviewer": "auto",
-      "timestamp": "2026-08-15T15:56:50.063892+00:00",
-      "evidence_hash": "d508b47a8c191b33",
-      "generated_text_hash": "b321e2f975af9b55"
+      "reviewer_comment": "Automated batch review approval (CI Mode)",
+      "reviewer": "Automated CI Reviewer",
+      "timestamp": "2026-08-15T17:41:22.191851+00:00",
+      "evidence_hash": "7e9416140307157f",
+      "generated_text_hash": "ee115343974f5996",
+      "generation_version": 1,
+      "grounding_status": "PASS",
+      "grounding_score": 1.0,
+      "history": [
+        {
+          "generation_version": 1,
+          "generated_text_hash": "ee115343974f5996",
+          "evidence_hash": "7e9416140307157f",
+          "grounding_status": "PASS",
+          "grounding_score": 1.0,
+          "human_status": "APPROVED",
+          "reviewer": "Automated CI Reviewer",
+          "reviewer_comment": "Automated batch review approval (CI Mode)",
+          "timestamp": "2026-08-15T17:27:28.311077+00:00"
+        },
+        {
+          "generation_version": 1,
+          "generated_text_hash": "ee115343974f5996",
+          "evidence_hash": "979c62ef63419db5",
+          "grounding_status": "PASS",
+          "grounding_score": 1.0,
+          "human_status": "APPROVED",
+          "reviewer": "Automated CI Reviewer",
+          "reviewer_comment": "Automated batch review approval (CI Mode)",
+          "timestamp": "2026-08-15T17:33:02.935805+00:00"
+        },
+        {
+          "generation_version": 1,
+          "generated_text_hash": "ee115343974f5996",
+          "evidence_hash": "979c62ef63419db5",
+          "grounding_status": "PASS",
+          "grounding_score": 1.0,
+          "human_status": "FLAGGED",
+          "reviewer": "Automated CI Reviewer",
+          "reviewer_comment": "Automated batch review approval (CI Mode)",
+          "timestamp": "2026-08-15T17:33:08.071782+00:00"
+        },
+        {
+          "generation_version": 1,
+          "generated_text_hash": "ee115343974f5996",
+          "evidence_hash": "979c62ef63419db5",
+          "grounding_status": "PASS",
+          "grounding_score": 1.0,
+          "human_status": "APPROVED",
+          "reviewer": "Automated CI Reviewer",
+          "reviewer_comment": "Automated batch review approval (CI Mode)",
+          "timestamp": "2026-08-15T17:33:10.427039+00:00"
+        }
+      ]
     },
-    {
+    "case_summary": {
       "section_id": "case_summary",
       "section_title": "3. Summary Analysis of Cases",
+      "status": "APPROVED",
       "decision": "approve",
-      "reason": "auto-approved (non-interactive mode)",
-      "reviewer": "auto",
-      "timestamp": "2026-08-15T15:56:50.063917+00:00",
-      "evidence_hash": "5c2980a797150976",
-      "generated_text_hash": "f76faefaee52b07f"
+      "reviewer_comment": "Automated batch review approval (CI Mode)",
+      "reviewer": "Automated CI Reviewer",
+      "timestamp": "2026-08-15T17:41:22.194032+00:00",
+      "evidence_hash": "f6a327f5653f2ae2",
+      "generated_text_hash": "4d139b4c36d406c6",
+      "generation_version": 1,
+      "grounding_status": "PASS",
+      "grounding_score": 0.842,
+      "history": [
+        {
+          "generation_version": 1,
+          "generated_text_hash": "4d139b4c36d406c6",
+          "evidence_hash": "f6a327f5653f2ae2",
+          "grounding_status": "PASS",
+          "grounding_score": 0.842,
+          "human_status": "APPROVED",
+          "reviewer": "Automated CI Reviewer",
+          "reviewer_comment": "Automated batch review approval (CI Mode)",
+          "timestamp": "2026-08-15T17:27:28.312791+00:00"
+        }
+      ]
     },
-    {
+    "reaction_analysis": {
       "section_id": "reaction_analysis",
       "section_title": "4. Reaction / Adverse Event Analysis",
+      "status": "APPROVED",
       "decision": "approve",
-      "reason": "auto-approved (non-interactive mode)",
-      "reviewer": "auto",
-      "timestamp": "2026-08-15T15:56:50.063936+00:00",
-      "evidence_hash": "8871842593eacbc7",
-      "generated_text_hash": "0078a6343c096727"
+      "reviewer_comment": "Automated batch review approval (CI Mode)",
+      "reviewer": "Automated CI Reviewer",
+      "timestamp": "2026-08-15T17:41:22.196281+00:00",
+      "evidence_hash": "c9e882a1e9d70b02",
+      "generated_text_hash": "6b856cf6fa12645e",
+      "generation_version": 1,
+      "grounding_status": "PASS",
+      "grounding_score": 0.931,
+      "history": [
+        {
+          "generation_version": 1,
+          "generated_text_hash": "6b856cf6fa12645e",
+          "evidence_hash": "c9e882a1e9d70b02",
+          "grounding_status": "PASS",
+          "grounding_score": 0.931,
+          "human_status": "APPROVED",
+          "reviewer": "Automated CI Reviewer",
+          "reviewer_comment": "Automated batch review approval (CI Mode)",
+          "timestamp": "2026-08-15T17:27:28.314331+00:00"
+        }
+      ]
     },
-    {
+    "serious_cases": {
       "section_id": "serious_cases",
       "section_title": "5. Serious Cases / 15-Day Alerts",
+      "status": "APPROVED",
       "decision": "approve",
-      "reason": "auto-approved (non-interactive mode)",
-      "reviewer": "auto",
-      "timestamp": "2026-08-15T15:56:50.063950+00:00",
-      "evidence_hash": "4a672e8b3b5b6350",
-      "generated_text_hash": "88dc907d734ff063"
+      "reviewer_comment": "Automated batch review approval (CI Mode)",
+      "reviewer": "Automated CI Reviewer",
+      "timestamp": "2026-08-15T17:41:22.198092+00:00",
+      "evidence_hash": "8ac5e2ab7d51b790",
+      "generated_text_hash": "376e9536ee308731",
+      "generation_version": 1,
+      "grounding_status": "PASS",
+      "grounding_score": 1.0,
+      "history": [
+        {
+          "generation_version": 1,
+          "generated_text_hash": "376e9536ee308731",
+          "evidence_hash": "8ac5e2ab7d51b790",
+          "grounding_status": "PASS",
+          "grounding_score": 1.0,
+          "human_status": "APPROVED",
+          "reviewer": "Automated CI Reviewer",
+          "reviewer_comment": "Automated batch review approval (CI Mode)",
+          "timestamp": "2026-08-15T17:27:28.315791+00:00"
+        }
+      ]
     },
-    {
+    "trends": {
       "section_id": "trends",
       "section_title": "6. Trends and Important Observations",
+      "status": "APPROVED",
       "decision": "approve",
-      "reason": "auto-approved (non-interactive mode)",
-      "reviewer": "auto",
-      "timestamp": "2026-08-15T15:56:50.063963+00:00",
-      "evidence_hash": "9a67292483eb7663",
-      "generated_text_hash": "d3a6d40d602c9a24"
+      "reviewer_comment": "Automated batch review approval (CI Mode)",
+      "reviewer": "Automated CI Reviewer",
+      "timestamp": "2026-08-15T17:41:22.199734+00:00",
+      "evidence_hash": "6d55d1d5b47d6d09",
+      "generated_text_hash": "895bfb8fba5055c1",
+      "generation_version": 1,
+      "grounding_status": "PASS",
+      "grounding_score": 1.0,
+      "history": [
+        {
+          "generation_version": 1,
+          "generated_text_hash": "895bfb8fba5055c1",
+          "evidence_hash": "6d55d1d5b47d6d09",
+          "grounding_status": "PASS",
+          "grounding_score": 1.0,
+          "human_status": "APPROVED",
+          "reviewer": "Automated CI Reviewer",
+          "reviewer_comment": "Automated batch review approval (CI Mode)",
+          "timestamp": "2026-08-15T17:27:28.317214+00:00"
+        }
+      ]
     },
-    {
+    "history_of_actions": {
       "section_id": "history_of_actions",
       "section_title": "7. History of Actions",
+      "status": "APPROVED",
       "decision": "approve",
-      "reason": "auto-approved (non-interactive mode)",
-      "reviewer": "auto",
-      "timestamp": "2026-08-15T15:56:50.063975+00:00",
-      "evidence_hash": "4ba581c0cd07ff5c",
-      "generated_text_hash": "85830b84ce1be340"
+      "reviewer_comment": "Automated batch review approval (CI Mode)",
+      "reviewer": "Automated CI Reviewer",
+      "timestamp": "2026-08-15T17:41:22.200753+00:00",
+      "evidence_hash": "f88c7ec3049fd0af",
+      "generated_text_hash": "0e38c80a8c25ac82",
+      "generation_version": 1,
+      "grounding_status": "PASS",
+      "grounding_score": 1.0,
+      "history": [
+        {
+          "generation_version": 1,
+          "generated_text_hash": "0e38c80a8c25ac82",
+          "evidence_hash": "f88c7ec3049fd0af",
+          "grounding_status": "PASS",
+          "grounding_score": 1.0,
+          "human_status": "APPROVED",
+          "reviewer": "Automated CI Reviewer",
+          "reviewer_comment": "Automated batch review approval (CI Mode)",
+          "timestamp": "2026-08-15T17:27:28.318093+00:00"
+        }
+      ]
     },
-    {
+    "case_listing": {
       "section_id": "case_listing",
       "section_title": "8. Case Index / Listing",
+      "status": "APPROVED",
       "decision": "approve",
-      "reason": "auto-approved (non-interactive mode)",
-      "reviewer": "auto",
-      "timestamp": "2026-08-15T15:56:50.063985+00:00",
-      "evidence_hash": "866565db36972b18",
-      "generated_text_hash": "60508e55f8a10a0a"
+      "reviewer_comment": "Automated batch review approval (CI Mode)",
+      "reviewer": "Automated CI Reviewer",
+      "timestamp": "2026-08-15T17:41:22.201721+00:00",
+      "evidence_hash": "73c5cd706e19d486",
+      "generated_text_hash": "94878cb46516d5d9",
+      "generation_version": 1,
+      "grounding_status": "PASS",
+      "grounding_score": 1.0,
+      "history": [
+        {
+          "generation_version": 1,
+          "generated_text_hash": "94878cb46516d5d9",
+          "evidence_hash": "73c5cd706e19d486",
+          "grounding_status": "PASS",
+          "grounding_score": 1.0,
+          "human_status": "APPROVED",
+          "reviewer": "Automated CI Reviewer",
+          "reviewer_comment": "Automated batch review approval (CI Mode)",
+          "timestamp": "2026-08-15T17:27:28.318897+00:00"
+        }
+      ]
     }
-  ]
+  }
 }

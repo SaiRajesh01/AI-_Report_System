@@ -6,7 +6,7 @@ Streamlit application providing:
 2. Deterministic Analysis Explorer (visualize exact calculated figures)
 3. Scoped Evidence Inspector (browse evidence metrics and definitions)
 4. Report & Claim-Level Grounding Review (approve / flag / regenerate sections)
-5. Final Report Generator & Multi-Format Exporter (DOCX, Markdown, JSON)
+5. Final Report Generator & Multi-Format Exporter (DOCX, Markdown, JSON) — STRICTLY HARD-GATED
 """
 from __future__ import annotations
 
@@ -21,9 +21,9 @@ from src.data_loader import load_dataset_pipeline, DatasetContainer
 from src.analysis_pipeline import run_deterministic_analysis_pipeline
 from src.evidence_builder import build_all_section_evidence_packets
 from src.llm_generator import generate_section_llm
-from src.report_assembler import assemble_draft_pader_report
+from src.report_assembler import assemble_draft_pader_report, assemble_final_pader_report
 from src.docx_exporter import export_markdown_to_docx
-from src.review_manager import HumanReviewSession
+from src.review_manager import HumanReviewSession, FinalizationBlockedError
 from src.evidence_model import CompleteAnalysisPackage
 
 # Page Configuration
@@ -34,7 +34,7 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Custom CSS Styling for Premium Clean UI
+# Custom CSS Styling for High-Clarity Regulatory UI
 st.markdown("""
 <style>
     .main-header {
@@ -55,29 +55,46 @@ st.markdown("""
         border-radius: 4px;
         box-shadow: 0 1px 3px rgba(0,0,0,0.05);
     }
-    .status-badge-approved {
+    .badge-approved {
         background-color: #D4EDDA;
         color: #155724;
         padding: 0.25rem 0.6rem;
         border-radius: 12px;
         font-weight: 600;
         font-size: 0.85rem;
+        border: 1px solid #C3E6CB;
     }
-    .status-badge-flagged {
+    .badge-flagged {
+        background-color: #F8D7DA;
+        color: #721C24;
+        padding: 0.25rem 0.6rem;
+        border-radius: 12px;
+        font-weight: 600;
+        font-size: 0.85rem;
+        border: 1px solid #F5C6CB;
+    }
+    .badge-pending {
         background-color: #FFF3CD;
         color: #856404;
         padding: 0.25rem 0.6rem;
         border-radius: 12px;
         font-weight: 600;
         font-size: 0.85rem;
+        border: 1px solid #FFEEBA;
     }
-    .status-badge-pending {
-        background-color: #E2E3E5;
-        color: #383D41;
-        padding: 0.25rem 0.6rem;
-        border-radius: 12px;
-        font-weight: 600;
-        font-size: 0.85rem;
+    .gate-blocked-card {
+        background-color: #FFF5F5;
+        border-left: 6px solid #E53E3E;
+        padding: 1.2rem;
+        border-radius: 6px;
+        margin-bottom: 1.5rem;
+    }
+    .gate-passed-card {
+        background-color: #F0FFF4;
+        border-left: 6px solid #38A169;
+        padding: 1.2rem;
+        border-radius: 6px;
+        margin-bottom: 1.5rem;
     }
 </style>
 """, unsafe_allow_html=True)
@@ -95,9 +112,8 @@ def init_app_state():
         st.session_state.generated_sections = {}
         st.session_state.draft_report = None
         st.session_state.review_session = HumanReviewSession()
-        st.session_state.section_versions = {}
+        st.session_state.selected_review_section = "narrative_summary"
 
-        # Auto-load pre-computed pipeline data if available
         try:
             container = load_dataset_pipeline("Bisoprolol_icsr_sample_1068rows.csv")
             pkg = run_deterministic_analysis_pipeline()
@@ -116,7 +132,6 @@ def init_app_state():
             st.session_state.draft_report = draft
             st.session_state.pipeline_ran = True
 
-            # Init review session sections
             sec_meta = [{"id": sid, "title": pkt.section_title} for sid, pkt in packets.items()]
             st.session_state.review_session.init_sections(sec_meta)
         except Exception as e:
@@ -145,8 +160,8 @@ with st.sidebar:
     )
 
     st.markdown("---")
-    st.markdown("### Review Progress")
-    review_session = st.session_state.review_session
+    st.markdown("### Human Review Gatekeeper")
+    review_session: HumanReviewSession = st.session_state.review_session
     approved_cnt = sum(1 for r in review_session.records.values() if r.status == "APPROVED")
     flagged_cnt = sum(1 for r in review_session.records.values() if r.status == "FLAGGED")
     pending_cnt = sum(1 for r in review_session.records.values() if r.status == "PENDING")
@@ -155,11 +170,17 @@ with st.sidebar:
     prog_pct = int((approved_cnt / total_sec) * 100)
     st.progress(prog_pct)
     st.caption(f"**{approved_cnt} / {total_sec}** Sections Approved ({prog_pct}%)")
-    st.caption(f"🟡 **{flagged_cnt}** Flagged | ⚪ **{pending_cnt}** Pending")
+    st.caption(f"🟢 **{approved_cnt}** Approved | 🔴 **{flagged_cnt}** Flagged | 🟡 **{pending_cnt}** Pending")
+
+    is_finalizable, blockers = review_session.can_finalize()
+    if is_finalizable:
+        st.success("🟢 Ready for Final Report")
+    else:
+        st.warning(f"🔴 Finalization Blocked ({len(blockers)} items)")
 
     st.markdown("---")
-    if st.button("🔄 Re-run Full Pipeline", use_container_width=True):
-        with st.spinner("Executing deterministic analysis and report generation..."):
+    if st.button("🔄 Re-run Full Pipeline (Reset Draft)", use_container_width=True):
+        with st.spinner("Executing deterministic analysis and refreshing draft..."):
             container = load_dataset_pipeline("Bisoprolol_icsr_sample_1068rows.csv")
             pkg = run_deterministic_analysis_pipeline()
             packets = build_all_section_evidence_packets(pkg, dedup_df=container.dedup_df)
@@ -210,18 +231,22 @@ if nav_choice == "📊 Executive Dashboard":
     st.markdown("---")
 
     # Review Progress & Section Status Matrix
-    st.subheader("Report Sections Review Status")
+    st.subheader("Section Review & Quality Assurance Matrix")
     status_rows = []
     for sid, rec in st.session_state.review_session.records.items():
         sec_out = st.session_state.generated_sections.get(sid)
         g_score = f"{sec_out.grounding_score:.0%}" if sec_out else "N/A"
+        g_status = "PASS" if (sec_out and sec_out.grounding_score >= 0.80) else "FLAGGED"
         mode = sec_out.generation_mode.upper() if sec_out else "N/A"
 
         status_rows.append({
             "Section Title": rec.section_title,
             "Mode": mode,
+            "Version": f"v{rec.generation_version}",
+            "Automated Grounding": g_status,
             "Grounding Score": g_score,
-            "Review Status": rec.status,
+            "Human Review Status": rec.status,
+            "Reviewer": rec.reviewer,
             "Reviewer Comment": rec.reviewer_comment or "--",
             "Last Updated": rec.timestamp[:19].replace("T", " ")
         })
@@ -249,134 +274,135 @@ elif nav_choice == "🔍 Deterministic Analysis":
     tab_case, tab_demo, tab_rxn, tab_out, tab_trend, tab_alert = st.tabs([
         "📋 Case Volumes & Seriousness",
         "👥 Demographics & Geography",
-        "⚡ Adverse Reactions (PTs)",
-        "🎯 Clinical Outcomes",
-        "📈 Temporal Trends",
-        "🚨 Expedited Alerts & Scoping"
+        "💊 Adverse Reactions (PTs)",
+        "🏥 Clinical Outcomes",
+        "📈 Trends & Reporting Velocity",
+        "🚨 15-Day Expedited Alerts"
     ])
 
     with tab_case:
-        st.subheader("Case Overview & Seriousness Criteria Breakdown")
-        case_sec = pkg.sections.get("case_analysis")
-        if case_sec:
-            c1, c2 = st.columns([1, 1])
-            with c1:
-                st.markdown("#### Independent Seriousness Criteria Flags")
-                crit_dict = case_sec.get_metric("SER-SUMMARY").value
-                crit_df = pd.DataFrame([
-                    {"Seriousness Criterion": k, "Case Count": v["count"], "Percentage": f"{v['percentage']}%"}
-                    for k, v in crit_dict.items()
-                ])
-                st.dataframe(crit_df, use_container_width=True, hide_index=True)
+        sec = pkg.sections["case_analysis"]
+        st.subheader("Case Overview & Seriousness Criteria")
+        c1, c2, c3 = st.columns(3)
+        c1.metric("Total Unique Cases", f"{sec.get_metric('CO-001').value:,}")
+        c2.metric("Serious Cases", f"{sec.get_metric('CO-002').value:,} ({sec.get_metric('CO-003').value}%)")
+        c3.metric("Non-Serious Cases", f"{sec.get_metric('CO-004').value:,}")
 
-            with c2:
-                st.markdown("#### Drug Characterization Role for Bisoprolol")
-                role_dict = case_sec.get_metric("DC-ROLE-001").value
-                role_df = pd.DataFrame([
-                    {"Drug Role": k.title(), "Cases": v["count"], "Percentage": f"{v['percentage']}%"}
-                    for k, v in role_dict.items()
-                ])
-                st.dataframe(role_df, use_container_width=True, hide_index=True)
-                st.caption("Notice that in 65.04% of cases, Bisoprolol was a concomitant medication.")
+        st.markdown("#### Seriousness Criteria Breakdown")
+        ser_data = sec.get_metric("SER-SUMMARY").value
+        ser_df = pd.DataFrame([
+            {"Criterion": k, "Case Count": v["count"], "Percentage": f"{v['percentage']}%"}
+            for k, v in ser_data.items()
+        ])
+        st.dataframe(ser_df, use_container_width=True, hide_index=True)
+
+        st.markdown("#### Bisoprolol Drug Characterization Roles")
+        role_data = sec.get_metric("DC-ROLE-001").value
+        role_df = pd.DataFrame([
+            {"Reported Drug Role": k.capitalize(), "Cases": v["count"], "Percentage": f"{v['percentage']}%"}
+            for k, v in role_data.items()
+        ])
+        st.dataframe(role_df, use_container_width=True, hide_index=True)
 
     with tab_demo:
-        st.subheader("Patient Demographics and Origin Distribution")
-        demo_sec = pkg.sections.get("demographic_analysis")
-        if demo_sec:
-            c1, c2 = st.columns(2)
-            with c1:
-                st.markdown("#### WHO / ICH Standard Age Groups")
-                age_dict = demo_sec.get_metric("DEMO-AGEGROUP-ALL").value
-                age_df = pd.DataFrame([
-                    {"Age Group": k, "Case Count": v["count"], "Percentage": f"{v['percentage']}%"}
-                    for k, v in age_dict.items()
-                ])
-                st.dataframe(age_df, use_container_width=True, hide_index=True)
+        sec = pkg.sections["demographic_analysis"]
+        st.subheader("Patient Demographics & Country of Occurrence")
+        d1, d2, d3, d4 = st.columns(4)
+        stats = sec.get_metric("DEMO-AGE-STATS").value
+        d1.metric("Mean Age", f"{stats['mean']} years")
+        d2.metric("Median Age", f"{stats['median']} years")
+        d3.metric("Age Range", f"{stats['min']} - {stats['max']} yrs")
+        d4.metric("Age Known Cases", f"{stats['reported_count']} / {sec.metadata['total_cases']}")
 
-            with c2:
-                st.markdown("#### Geographic Origin (primarysourcecountry)")
-                geo_dict = demo_sec.get_metric("DEMO-GEO-ALL").value
-                geo_df = pd.DataFrame([
-                    {"Country": k, "Cases": v["count"], "Percentage": f"{v['percentage']}%"}
-                    for k, v in geo_dict.items()
-                ])
-                st.dataframe(geo_df.head(10), use_container_width=True, hide_index=True)
+        st.markdown("#### Sex Distribution")
+        sex_data = sec.get_metric("DEMO-SEX-ALL").value
+        st.dataframe(pd.DataFrame([
+            {"Sex": k.capitalize(), "Cases": v["count"], "Percentage": f"{v['percentage']}%"}
+            for k, v in sex_data.items()
+        ]), use_container_width=True, hide_index=True)
+
+        st.markdown("#### Age Group Stratification (WHO Standards)")
+        age_data = sec.get_metric("DEMO-AGE-GROUPS").value
+        st.dataframe(pd.DataFrame([
+            {"Age Group": k, "Cases": v["count"], "Percentage": f"{v['percentage']}%"}
+            for k, v in age_data.items()
+        ]), use_container_width=True, hide_index=True)
 
     with tab_rxn:
-        st.subheader("Adverse Reactions at MedDRA Preferred Term (PT) Level")
-        rxn_sec = pkg.sections.get("reaction_analysis")
-        if rxn_sec:
-            st.info("System Organ Class (SOC) coding is omitted because no SOC field is present in the dataset.")
-            top_table = rxn_sec.get_metric("RXN-TOP20-TABLE").value
-            rxn_df = pd.DataFrame(top_table)
-            st.dataframe(rxn_df, use_container_width=True, hide_index=True)
+        sec = pkg.sections["reaction_analysis"]
+        st.subheader("Adverse Reaction Aggregations (MedDRA Preferred Terms)")
+        r1, r2 = st.columns(2)
+        r1.metric("Total Reaction Occurrences", f"{sec.get_metric('RXN-001').value:,}")
+        r2.metric("Unique Preferred Terms (PTs)", f"{sec.get_metric('RXN-002').value:,}")
+
+        st.markdown("#### Top 20 Most Frequent Preferred Terms")
+        top_table = sec.get_metric("RXN-TOP20-TABLE").value
+        st.dataframe(pd.DataFrame(top_table), use_container_width=True, hide_index=True)
 
     with tab_out:
-        st.subheader("Clinical Reaction Outcomes & Worst-Case Severity Hierarchy")
-        out_sec = pkg.sections.get("outcome_analysis")
-        if out_sec:
-            c1, c2 = st.columns(2)
-            with c1:
-                st.markdown("#### Reaction-Level Outcomes")
-                rxn_out = out_sec.get_metric("OUT-RXN-ALL").value
-                st.dataframe(pd.DataFrame([{"Outcome": k, "Occurrences": v["count"], "%": f"{v['percentage']}%"} for k, v in rxn_out.items()]), use_container_width=True, hide_index=True)
+        sec = pkg.sections["outcome_analysis"]
+        st.subheader("Clinical Outcomes & Severity Distribution")
+        o1, o2 = st.columns(2)
+        o1.metric("Case Worst Fatalities", f"{sec.get_metric('OUT-CASE-FATAL').value}")
+        o2.metric("Total Outcomes Recorded", f"{sec.get_metric('OUT-RXN-TOTAL').value:,}")
 
-            with c2:
-                st.markdown("#### Case-Level Worst Outcome")
-                case_out = out_sec.get_metric("OUT-CASE-ALL").value
-                st.dataframe(pd.DataFrame([{"Worst Outcome": k, "Cases": v["count"], "%": f"{v['percentage']}%"} for k, v in case_out.items()]), use_container_width=True, hide_index=True)
+        st.markdown("#### Case-Level Worst Outcome Distribution")
+        case_outs = sec.get_metric("OUT-CASE-ALL").value
+        st.dataframe(pd.DataFrame([
+            {"Clinical Outcome": k.capitalize(), "Distinct Cases": v["count"], "Percentage": f"{v['percentage']}%"}
+            for k, v in case_outs.items()
+        ]), use_container_width=True, hide_index=True)
 
     with tab_trend:
-        st.subheader("Reporting Volume Over Time & Volume Velocity")
-        trend_sec = pkg.sections.get("trend_analysis")
-        if trend_sec:
-            monthly = trend_sec.get_metric("TIME-MONTHLY-COUNTS").value
-            m_df = pd.DataFrame(list(monthly.items()), columns=["Month", "Cases"])
-            st.line_chart(m_df.set_index("Month"))
+        sec = pkg.sections["trend_analysis"]
+        st.subheader("Temporal Trends and Reporting Velocity")
+        vel = sec.get_metric("TIME-VELOCITY-001").value
+        t1, t2, t3 = st.columns(3)
+        t1.metric("First Half Cases", f"{vel['first_half_cases']}")
+        t2.metric("Second Half Cases", f"{vel['second_half_cases']}")
+        t3.metric("Volume Velocity", f"{vel['velocity_percentage']:+.2f}% ({vel['trend_direction'].upper()})")
 
-            vel = trend_sec.get_metric("TIME-VELOCITY-001").value
-            st.metric("Reporting Velocity Trend", vel.get("trend_direction", "stable").upper(), delta=f"{vel.get('percentage_change')}% change")
+        st.markdown("#### Monthly Case Volumes")
+        monthly = sec.get_metric("TIME-MONTHLY-COUNTS").value
+        st.bar_chart(pd.DataFrame(list(monthly.items()), columns=["Month", "Cases"]).set_index("Month"))
 
     with tab_alert:
-        st.subheader("15-Day Expedited Alerts & Compliance Declarations")
-        alert_sec = pkg.sections.get("alert_analysis")
-        if alert_sec:
-            c1, c2 = st.columns(2)
-            with c1:
-                st.markdown("#### 15-Day Expedited Cases Fatal vs Non-Fatal")
-                fatal_split = alert_sec.get_metric("ALERT-FATAL-SPLIT").value
-                st.json(fatal_split)
-            with c2:
-                st.markdown("#### Regulatory Compliance Declarations")
-                st.markdown("- **History of Actions**: Explicit statement of no actions reported.")
-                st.markdown("- **Expectedness**: Out of scope (No Reference Safety Information / CCDS supplied).")
+        sec = pkg.sections["alert_analysis"]
+        st.subheader("15-Day Expedited Alert Scoping")
+        st.metric("Total Expedited 15-Day Alert Reports", f"{sec.get_metric('ALERT-001').value:,}")
+        st.info("99.9% of cases met 15-day expedited reporting criteria under 21 CFR 314.80(c)(1)(i).")
 
 
-# ─── 3. SCOPED EVIDENCE INSPECTOR ────────────────────────────────────────────
+# ─── 3. SCOPED EVIDENCE INSPECTOR ─────────────────────────────────────────────
 
 elif nav_choice == "📦 Scoped Evidence":
-    st.markdown('<div class="main-header">Scoped Evidence Inspector</div>', unsafe_allow_html=True)
-    st.markdown('<div class="sub-header">Inspect the exact evidence metrics provided to each individual report section</div>', unsafe_allow_html=True)
+    st.markdown('<div class="main-header">Scoped Evidence Packet Inspector</div>', unsafe_allow_html=True)
+    st.markdown('<div class="sub-header">Inspect isolated section evidence bundles. The LLM only receives approved scoped data.</div>', unsafe_allow_html=True)
 
     packets = st.session_state.evidence_packets
     if packets:
-        sec_choice = st.selectbox("Select Report Section", list(packets.keys()), format_func=lambda k: packets[k].section_title)
-        packet = packets[sec_choice]
+        sec_id = st.selectbox(
+            "Select Section Evidence Packet",
+            list(packets.keys()),
+            format_func=lambda k: packets[k].section_title
+        )
+        packet = packets[sec_id]
 
-        st.markdown(f"### Evidence Catalog for {packet.section_title}")
-        st.caption(f"Product: {packet.product_name} | Interval: {packet.reporting_period.get('start_date')} to {packet.reporting_period.get('end_date')}")
+        st.markdown(f"### Evidence Scope: **{packet.section_title}**")
+        st.markdown(f"**Target Product**: `{packet.product_name}` | **Reporting Window**: `{packet.reporting_period.get('start_date')}` to `{packet.reporting_period.get('end_date')}`")
 
-        st.markdown("#### Enforced Constraints")
+        st.markdown("#### Section Constraints Enforced on AI")
         for c in packet.constraints:
             st.markdown(f"- 🔒 {c}")
 
-        st.markdown("---")
-        st.markdown("#### Approved Metrics Table")
+        st.markdown("#### Approved Metric Catalog & Provenance")
         cat_rows = []
         for item in packet.metric_catalog:
             cat_rows.append({
                 "Evidence ID": item.get("evidence_id"),
-                "Metric Name": item.get("metric_name"),
+                "Metric Name": item.get("name"),
+                "Value": str(item.get("value")),
+                "Source Field(s)": ", ".join(item.get("source_fields", [])),
                 "Scope": item.get("scope"),
                 "Calculation Definition": item.get("definition"),
                 "Notes": item.get("notes") or "--"
@@ -391,7 +417,7 @@ elif nav_choice == "📦 Scoped Evidence":
 
 elif nav_choice == "📝 Report & Claim Review":
     st.markdown('<div class="main-header">Report Section & Claim Review</div>', unsafe_allow_html=True)
-    st.markdown('<div class="sub-header">Inspect generated prose, audit claim grounding, and record human review decisions</div>', unsafe_allow_html=True)
+    st.markdown('<div class="sub-header">Review generated draft, audit grounding claims, and record human approval or rejection</div>', unsafe_allow_html=True)
 
     packets = st.session_state.evidence_packets
     sections = st.session_state.generated_sections
@@ -401,28 +427,50 @@ elif nav_choice == "📝 Report & Claim Review":
         sec_id = st.selectbox(
             "Select Section to Review",
             list(packets.keys()),
-            format_func=lambda k: f"{packets[k].section_title} [{review_session.records.get(k, {}).status or 'PENDING'}]"
+            index=list(packets.keys()).index(st.session_state.get("selected_review_section", "narrative_summary")),
+            format_func=lambda k: f"{packets[k].section_title} [Human: {review_session.records.get(k).status if review_session.records.get(k) else 'PENDING'}]"
         )
+        st.session_state.selected_review_section = sec_id
 
         sec_packet = packets[sec_id]
         sec_output = sections.get(sec_id)
         current_rec = review_session.records.get(sec_id)
 
-        # Top Section Banner with Status Badge
-        badge_class = f"status-badge-{current_rec.status.lower()}" if current_rec else "status-badge-pending"
-        st.markdown(f"### {sec_packet.section_title} <span class='{badge_class}'>{current_rec.status if current_rec else 'PENDING'}</span>", unsafe_allow_html=True)
+        # Dual Status Badges
+        h_status = current_rec.status if current_rec else "PENDING"
+        g_score = sec_output.grounding_score if sec_output else 1.0
+        g_status = "PASS" if g_score >= 0.80 else "FLAGGED"
+
+        badge_human = f"badge-{h_status.lower()}"
+        badge_ground = "badge-approved" if g_status == "PASS" else "badge-flagged"
+
+        st.markdown(
+            f"### {sec_packet.section_title} &nbsp; "
+            f"<span class='{badge_human}'>Human: {h_status}</span> &nbsp; "
+            f"<span class='{badge_ground}'>Grounding: {g_status} ({g_score:.0%})</span> &nbsp; "
+            f"<span style='font-size:0.9rem; color:#666;'>Version: v{current_rec.generation_version if current_rec else 1}</span>",
+            unsafe_allow_html=True
+        )
 
         col_left, col_right = st.columns([1.1, 0.9])
 
         with col_left:
-            st.markdown("#### Generated Report Section")
+            st.markdown("#### Generated Draft Content")
             if sec_output:
                 st.markdown(sec_output.generated_text)
             else:
                 st.warning("Section has not been generated.")
 
+            if current_rec and current_rec.history:
+                with st.expander(f"📜 View Previous Version History ({len(current_rec.history)} prior versions)"):
+                    for h in reversed(current_rec.history):
+                        st.markdown(f"**Version {h['generation_version']}** ({h['timestamp'][:19]}) | Status: `{h['human_status']}` | Grounding: `{h['grounding_status']}` ({h['grounding_score']:.0%})")
+                        if h.get("reviewer_comment"):
+                            st.caption(f"Reviewer Note: {h['reviewer_comment']}")
+                        st.markdown("---")
+
         with col_right:
-            st.markdown("#### Claim-Level Grounding Audit")
+            st.markdown("#### Automated Claim Grounding Audit")
             if sec_output and sec_output.claims:
                 claim_rows = []
                 for c in sec_output.claims:
@@ -430,7 +478,7 @@ elif nav_choice == "📝 Report & Claim Review":
                         "Claim Statement": c.claim_text[:75] + "..." if len(c.claim_text) > 75 else c.claim_text,
                         "Evidence ID": c.evidence_id or "N/A",
                         "Status": c.status,
-                        "Reason": c.flag_reason or "Verified"
+                        "Reason": c.flag_reason or "Verified Grounded"
                     })
                 df_claims = pd.DataFrame(claim_rows)
                 st.dataframe(df_claims, use_container_width=True, hide_index=True)
@@ -438,63 +486,59 @@ elif nav_choice == "📝 Report & Claim Review":
                 st.info("Deterministic section with verified fixed regulatory structure.")
 
             st.markdown("---")
-            st.markdown("#### Human Review Decision")
+            st.markdown("#### Human Review Decision & Actions")
 
-            reviewer_name = st.text_input("Reviewer Name", value=current_rec.reviewer if current_rec else "Safety Reviewer")
-            reviewer_comment = st.text_area("Reviewer Comment / Flag Reason", value=current_rec.reviewer_comment or "")
+            reviewer_name = st.text_input("Safety Reviewer Name", value=current_rec.reviewer if current_rec else "Lead Safety Reviewer")
+            reviewer_comment = st.text_area("Reviewer Comment / Flag Reason", value=current_rec.reviewer_comment or "", placeholder="Provide justification for approval or detailed reason for rejection/flagging...")
 
             btn_col1, btn_col2, btn_col3 = st.columns(3)
 
             with btn_col1:
                 if st.button("✅ Approve Section", use_container_width=True):
-                    review_session.record_decision(
+                    review_session.approve_section(
                         section_id=sec_id,
                         section_title=sec_packet.section_title,
-                        decision="approve",
-                        comment=reviewer_comment or "Approved as compliant",
+                        comment=reviewer_comment or "Approved compliant by safety reviewer",
                         reviewer=reviewer_name,
                         evidence_text=json.dumps(sec_packet.approved_metrics),
-                        generated_text=sec_output.generated_text if sec_output else ""
+                        generated_text=sec_output.generated_text if sec_output else "",
+                        grounding_score=g_score
                     )
-                    st.success(f"Section '{sec_packet.section_title}' Approved!")
+                    st.success(f"Section '{sec_packet.section_title}' APPROVED!")
                     st.rerun()
 
             with btn_col2:
-                if st.button("⚠️ Flag Section", use_container_width=True):
+                if st.button("🔴 Reject / Flag", use_container_width=True):
                     if not reviewer_comment.strip():
-                        st.error("Please provide a reason in the Reviewer Comment box before flagging.")
+                        st.error("❌ A comment/reason is REQUIRED when rejecting/flagging a section.")
                     else:
-                        review_session.record_decision(
+                        review_session.flag_section(
                             section_id=sec_id,
                             section_title=sec_packet.section_title,
-                            decision="flag",
                             comment=reviewer_comment,
                             reviewer=reviewer_name,
                             evidence_text=json.dumps(sec_packet.approved_metrics),
-                            generated_text=sec_output.generated_text if sec_output else ""
+                            generated_text=sec_output.generated_text if sec_output else "",
+                            grounding_score=g_score
                         )
-                        st.warning(f"Section '{sec_packet.section_title}' marked as FLAGGED.")
+                        st.warning(f"Section '{sec_packet.section_title}' FLAGGED. Must be regenerated.")
                         st.rerun()
 
             with btn_col3:
                 if st.button("🔄 Regenerate", use_container_width=True):
                     with st.spinner(f"Regenerating {sec_packet.section_title}..."):
-                        cur_ver = st.session_state.section_versions.get(sec_id, 1) + 1
-                        st.session_state.section_versions[sec_id] = cur_ver
-
                         new_sec_out = generate_section_llm(sec_id, sec_packet)
                         st.session_state.generated_sections[sec_id] = new_sec_out
 
-                        # Reset review status on regeneration
-                        review_session.record_decision(
+                        # Reset review status strictly to PENDING
+                        review_session.record_regeneration(
                             section_id=sec_id,
                             section_title=sec_packet.section_title,
-                            decision="regenerate",
-                            comment=f"Regenerated version {cur_ver}",
+                            new_generated_text=new_sec_out.generated_text,
+                            new_evidence_text=json.dumps(sec_packet.approved_metrics),
+                            new_grounding_score=new_sec_out.grounding_score,
                             reviewer=reviewer_name,
-                            evidence_text=json.dumps(sec_packet.approved_metrics),
-                            generated_text=new_sec_out.generated_text,
-                            generation_version=cur_ver
+                            comment=f"Regenerated; reason: {reviewer_comment or 'User requested regeneration'}"
                         )
 
                         # Re-assemble draft
@@ -503,67 +547,104 @@ elif nav_choice == "📝 Report & Claim Review":
                             st.session_state.pkg.reporting_period,
                             "pader_bisoprolol_draft.md"
                         )
-                        st.success("Section regenerated!")
+                        st.info("Section regenerated! Review status reset to PENDING.")
                         st.rerun()
 
 
-# ─── 5. FINAL REPORT & MULTI-FORMAT EXPORT ───────────────────────────────────
+# ─── 5. FINAL REPORT & MULTI-FORMAT EXPORT (STRICTLY HARD-GATED) ───────────────
 
 elif nav_choice == "📑 Final Report & Export":
-    st.markdown('<div class="main-header">Final Report & Multi-Format Export</div>', unsafe_allow_html=True)
-    st.markdown('<div class="sub-header">Generate, inspect, and download the finalized regulatory PADER report package</div>', unsafe_allow_html=True)
+    st.markdown('<div class="main-header">Final Report & Regulatory Export</div>', unsafe_allow_html=True)
+    st.markdown('<div class="sub-header">Compile, inspect, and export the official regulatory PADER report package</div>', unsafe_allow_html=True)
 
     review_session = st.session_state.review_session
     draft = st.session_state.draft_report
+    sections = st.session_state.generated_sections
+    pkg = st.session_state.pkg
 
-    # Approval Gatekeeper Check
-    all_approved = review_session.is_all_approved()
-    flagged_list = review_session.get_flagged_sections()
-    pending_list = review_session.get_pending_sections()
+    # Hard Gatekeeper Verification
+    is_finalizable, blockers = review_session.can_finalize()
 
-    if not all_approved:
-        st.warning(
-            f"⚠️ **Human Review Control Notice**: {len(pending_list)} pending section(s) and {len(flagged_list)} flagged section(s) remain. "
-            "Regulatory guidelines recommend reviewing all sections before report finalization."
-        )
-        override = st.checkbox("Acknowledge observations and proceed with report compilation")
+    if not is_finalizable:
+        # GATING ACTIVE - REPORT BLOCKED
+        st.markdown(f"""
+        <div class="gate-blocked-card">
+            <h3 style="color:#C53030; margin-top:0;">🛑 Final Report Generation Blocked</h3>
+            <p><strong>Regulatory Compliance Notice</strong>: Under 21 CFR 314.80 quality assurance standards, every section must be explicitly reviewed and <strong>APPROVED</strong> by a qualified safety reviewer. No unreviewed (PENDING) or FLAGGED sections may be finalized.</p>
+            <p><strong>Blocking Items ({len(blockers)}):</strong></p>
+            <ul>
+                {"".join(f"<li><strong>{b}</strong></li>" for b in blockers)}
+            </ul>
+        </div>
+        """, unsafe_allow_html=True)
+
+        st.markdown("### Action Required to Unlock Final Report")
+        st.info("Navigate back to **'📝 Report & Claim Review'** to review pending sections or regenerate flagged sections.")
+
+        # Show section-by-section breakdown with direct action hints
+        st.markdown("#### Section Sign-off Status")
+        gate_rows = []
+        for sid in HumanReviewSession.REQUIRED_SECTIONS:
+            rec = review_session.records.get(sid)
+            status = rec.status if rec else "MISSING"
+            gate_rows.append({
+                "Section": rec.section_title if rec else sid,
+                "Version": f"v{rec.generation_version}" if rec else "--",
+                "Human Review Status": status,
+                "Reviewer": rec.reviewer if rec else "--",
+                "Reviewer Note": rec.reviewer_comment or "--",
+                "Can Finalize?": "✅ YES" if status == "APPROVED" else "❌ BLOCKED"
+            })
+        st.dataframe(pd.DataFrame(gate_rows), use_container_width=True, hide_index=True)
+
     else:
-        st.success("✅ **All Sections Approved**: Human review verification complete. The final report is ready for export.")
-        override = True
+        # ALL SECTIONS APPROVED - FINALIZATION ALLOWED
+        st.markdown(f"""
+        <div class="gate-passed-card">
+            <h3 style="color:#22543D; margin-top:0;">✅ All 8 Sections Approved by Human Reviewer</h3>
+            <p>Quality assurance sign-off is complete. 100% of required sections have been verified, grounded, and approved for official regulatory submission.</p>
+        </div>
+        """, unsafe_allow_html=True)
 
-    if override and draft:
-        st.markdown("### Export Report Packages")
+        # Assemble official final report
+        final_report = assemble_final_pader_report(
+            sections=sections,
+            reporting_period=pkg.reporting_period,
+            review_session=review_session,
+            output_filename="pader_bisoprolol_final.md"
+        )
 
-        # Prepare export files
-        md_text = draft.generated_markdown
-        docx_path = REPORT_OUTPUT_DIR / "pader_bisoprolol.docx"
+        md_text = final_report.generated_markdown
+        docx_path = REPORT_OUTPUT_DIR / "pader_bisoprolol_final.docx"
         export_markdown_to_docx(md_text, docx_path)
+
+        st.markdown("### Download Official Final Deliverables")
 
         exp_col1, exp_col2, exp_col3, exp_col4 = st.columns(4)
 
         with exp_col1:
             with open(docx_path, "rb") as f:
                 st.download_button(
-                    label="📥 Download Word (.docx)",
+                    label="📥 Final Word Document (.docx)",
                     data=f.read(),
-                    file_name="pader_bisoprolol.docx",
+                    file_name="pader_bisoprolol_final.docx",
                     mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document",
                     use_container_width=True
                 )
 
         with exp_col2:
             st.download_button(
-                label="📥 Download Markdown (.md)",
+                label="📥 Final Markdown (.md)",
                 data=md_text,
-                file_name="pader_bisoprolol.md",
+                file_name="pader_bisoprolol_final.md",
                 mime="text/markdown",
                 use_container_width=True
             )
 
         with exp_col3:
-            pkg_json = st.session_state.pkg.model_dump_json(indent=2)
+            pkg_json = pkg.model_dump_json(indent=2)
             st.download_button(
-                label="📥 Evidence Bundle (.json)",
+                label="📥 Complete Evidence Bundle (.json)",
                 data=pkg_json,
                 file_name="complete_analysis_package.json",
                 mime="application/json",
@@ -573,7 +654,7 @@ elif nav_choice == "📑 Final Report & Export":
         with exp_col4:
             audit_json = json.dumps(review_session.to_dict(), indent=2)
             st.download_button(
-                label="📥 Review Audit Log (.json)",
+                label="📥 Review Audit Trail Log (.json)",
                 data=audit_json,
                 file_name="review_session.json",
                 mime="application/json",
@@ -581,5 +662,5 @@ elif nav_choice == "📑 Final Report & Export":
             )
 
         st.markdown("---")
-        st.subheader("Compiled Report Document Preview")
+        st.subheader("Official Final Report Document Preview")
         st.markdown(md_text)

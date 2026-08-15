@@ -183,14 +183,18 @@ class TestHumanReviewLogic:
     def test_flagged_sections_prevent_clean_approval(self, tmp_path):
         session = HumanReviewSession(session_file=tmp_path / "review_test.json")
         session.init_sections([{"id": "sec_1", "title": "Section 1"}])
-        session.record_decision("sec_1", "Section 1", "flag", comment="Requires revision")
-        assert not session.is_all_approved()
+        session.flag_section("sec_1", "Section 1", comment="Requires revision")
+        assert session.records["sec_1"].status == "FLAGGED"
+        allowed, blockers = session.can_finalize(["sec_1"])
+        assert not allowed
 
     def test_approved_sections_allow_finalization(self, tmp_path):
         session = HumanReviewSession(session_file=tmp_path / "review_test2.json")
         session.init_sections([{"id": "sec_1", "title": "Section 1"}])
-        session.record_decision("sec_1", "Section 1", "approve", comment="Looks great")
-        assert session.is_all_approved()
+        session.approve_section("sec_1", "Section 1", comment="Looks great")
+        assert session.records["sec_1"].status == "APPROVED"
+        allowed, blockers = session.can_finalize(["sec_1"])
+        assert allowed
 
     def test_regeneration_replaces_draft_correctly(self, section_packets):
         pkt = section_packets["trends"]
