@@ -1,0 +1,153 @@
+{
+  "section_id": "outcome_analysis",
+  "section_title": "Reaction and Case-Level Outcome Analysis",
+  "metrics": [
+    {
+      "evidence_id": "OUT-RXN-ALL",
+      "metric_name": "reaction_level_outcome_distribution",
+      "value": {
+        "recovered/resolved": {
+          "count": 1280,
+          "percentage": 37.33
+        },
+        "unknown": {
+          "count": 1039,
+          "percentage": 30.3
+        },
+        "not recovered/not resolved/ongoing": {
+          "count": 536,
+          "percentage": 15.63
+        },
+        "recovering/resolving": {
+          "count": 406,
+          "percentage": 11.84
+        },
+        "fatal": {
+          "count": 134,
+          "percentage": 3.91
+        },
+        "recovered/resolved with sequelae": {
+          "count": 34,
+          "percentage": 0.99
+        }
+      },
+      "unit": "reactions",
+      "source_fields": [
+        "patient_reaction_reactionoutcome"
+      ],
+      "calculation_definition": "COUNT(reactions) GROUP BY outcome",
+      "scope": "reaction-level",
+      "supporting_case_ids": null,
+      "notes": null
+    },
+    {
+      "evidence_id": "OUT-CASE-ALL",
+      "metric_name": "case_level_worst_outcome_distribution",
+      "value": {
+        "recovered/resolved": {
+          "count": 397,
+          "percentage": 38.77
+        },
+        "recovering/resolving": {
+          "count": 202,
+          "percentage": 19.73
+        },
+        "not recovered/not resolved/ongoing": {
+          "count": 184,
+          "percentage": 17.97
+        },
+        "unknown": {
+          "count": 159,
+          "percentage": 15.53
+        },
+        "fatal": {
+          "count": 68,
+          "percentage": 6.64
+        },
+        "recovered/resolved with sequelae": {
+          "count": 14,
+          "percentage": 1.37
+        }
+      },
+      "unit": "cases",
+      "source_fields": [
+        "patient_reaction_reactionoutcome"
+      ],
+      "calculation_definition": "Worst reaction outcome per case based on clinical severity hierarchy (Fatal > Not recovered > Recovering > Recovered > Unknown)",
+      "scope": "case-level",
+      "supporting_case_ids": null,
+      "notes": null
+    },
+    {
+      "evidence_id": "OUT-CROSSTAB-TOP5",
+      "metric_name": "top_5_pts_outcome_crosstab",
+      "value": {
+        "Acute kidney injury": {
+          "recovered/resolved": 44,
+          "recovering/resolving": 14,
+          "unknown": 8,
+          "fatal": 7,
+          "not recovered/not resolved/ongoing": 5,
+          "recovered/resolved with sequelae": 2
+        },
+        "Drug ineffective": {
+          "unknown": 40,
+          "recovered/resolved": 7,
+          "recovering/resolving": 5,
+          "not recovered/not resolved/ongoing": 2
+        },
+        "Hypotension": {
+          "recovered/resolved": 24,
+          "unknown": 9,
+          "recovering/resolving": 8,
+          "not recovered/not resolved/ongoing": 3,
+          "recovered/resolved with sequelae": 1,
+          "fatal": 1
+        },
+        "Drug interaction": {
+          "unknown": 22,
+          "recovered/resolved": 18,
+          "recovering/resolving": 1,
+          "not recovered/not resolved/ongoing": 1,
+          "fatal": 1
+        },
+        "Dyspnoea": {
+          "recovered/resolved": 14,
+          "unknown": 10,
+          "not recovered/not resolved/ongoing": 5,
+          "recovering/resolving": 4,
+          "fatal": 3,
+          "recovered/resolved with sequelae": 2
+        }
+      },
+      "unit": "reactions",
+      "source_fields": [
+        "patient_reaction_reactionmeddrapt",
+        "patient_reaction_reactionoutcome"
+      ],
+      "calculation_definition": "Crosstabulation of reaction outcomes for top 5 Preferred Terms",
+      "scope": "reaction-level",
+      "supporting_case_ids": null,
+      "notes": null
+    }
+  ],
+  "metadata": {
+    "outcome_categories_detected": [
+      "recovered/resolved",
+      "unknown",
+      "not recovered/not resolved/ongoing",
+      "recovering/resolving",
+      "fatal",
+      "recovered/resolved with sequelae"
+    ],
+    "severity_hierarchy": [
+      "unknown",
+      "recovered/resolved",
+      "recovered/resolved with sequelae",
+      "recovering/resolving",
+      "not recovered/not resolved/ongoing",
+      "fatal"
+    ]
+  },
+  "computed_at": "2026-08-15T17:04:30.125168+00:00"
+}

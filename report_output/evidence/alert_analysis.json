@@ -1,0 +1,127 @@
+{
+  "section_id": "alert_and_regulatory_analysis",
+  "section_title": "15-Day Expedited Alerts and Regulatory Declarations",
+  "metrics": [
+    {
+      "evidence_id": "ALERT-001",
+      "metric_name": "expedited_15day_alert_cases_count",
+      "value": 1023,
+      "unit": "cases",
+      "source_fields": [
+        "fulfillexpeditecriteria"
+      ],
+      "calculation_definition": "COUNT(cases WHERE fulfillexpeditecriteria == 'yes')",
+      "scope": "case-level",
+      "supporting_case_ids": null,
+      "notes": null
+    },
+    {
+      "evidence_id": "ALERT-002",
+      "metric_name": "expedited_15day_alert_cases_percentage",
+      "value": 99.9,
+      "unit": "%",
+      "source_fields": [
+        "fulfillexpeditecriteria"
+      ],
+      "calculation_definition": "(expedited_15day_alert_cases_count / total_unique_cases) * 100",
+      "scope": "case-level",
+      "supporting_case_ids": null,
+      "notes": null
+    },
+    {
+      "evidence_id": "ALERT-SERIOUS-CROSSTAB",
+      "metric_name": "expedited_vs_serious_crosstab",
+      "value": {
+        "not serious": {
+          "no": 1,
+          "yes": 0
+        },
+        "serious": {
+          "no": 0,
+          "yes": 1023
+        }
+      },
+      "unit": "cases",
+      "source_fields": [
+        "fulfillexpeditecriteria",
+        "serious"
+      ],
+      "calculation_definition": "Cross-tabulation of fulfillexpeditecriteria by serious classification",
+      "scope": "case-level",
+      "supporting_case_ids": null,
+      "notes": "Evaluates mathematical independence of seriousness and expedited flags."
+    },
+    {
+      "evidence_id": "ALERT-FATAL-SPLIT",
+      "metric_name": "expedited_cases_fatal_split",
+      "value": {
+        "fatal_expedited_cases": 68,
+        "non_fatal_expedited_cases": 955,
+        "total_expedited_cases": 1023
+      },
+      "unit": "cases",
+      "source_fields": [
+        "fulfillexpeditecriteria",
+        "seriousnessdeath"
+      ],
+      "calculation_definition": "COUNT(cases WHERE fulfillexpeditecriteria == 'yes') broken down by seriousnessdeath == 'yes'",
+      "scope": "case-level",
+      "supporting_case_ids": null,
+      "notes": null
+    },
+    {
+      "evidence_id": "ALERT-REPORT-TYPE",
+      "metric_name": "expedited_cases_report_type_breakdown",
+      "value": {
+        "spontaneous report": 1013,
+        "report from study": 10
+      },
+      "unit": "cases",
+      "source_fields": [
+        "fulfillexpeditecriteria",
+        "reporttype"
+      ],
+      "calculation_definition": "GROUP BY reporttype WHERE fulfillexpeditecriteria == 'yes'",
+      "scope": "case-level",
+      "supporting_case_ids": null,
+      "notes": null
+    },
+    {
+      "evidence_id": "HIST-ACTION-001",
+      "metric_name": "history_of_actions_status",
+      "value": {
+        "actions_reported_in_dataset": false,
+        "action_count": 0,
+        "formal_statement": "No safety-related regulatory actions, labeling modifications, or risk-minimization interventions were reported during the interval covered by this report. No history-of-actions records were supplied in the dataset."
+      },
+      "unit": null,
+      "source_fields": [
+        "safetyreportid"
+      ],
+      "calculation_definition": "Regulatory compliance verification: Explicit confirmation of absence of reported actions",
+      "scope": "dataset-level",
+      "supporting_case_ids": null,
+      "notes": "Strict grounding rule: Do not invent safety or regulatory actions."
+    },
+    {
+      "evidence_id": "EXPECT-SCOPE-001",
+      "metric_name": "expectedness_assessment_status",
+      "value": {
+        "expectedness_calculated": false,
+        "reason": "No approved Company Core Data Sheet (CCDS) or Reference Safety Information (RSI) label was provided with the dataset for Version 0."
+      },
+      "unit": null,
+      "source_fields": [
+        "patient_reaction_reactionmeddrapt"
+      ],
+      "calculation_definition": "Compliance check: Expectedness analysis omitted due to lack of reference label",
+      "scope": "dataset-level",
+      "supporting_case_ids": null,
+      "notes": null
+    }
+  ],
+  "metadata": {
+    "total_expedited_cases": 1023
+  },
+  "computed_at": "2026-08-15T17:04:30.189780+00:00"
+}

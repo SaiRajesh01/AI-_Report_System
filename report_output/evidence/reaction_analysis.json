@@ -1,0 +1,759 @@
+{
+  "section_id": "reaction_analysis",
+  "section_title": "Adverse Reaction / Preferred Term Analysis",
+  "metrics": [
+    {
+      "evidence_id": "RXN-001",
+      "metric_name": "total_reaction_occurrences",
+      "value": 3429,
+      "unit": "reactions",
+      "source_fields": [
+        "patient_reaction_reactionmeddrapt"
+      ],
+      "calculation_definition": "Total count of exploded Preferred Term instances across unique cases",
+      "scope": "reaction-level",
+      "supporting_case_ids": null,
+      "notes": "Unpacked from comma-separated string across 1,024 unique deduplicated cases."
+    },
+    {
+      "evidence_id": "RXN-002",
+      "metric_name": "unique_preferred_terms_count",
+      "value": 1122,
+      "unit": "terms",
+      "source_fields": [
+        "patient_reaction_reactionmeddrapt"
+      ],
+      "calculation_definition": "COUNT(DISTINCT pt) across all unpacked reactions",
+      "scope": "reaction-level",
+      "supporting_case_ids": null,
+      "notes": null
+    },
+    {
+      "evidence_id": "RXN-TOP-01",
+      "metric_name": "top_01_reaction_acute_kidney_injury",
+      "value": {
+        "rank": 1,
+        "preferred_term": "Acute kidney injury",
+        "total_occurrences": 80,
+        "percentage_of_reactions": 2.33,
+        "distinct_case_count": 80,
+        "percentage_of_cases": 7.81
+      },
+      "unit": "reactions",
+      "source_fields": [
+        "patient_reaction_reactionmeddrapt"
+      ],
+      "calculation_definition": "Total occurrences and distinct case count for Preferred Term",
+      "scope": "reaction-level",
+      "supporting_case_ids": null,
+      "notes": null
+    },
+    {
+      "evidence_id": "RXN-TOP-02",
+      "metric_name": "top_02_reaction_drug_ineffective",
+      "value": {
+        "rank": 2,
+        "preferred_term": "Drug ineffective",
+        "total_occurrences": 54,
+        "percentage_of_reactions": 1.57,
+        "distinct_case_count": 54,
+        "percentage_of_cases": 5.27
+      },
+      "unit": "reactions",
+      "source_fields": [
+        "patient_reaction_reactionmeddrapt"
+      ],
+      "calculation_definition": "Total occurrences and distinct case count for Preferred Term",
+      "scope": "reaction-level",
+      "supporting_case_ids": null,
+      "notes": null
+    },
+    {
+      "evidence_id": "RXN-TOP-03",
+      "metric_name": "top_03_reaction_hypotension",
+      "value": {
+        "rank": 3,
+        "preferred_term": "Hypotension",
+        "total_occurrences": 46,
+        "percentage_of_reactions": 1.34,
+        "distinct_case_count": 46,
+        "percentage_of_cases": 4.49
+      },
+      "unit": "reactions",
+      "source_fields": [
+        "patient_reaction_reactionmeddrapt"
+      ],
+      "calculation_definition": "Total occurrences and distinct case count for Preferred Term",
+      "scope": "reaction-level",
+      "supporting_case_ids": null,
+      "notes": null
+    },
+    {
+      "evidence_id": "RXN-TOP-04",
+      "metric_name": "top_04_reaction_drug_interaction",
+      "value": {
+        "rank": 4,
+        "preferred_term": "Drug interaction",
+        "total_occurrences": 43,
+        "percentage_of_reactions": 1.25,
+        "distinct_case_count": 43,
+        "percentage_of_cases": 4.2
+      },
+      "unit": "reactions",
+      "source_fields": [
+        "patient_reaction_reactionmeddrapt"
+      ],
+      "calculation_definition": "Total occurrences and distinct case count for Preferred Term",
+      "scope": "reaction-level",
+      "supporting_case_ids": null,
+      "notes": null
+    },
+    {
+      "evidence_id": "RXN-TOP-05",
+      "metric_name": "top_05_reaction_dyspnoea",
+      "value": {
+        "rank": 5,
+        "preferred_term": "Dyspnoea",
+        "total_occurrences": 38,
+        "percentage_of_reactions": 1.11,
+        "distinct_case_count": 38,
+        "percentage_of_cases": 3.71
+      },
+      "unit": "reactions",
+      "source_fields": [
+        "patient_reaction_reactionmeddrapt"
+      ],
+      "calculation_definition": "Total occurrences and distinct case count for Preferred Term",
+      "scope": "reaction-level",
+      "supporting_case_ids": null,
+      "notes": null
+    },
+    {
+      "evidence_id": "RXN-TOP-06",
+      "metric_name": "top_06_reaction_bradycardia",
+      "value": {
+        "rank": 6,
+        "preferred_term": "Bradycardia",
+        "total_occurrences": 37,
+        "percentage_of_reactions": 1.08,
+        "distinct_case_count": 37,
+        "percentage_of_cases": 3.61
+      },
+      "unit": "reactions",
+      "source_fields": [
+        "patient_reaction_reactionmeddrapt"
+      ],
+      "calculation_definition": "Total occurrences and distinct case count for Preferred Term",
+      "scope": "reaction-level",
+      "supporting_case_ids": null,
+      "notes": null
+    },
+    {
+      "evidence_id": "RXN-TOP-07",
+      "metric_name": "top_07_reaction_dizziness",
+      "value": {
+        "rank": 7,
+        "preferred_term": "Dizziness",
+        "total_occurrences": 36,
+        "percentage_of_reactions": 1.05,
+        "distinct_case_count": 36,
+        "percentage_of_cases": 3.52
+      },
+      "unit": "reactions",
+      "source_fields": [
+        "patient_reaction_reactionmeddrapt"
+      ],
+      "calculation_definition": "Total occurrences and distinct case count for Preferred Term",
+      "scope": "reaction-level",
+      "supporting_case_ids": null,
+      "notes": null
+    },
+    {
+      "evidence_id": "RXN-TOP-08",
+      "metric_name": "top_08_reaction_fatigue",
+      "value": {
+        "rank": 8,
+        "preferred_term": "Fatigue",
+        "total_occurrences": 33,
+        "percentage_of_reactions": 0.96,
+        "distinct_case_count": 33,
+        "percentage_of_cases": 3.22
+      },
+      "unit": "reactions",
+      "source_fields": [
+        "patient_reaction_reactionmeddrapt"
+      ],
+      "calculation_definition": "Total occurrences and distinct case count for Preferred Term",
+      "scope": "reaction-level",
+      "supporting_case_ids": null,
+      "notes": null
+    },
+    {
+      "evidence_id": "RXN-TOP-09",
+      "metric_name": "top_09_reaction_off_label_use",
+      "value": {
+        "rank": 9,
+        "preferred_term": "Off label use",
+        "total_occurrences": 31,
+        "percentage_of_reactions": 0.9,
+        "distinct_case_count": 31,
+        "percentage_of_cases": 3.03
+      },
+      "unit": "reactions",
+      "source_fields": [
+        "patient_reaction_reactionmeddrapt"
+      ],
+      "calculation_definition": "Total occurrences and distinct case count for Preferred Term",
+      "scope": "reaction-level",
+      "supporting_case_ids": null,
+      "notes": null
+    },
+    {
+      "evidence_id": "RXN-TOP-10",
+      "metric_name": "top_10_reaction_diarrhoea",
+      "value": {
+        "rank": 10,
+        "preferred_term": "Diarrhoea",
+        "total_occurrences": 30,
+        "percentage_of_reactions": 0.87,
+        "distinct_case_count": 30,
+        "percentage_of_cases": 2.93
+      },
+      "unit": "reactions",
+      "source_fields": [
+        "patient_reaction_reactionmeddrapt"
+      ],
+      "calculation_definition": "Total occurrences and distinct case count for Preferred Term",
+      "scope": "reaction-level",
+      "supporting_case_ids": null,
+      "notes": null
+    },
+    {
+      "evidence_id": "RXN-TOP-11",
+      "metric_name": "top_11_reaction_fall",
+      "value": {
+        "rank": 11,
+        "preferred_term": "Fall",
+        "total_occurrences": 30,
+        "percentage_of_reactions": 0.87,
+        "distinct_case_count": 30,
+        "percentage_of_cases": 2.93
+      },
+      "unit": "reactions",
+      "source_fields": [
+        "patient_reaction_reactionmeddrapt"
+      ],
+      "calculation_definition": "Total occurrences and distinct case count for Preferred Term",
+      "scope": "reaction-level",
+      "supporting_case_ids": null,
+      "notes": null
+    },
+    {
+      "evidence_id": "RXN-TOP-12",
+      "metric_name": "top_12_reaction_condition_aggravated",
+      "value": {
+        "rank": 12,
+        "preferred_term": "Condition aggravated",
+        "total_occurrences": 27,
+        "percentage_of_reactions": 0.79,
+        "distinct_case_count": 27,
+        "percentage_of_cases": 2.64
+      },
+      "unit": "reactions",
+      "source_fields": [
+        "patient_reaction_reactionmeddrapt"
+      ],
+      "calculation_definition": "Total occurrences and distinct case count for Preferred Term",
+      "scope": "reaction-level",
+      "supporting_case_ids": null,
+      "notes": null
+    },
+    {
+      "evidence_id": "RXN-TOP-13",
+      "metric_name": "top_13_reaction_hypokalaemia",
+      "value": {
+        "rank": 13,
+        "preferred_term": "Hypokalaemia",
+        "total_occurrences": 27,
+        "percentage_of_reactions": 0.79,
+        "distinct_case_count": 27,
+        "percentage_of_cases": 2.64
+      },
+      "unit": "reactions",
+      "source_fields": [
+        "patient_reaction_reactionmeddrapt"
+      ],
+      "calculation_definition": "Total occurrences and distinct case count for Preferred Term",
+      "scope": "reaction-level",
+      "supporting_case_ids": null,
+      "notes": null
+    },
+    {
+      "evidence_id": "RXN-TOP-14",
+      "metric_name": "top_14_reaction_medication_error",
+      "value": {
+        "rank": 14,
+        "preferred_term": "Medication error",
+        "total_occurrences": 25,
+        "percentage_of_reactions": 0.73,
+        "distinct_case_count": 25,
+        "percentage_of_cases": 2.44
+      },
+      "unit": "reactions",
+      "source_fields": [
+        "patient_reaction_reactionmeddrapt"
+      ],
+      "calculation_definition": "Total occurrences and distinct case count for Preferred Term",
+      "scope": "reaction-level",
+      "supporting_case_ids": null,
+      "notes": null
+    },
+    {
+      "evidence_id": "RXN-TOP-15",
+      "metric_name": "top_15_reaction_asthenia",
+      "value": {
+        "rank": 15,
+        "preferred_term": "Asthenia",
+        "total_occurrences": 25,
+        "percentage_of_reactions": 0.73,
+        "distinct_case_count": 25,
+        "percentage_of_cases": 2.44
+      },
+      "unit": "reactions",
+      "source_fields": [
+        "patient_reaction_reactionmeddrapt"
+      ],
+      "calculation_definition": "Total occurrences and distinct case count for Preferred Term",
+      "scope": "reaction-level",
+      "supporting_case_ids": null,
+      "notes": null
+    },
+    {
+      "evidence_id": "RXN-TOP-16",
+      "metric_name": "top_16_reaction_hyponatraemia",
+      "value": {
+        "rank": 16,
+        "preferred_term": "Hyponatraemia",
+        "total_occurrences": 24,
+        "percentage_of_reactions": 0.7,
+        "distinct_case_count": 24,
+        "percentage_of_cases": 2.34
+      },
+      "unit": "reactions",
+      "source_fields": [
+        "patient_reaction_reactionmeddrapt"
+      ],
+      "calculation_definition": "Total occurrences and distinct case count for Preferred Term",
+      "scope": "reaction-level",
+      "supporting_case_ids": null,
+      "notes": null
+    },
+    {
+      "evidence_id": "RXN-TOP-17",
+      "metric_name": "top_17_reaction_toxicity_to_various_agents",
+      "value": {
+        "rank": 17,
+        "preferred_term": "Toxicity to various agents",
+        "total_occurrences": 23,
+        "percentage_of_reactions": 0.67,
+        "distinct_case_count": 23,
+        "percentage_of_cases": 2.25
+      },
+      "unit": "reactions",
+      "source_fields": [
+        "patient_reaction_reactionmeddrapt"
+      ],
+      "calculation_definition": "Total occurrences and distinct case count for Preferred Term",
+      "scope": "reaction-level",
+      "supporting_case_ids": null,
+      "notes": null
+    },
+    {
+      "evidence_id": "RXN-TOP-18",
+      "metric_name": "top_18_reaction_confusional_state",
+      "value": {
+        "rank": 18,
+        "preferred_term": "Confusional state",
+        "total_occurrences": 23,
+        "percentage_of_reactions": 0.67,
+        "distinct_case_count": 23,
+        "percentage_of_cases": 2.25
+      },
+      "unit": "reactions",
+      "source_fields": [
+        "patient_reaction_reactionmeddrapt"
+      ],
+      "calculation_definition": "Total occurrences and distinct case count for Preferred Term",
+      "scope": "reaction-level",
+      "supporting_case_ids": null,
+      "notes": null
+    },
+    {
+      "evidence_id": "RXN-TOP-19",
+      "metric_name": "top_19_reaction_arthralgia",
+      "value": {
+        "rank": 19,
+        "preferred_term": "Arthralgia",
+        "total_occurrences": 22,
+        "percentage_of_reactions": 0.64,
+        "distinct_case_count": 22,
+        "percentage_of_cases": 2.15
+      },
+      "unit": "reactions",
+      "source_fields": [
+        "patient_reaction_reactionmeddrapt"
+      ],
+      "calculation_definition": "Total occurrences and distinct case count for Preferred Term",
+      "scope": "reaction-level",
+      "supporting_case_ids": null,
+      "notes": null
+    },
+    {
+      "evidence_id": "RXN-TOP-20",
+      "metric_name": "top_20_reaction_syncope",
+      "value": {
+        "rank": 20,
+        "preferred_term": "Syncope",
+        "total_occurrences": 20,
+        "percentage_of_reactions": 0.58,
+        "distinct_case_count": 20,
+        "percentage_of_cases": 1.95
+      },
+      "unit": "reactions",
+      "source_fields": [
+        "patient_reaction_reactionmeddrapt"
+      ],
+      "calculation_definition": "Total occurrences and distinct case count for Preferred Term",
+      "scope": "reaction-level",
+      "supporting_case_ids": null,
+      "notes": null
+    },
+    {
+      "evidence_id": "RXN-TOP20-TABLE",
+      "metric_name": "top_20_preferred_terms_table",
+      "value": [
+        {
+          "rank": 1,
+          "preferred_term": "Acute kidney injury",
+          "total_occurrences": 80,
+          "percentage_of_reactions": 2.33,
+          "distinct_case_count": 80,
+          "percentage_of_cases": 7.81
+        },
+        {
+          "rank": 2,
+          "preferred_term": "Drug ineffective",
+          "total_occurrences": 54,
+          "percentage_of_reactions": 1.57,
+          "distinct_case_count": 54,
+          "percentage_of_cases": 5.27
+        },
+        {
+          "rank": 3,
+          "preferred_term": "Hypotension",
+          "total_occurrences": 46,
+          "percentage_of_reactions": 1.34,
+          "distinct_case_count": 46,
+          "percentage_of_cases": 4.49
+        },
+        {
+          "rank": 4,
+          "preferred_term": "Drug interaction",
+          "total_occurrences": 43,
+          "percentage_of_reactions": 1.25,
+          "distinct_case_count": 43,
+          "percentage_of_cases": 4.2
+        },
+        {
+          "rank": 5,
+          "preferred_term": "Dyspnoea",
+          "total_occurrences": 38,
+          "percentage_of_reactions": 1.11,
+          "distinct_case_count": 38,
+          "percentage_of_cases": 3.71
+        },
+        {
+          "rank": 6,
+          "preferred_term": "Bradycardia",
+          "total_occurrences": 37,
+          "percentage_of_reactions": 1.08,
+          "distinct_case_count": 37,
+          "percentage_of_cases": 3.61
+        },
+        {
+          "rank": 7,
+          "preferred_term": "Dizziness",
+          "total_occurrences": 36,
+          "percentage_of_reactions": 1.05,
+          "distinct_case_count": 36,
+          "percentage_of_cases": 3.52
+        },
+        {
+          "rank": 8,
+          "preferred_term": "Fatigue",
+          "total_occurrences": 33,
+          "percentage_of_reactions": 0.96,
+          "distinct_case_count": 33,
+          "percentage_of_cases": 3.22
+        },
+        {
+          "rank": 9,
+          "preferred_term": "Off label use",
+          "total_occurrences": 31,
+          "percentage_of_reactions": 0.9,
+          "distinct_case_count": 31,
+          "percentage_of_cases": 3.03
+        },
+        {
+          "rank": 10,
+          "preferred_term": "Diarrhoea",
+          "total_occurrences": 30,
+          "percentage_of_reactions": 0.87,
+          "distinct_case_count": 30,
+          "percentage_of_cases": 2.93
+        },
+        {
+          "rank": 11,
+          "preferred_term": "Fall",
+          "total_occurrences": 30,
+          "percentage_of_reactions": 0.87,
+          "distinct_case_count": 30,
+          "percentage_of_cases": 2.93
+        },
+        {
+          "rank": 12,
+          "preferred_term": "Condition aggravated",
+          "total_occurrences": 27,
+          "percentage_of_reactions": 0.79,
+          "distinct_case_count": 27,
+          "percentage_of_cases": 2.64
+        },
+        {
+          "rank": 13,
+          "preferred_term": "Hypokalaemia",
+          "total_occurrences": 27,
+          "percentage_of_reactions": 0.79,
+          "distinct_case_count": 27,
+          "percentage_of_cases": 2.64
+        },
+        {
+          "rank": 14,
+          "preferred_term": "Medication error",
+          "total_occurrences": 25,
+          "percentage_of_reactions": 0.73,
+          "distinct_case_count": 25,
+          "percentage_of_cases": 2.44
+        },
+        {
+          "rank": 15,
+          "preferred_term": "Asthenia",
+          "total_occurrences": 25,
+          "percentage_of_reactions": 0.73,
+          "distinct_case_count": 25,
+          "percentage_of_cases": 2.44
+        },
+        {
+          "rank": 16,
+          "preferred_term": "Hyponatraemia",
+          "total_occurrences": 24,
+          "percentage_of_reactions": 0.7,
+          "distinct_case_count": 24,
+          "percentage_of_cases": 2.34
+        },
+        {
+          "rank": 17,
+          "preferred_term": "Toxicity to various agents",
+          "total_occurrences": 23,
+          "percentage_of_reactions": 0.67,
+          "distinct_case_count": 23,
+          "percentage_of_cases": 2.25
+        },
+        {
+          "rank": 18,
+          "preferred_term": "Confusional state",
+          "total_occurrences": 23,
+          "percentage_of_reactions": 0.67,
+          "distinct_case_count": 23,
+          "percentage_of_cases": 2.25
+        },
+        {
+          "rank": 19,
+          "preferred_term": "Arthralgia",
+          "total_occurrences": 22,
+          "percentage_of_reactions": 0.64,
+          "distinct_case_count": 22,
+          "percentage_of_cases": 2.15
+        },
+        {
+          "rank": 20,
+          "preferred_term": "Syncope",
+          "total_occurrences": 20,
+          "percentage_of_reactions": 0.58,
+          "distinct_case_count": 20,
+          "percentage_of_cases": 1.95
+        }
+      ],
+      "unit": null,
+      "source_fields": [
+        "patient_reaction_reactionmeddrapt"
+      ],
+      "calculation_definition": "Top 20 most frequent Preferred Terms ranked by total occurrences",
+      "scope": "reaction-level",
+      "supporting_case_ids": null,
+      "notes": null
+    },
+    {
+      "evidence_id": "RXN-SERIOUS-TOP20",
+      "metric_name": "top_20_serious_reactions_table",
+      "value": [
+        {
+          "rank": 1,
+          "preferred_term": "Acute kidney injury",
+          "serious_reaction_count": 80,
+          "distinct_case_count": 80
+        },
+        {
+          "rank": 2,
+          "preferred_term": "Drug ineffective",
+          "serious_reaction_count": 53,
+          "distinct_case_count": 53
+        },
+        {
+          "rank": 3,
+          "preferred_term": "Hypotension",
+          "serious_reaction_count": 46,
+          "distinct_case_count": 46
+        },
+        {
+          "rank": 4,
+          "preferred_term": "Drug interaction",
+          "serious_reaction_count": 43,
+          "distinct_case_count": 43
+        },
+        {
+          "rank": 5,
+          "preferred_term": "Dyspnoea",
+          "serious_reaction_count": 38,
+          "distinct_case_count": 38
+        },
+        {
+          "rank": 6,
+          "preferred_term": "Bradycardia",
+          "serious_reaction_count": 37,
+          "distinct_case_count": 37
+        },
+        {
+          "rank": 7,
+          "preferred_term": "Dizziness",
+          "serious_reaction_count": 36,
+          "distinct_case_count": 36
+        },
+        {
+          "rank": 8,
+          "preferred_term": "Fatigue",
+          "serious_reaction_count": 33,
+          "distinct_case_count": 33
+        },
+        {
+          "rank": 9,
+          "preferred_term": "Off label use",
+          "serious_reaction_count": 31,
+          "distinct_case_count": 31
+        },
+        {
+          "rank": 10,
+          "preferred_term": "Fall",
+          "serious_reaction_count": 30,
+          "distinct_case_count": 30
+        },
+        {
+          "rank": 11,
+          "preferred_term": "Diarrhoea",
+          "serious_reaction_count": 30,
+          "distinct_case_count": 30
+        },
+        {
+          "rank": 12,
+          "preferred_term": "Hypokalaemia",
+          "serious_reaction_count": 27,
+          "distinct_case_count": 27
+        },
+        {
+          "rank": 13,
+          "preferred_term": "Condition aggravated",
+          "serious_reaction_count": 27,
+          "distinct_case_count": 27
+        },
+        {
+          "rank": 14,
+          "preferred_term": "Asthenia",
+          "serious_reaction_count": 25,
+          "distinct_case_count": 25
+        },
+        {
+          "rank": 15,
+          "preferred_term": "Medication error",
+          "serious_reaction_count": 25,
+          "distinct_case_count": 25
+        },
+        {
+          "rank": 16,
+          "preferred_term": "Hyponatraemia",
+          "serious_reaction_count": 24,
+          "distinct_case_count": 24
+        },
+        {
+          "rank": 17,
+          "preferred_term": "Confusional state",
+          "serious_reaction_count": 23,
+          "distinct_case_count": 23
+        },
+        {
+          "rank": 18,
+          "preferred_term": "Toxicity to various agents",
+          "serious_reaction_count": 23,
+          "distinct_case_count": 23
+        },
+        {
+          "rank": 19,
+          "preferred_term": "Arthralgia",
+          "serious_reaction_count": 22,
+          "distinct_case_count": 22
+        },
+        {
+          "rank": 20,
+          "preferred_term": "Syncope",
+          "serious_reaction_count": 20,
+          "distinct_case_count": 20
+        }
+      ],
+      "unit": null,
+      "source_fields": [
+        "patient_reaction_reactionmeddrapt",
+        "serious"
+      ],
+      "calculation_definition": "Top 20 Preferred Terms reported within serious cases",
+      "scope": "reaction-level",
+      "supporting_case_ids": null,
+      "notes": null
+    },
+    {
+      "evidence_id": "RXN-SOC-NOTICE",
+      "metric_name": "soc_analysis_availability",
+      "value": "UNAVAILABLE - No System Organ Class field supplied in dataset",
+      "unit": null,
+      "source_fields": [
+        "patient_reaction_reactionmeddrapt"
+      ],
+      "calculation_definition": "Compliance requirement: No MedDRA SOC inference performed without external dictionary",
+      "scope": "dataset-level",
+      "supporting_case_ids": null,
+      "notes": "Explicitly conforms to the challenge constraint: only MedDRA PT level analysis is performed."
+    }
+  ],
+  "metadata": {
+    "total_reaction_records": 3429,
+    "soc_field_present": false
+  },
+  "computed_at": "2026-08-15T17:04:30.064464+00:00"
+}

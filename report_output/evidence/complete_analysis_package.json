@@ -1,0 +1,2376 @@
+{
+  "product_name": "Bisoprolol",
+  "reporting_period": {
+    "start_date": "2024-12-27",
+    "end_date": "2025-12-26",
+    "duration_days": 364,
+    "total_cases_in_period": 1024
+  },
+  "validation_summary": {
+    "dataset_file": "Bisoprolol_icsr_sample_1068rows.csv",
+    "total_raw_rows": 1068,
+    "unique_cases": 1024,
+    "duplicate_rows_count": 44,
+    "columns_count": 67,
+    "required_columns_checked": [
+      "safetyreportid",
+      "safetyreportversion",
+      "serious",
+      "receivedate",
+      "patient_patientsex",
+      "patient_patientonsetage",
+      "patient_patientonsetageunit",
+      "patient_reaction_reactionmeddrapt",
+      "patient_reaction_reactionoutcome",
+      "patient_drug_drugcharacterization",
+      "patient_drug_medicinalproduct",
+      "primarysourcecountry",
+      "primarysource_qualification",
+      "reporttype",
+      "fulfillexpeditecriteria",
+      "seriousnessdeath",
+      "seriousnesslifethreatening",
+      "seriousnesshospitalization",
+      "seriousnessdisabling",
+      "seriousnesscongenitalanomali",
+      "seriousnessother"
+    ],
+    "missing_required_columns": [],
+    "date_range_start": "2024-12-27",
+    "date_range_end": "2025-12-26",
+    "missing_value_summary": {
+      "safetyreportversion": {
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "non_null_count": 1068
+      },
+      "safetyreportid": {
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "non_null_count": 1068
+      },
+      "primarysourcecountry": {
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "non_null_count": 1068
+      },
+      "occurcountry": {
+        "null_count": 7,
+        "null_percentage": 0.66,
+        "non_null_count": 1061
+      },
+      "transmissiondateformat": {
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "non_null_count": 1068
+      },
+      "transmissiondate": {
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "non_null_count": 1068
+      },
+      "reporttype": {
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "non_null_count": 1068
+      },
+      "serious": {
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "non_null_count": 1068
+      },
+      "seriousnessdeath": {
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "non_null_count": 1068
+      },
+      "seriousnesslifethreatening": {
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "non_null_count": 1068
+      },
+      "seriousnesshospitalization": {
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "non_null_count": 1068
+      },
+      "seriousnessdisabling": {
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "non_null_count": 1068
+      },
+      "seriousnesscongenitalanomali": {
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "non_null_count": 1068
+      },
+      "seriousnessother": {
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "non_null_count": 1068
+      },
+      "receivedateformat": {
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "non_null_count": 1068
+      },
+      "receivedate": {
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "non_null_count": 1068
+      },
+      "receiptdateformat": {
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "non_null_count": 1068
+      },
+      "receiptdate": {
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "non_null_count": 1068
+      },
+      "fulfillexpeditecriteria": {
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "non_null_count": 1068
+      },
+      "companynumb": {
+        "null_count": 1,
+        "null_percentage": 0.09,
+        "non_null_count": 1067
+      },
+      "primarysource_reportercountry": {
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "non_null_count": 1068
+      },
+      "primarysource_qualification": {
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "non_null_count": 1068
+      },
+      "sender_sendertype": {
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "non_null_count": 1068
+      },
+      "sender_senderorganization": {
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "non_null_count": 1068
+      },
+      "receiver_receivertype": {
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "non_null_count": 1068
+      },
+      "receiver_receiverorganization": {
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "non_null_count": 1068
+      },
+      "patient_patientonsetage": {
+        "null_count": 91,
+        "null_percentage": 8.52,
+        "non_null_count": 977
+      },
+      "patient_patientonsetageunit": {
+        "null_count": 81,
+        "null_percentage": 7.58,
+        "non_null_count": 987
+      },
+      "patient_patientsex": {
+        "null_count": 30,
+        "null_percentage": 2.81,
+        "non_null_count": 1038
+      },
+      "patient_reaction_reactionmeddraversionpt": {
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "non_null_count": 1068
+      },
+      "patient_reaction_reactionmeddrapt": {
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "non_null_count": 1068
+      },
+      "patient_reaction_reactionoutcome": {
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "non_null_count": 1068
+      },
+      "patient_drug_drugcharacterization": {
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "non_null_count": 1068
+      },
+      "patient_drug_medicinalproduct": {
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "non_null_count": 1068
+      },
+      "patient_drug_drugauthorizationnumb": {
+        "null_count": 4,
+        "null_percentage": 0.37,
+        "non_null_count": 1064
+      },
+      "patient_drug_drugstructuredosagenumb": {
+        "null_count": 153,
+        "null_percentage": 14.33,
+        "non_null_count": 915
+      },
+      "patient_drug_drugstructuredosageunit": {
+        "null_count": 153,
+        "null_percentage": 14.33,
+        "non_null_count": 915
+      },
+      "patient_drug_drugseparatedosagenumb": {
+        "null_count": 290,
+        "null_percentage": 27.15,
+        "non_null_count": 778
+      },
+      "patient_drug_drugintervaldosageunitnumb": {
+        "null_count": 330,
+        "null_percentage": 30.9,
+        "non_null_count": 738
+      },
+      "patient_drug_drugintervaldosagedefinition": {
+        "null_count": 330,
+        "null_percentage": 30.9,
+        "non_null_count": 738
+      },
+      "patient_drug_drugdosagetext": {
+        "null_count": 244,
+        "null_percentage": 22.85,
+        "non_null_count": 824
+      },
+      "patient_drug_drugdosageform": {
+        "null_count": 378,
+        "null_percentage": 35.39,
+        "non_null_count": 690
+      },
+      "patient_drug_drugadministrationroute": {
+        "null_count": 23,
+        "null_percentage": 2.15,
+        "non_null_count": 1045
+      },
+      "patient_drug_drugindication": {
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "non_null_count": 1068
+      },
+      "patient_drug_actiondrug": {
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "non_null_count": 1068
+      },
+      "patient_drug_drugadditional": {
+        "null_count": 21,
+        "null_percentage": 1.97,
+        "non_null_count": 1047
+      },
+      "patient_drug_activesubstance_activesubstancename": {
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "non_null_count": 1068
+      },
+      "patient_summary_narrativeincludeclinical": {
+        "null_count": 355,
+        "null_percentage": 33.24,
+        "non_null_count": 713
+      },
+      "drugs": {
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "non_null_count": 1068
+      },
+      "report_date": {
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "non_null_count": 1068
+      },
+      "patient_patientweight": {
+        "null_count": 579,
+        "null_percentage": 54.21,
+        "non_null_count": 489
+      },
+      "patient_drug_drugstartdateformat": {
+        "null_count": 417,
+        "null_percentage": 39.04,
+        "non_null_count": 651
+      },
+      "patient_drug_drugstartdate": {
+        "null_count": 417,
+        "null_percentage": 39.04,
+        "non_null_count": 651
+      },
+      "patient_drug_drugenddateformat": {
+        "null_count": 532,
+        "null_percentage": 49.81,
+        "non_null_count": 536
+      },
+      "patient_drug_drugenddate": {
+        "null_count": 532,
+        "null_percentage": 49.81,
+        "non_null_count": 536
+      },
+      "patient_drug_drugtreatmentduration": {
+        "null_count": 622,
+        "null_percentage": 58.24,
+        "non_null_count": 446
+      },
+      "patient_drug_drugtreatmentdurationunit": {
+        "null_count": 622,
+        "null_percentage": 58.24,
+        "non_null_count": 446
+      },
+      "patient_drug_drugcumulativedosagenumb": {
+        "null_count": 880,
+        "null_percentage": 82.4,
+        "non_null_count": 188
+      },
+      "patient_drug_drugcumulativedosageunit": {
+        "null_count": 880,
+        "null_percentage": 82.4,
+        "non_null_count": 188
+      },
+      "primarysource_literaturereference": {
+        "null_count": 911,
+        "null_percentage": 85.3,
+        "non_null_count": 157
+      },
+      "duplicate": {
+        "null_count": 850,
+        "null_percentage": 79.59,
+        "non_null_count": 218
+      },
+      "reportduplicate_duplicatesource": {
+        "null_count": 890,
+        "null_percentage": 83.33,
+        "non_null_count": 178
+      },
+      "reportduplicate_duplicatenumb": {
+        "null_count": 850,
+        "null_percentage": 79.59,
+        "non_null_count": 218
+      },
+      "patient_drug_drugrecurreadministration": {
+        "null_count": 971,
+        "null_percentage": 90.92,
+        "non_null_count": 97
+      },
+      "patient_drug_drugbatchnumb": {
+        "null_count": 1021,
+        "null_percentage": 95.6,
+        "non_null_count": 47
+      },
+      "patient_patientagegroup": {
+        "null_count": 1037,
+        "null_percentage": 97.1,
+        "non_null_count": 31
+      },
+      "authoritynumb": {
+        "null_count": 1067,
+        "null_percentage": 99.91,
+        "non_null_count": 1
+      }
+    },
+    "column_dtypes": {
+      "safetyreportversion": "int64",
+      "safetyreportid": "int64",
+      "primarysourcecountry": "object",
+      "occurcountry": "object",
+      "transmissiondateformat": "object",
+      "transmissiondate": "object",
+      "reporttype": "object",
+      "serious": "object",
+      "seriousnessdeath": "object",
+      "seriousnesslifethreatening": "object",
+      "seriousnesshospitalization": "object",
+      "seriousnessdisabling": "object",
+      "seriousnesscongenitalanomali": "object",
+      "seriousnessother": "object",
+      "receivedateformat": "object",
+      "receivedate": "object",
+      "receiptdateformat": "object",
+      "receiptdate": "object",
+      "fulfillexpeditecriteria": "object",
+      "companynumb": "object",
+      "primarysource_reportercountry": "object",
+      "primarysource_qualification": "object",
+      "sender_sendertype": "object",
+      "sender_senderorganization": "object",
+      "receiver_receivertype": "object",
+      "receiver_receiverorganization": "object",
+      "patient_patientonsetage": "float64",
+      "patient_patientonsetageunit": "object",
+      "patient_patientsex": "object",
+      "patient_reaction_reactionmeddraversionpt": "object",
+      "patient_reaction_reactionmeddrapt": "object",
+      "patient_reaction_reactionoutcome": "object",
+      "patient_drug_drugcharacterization": "object",
+      "patient_drug_medicinalproduct": "object",
+      "patient_drug_drugauthorizationnumb": "object",
+      "patient_drug_drugstructuredosagenumb": "object",
+      "patient_drug_drugstructuredosageunit": "object",
+      "patient_drug_drugseparatedosagenumb": "object",
+      "patient_drug_drugintervaldosageunitnumb": "object",
+      "patient_drug_drugintervaldosagedefinition": "object",
+      "patient_drug_drugdosagetext": "object",
+      "patient_drug_drugdosageform": "object",
+      "patient_drug_drugadministrationroute": "object",
+      "patient_drug_drugindication": "object",
+      "patient_drug_actiondrug": "object",
+      "patient_drug_drugadditional": "object",
+      "patient_drug_activesubstance_activesubstancename": "object",
+      "patient_summary_narrativeincludeclinical": "object",
+      "drugs": "object",
+      "report_date": "object",
+      "patient_patientweight": "object",
+      "patient_drug_drugstartdateformat": "object",
+      "patient_drug_drugstartdate": "object",
+      "patient_drug_drugenddateformat": "object",
+      "patient_drug_drugenddate": "object",
+      "patient_drug_drugtreatmentduration": "object",
+      "patient_drug_drugtreatmentdurationunit": "object",
+      "patient_drug_drugcumulativedosagenumb": "object",
+      "patient_drug_drugcumulativedosageunit": "object",
+      "primarysource_literaturereference": "object",
+      "duplicate": "object",
+      "reportduplicate_duplicatesource": "object",
+      "reportduplicate_duplicatenumb": "object",
+      "patient_drug_drugrecurreadministration": "object",
+      "patient_drug_drugbatchnumb": "object",
+      "patient_patientagegroup": "object",
+      "authoritynumb": "object",
+      "parsed_receivedate": "datetime64[ns]",
+      "parsed_receiptdate": "datetime64[ns]",
+      "parsed_transmissiondate": "datetime64[ns]"
+    },
+    "structural_discrepancies": [
+      "Row count (1068) exceeds unique safetyreportid count (1024). 44 rows represent subsequent version updates (latest version retained for case-level analysis).",
+      "No System Organ Class (SOC) column found. Analysis must proceed exclusively at MedDRA Preferred Term (PT) level.",
+      "Narrative field contains only date stubs (average length: 25.0 chars). Clinical narratives cannot be extracted directly from this field.",
+      "Patient age is missing in 8.52% of records."
+    ],
+    "validation_status": "WARNING",
+    "validated_at": "2026-08-15T17:04:29.969086+00:00"
+  },
+  "sections": {
+    "case_analysis": {
+      "section_id": "case_analysis",
+      "section_title": "Case Volume and Seriousness Analysis",
+      "metrics": [
+        {
+          "evidence_id": "CO-001",
+          "metric_name": "total_unique_cases",
+          "value": 1024,
+          "unit": "cases",
+          "source_fields": [
+            "safetyreportid",
+            "safetyreportversion"
+          ],
+          "calculation_definition": "COUNT(DISTINCT safetyreportid) taking the highest safetyreportversion",
+          "scope": "case-level",
+          "supporting_case_ids": [
+            24780403,
+            24780599,
+            24780680,
+            24784771,
+            24784845,
+            24784920,
+            24784985,
+            24784989,
+            24787006,
+            24787240
+          ],
+          "notes": null
+        },
+        {
+          "evidence_id": "CO-002",
+          "metric_name": "serious_cases_count",
+          "value": 1023,
+          "unit": "cases",
+          "source_fields": [
+            "serious"
+          ],
+          "calculation_definition": "COUNT(cases WHERE serious == 'serious')",
+          "scope": "case-level",
+          "supporting_case_ids": null,
+          "notes": null
+        },
+        {
+          "evidence_id": "CO-003",
+          "metric_name": "serious_cases_percentage",
+          "value": 99.9,
+          "unit": "%",
+          "source_fields": [
+            "serious"
+          ],
+          "calculation_definition": "(serious_cases_count / total_unique_cases) * 100",
+          "scope": "case-level",
+          "supporting_case_ids": null,
+          "notes": null
+        },
+        {
+          "evidence_id": "CO-004",
+          "metric_name": "non_serious_cases_count",
+          "value": 1,
+          "unit": "cases",
+          "source_fields": [
+            "serious"
+          ],
+          "calculation_definition": "COUNT(cases WHERE serious == 'not serious')",
+          "scope": "case-level",
+          "supporting_case_ids": null,
+          "notes": null
+        },
+        {
+          "evidence_id": "CO-005",
+          "metric_name": "non_serious_cases_percentage",
+          "value": 0.1,
+          "unit": "%",
+          "source_fields": [
+            "serious"
+          ],
+          "calculation_definition": "(non_serious_cases_count / total_unique_cases) * 100",
+          "scope": "case-level",
+          "supporting_case_ids": null,
+          "notes": null
+        },
+        {
+          "evidence_id": "SER-001",
+          "metric_name": "seriousness_criterion_seriousnessdeath",
+          "value": {
+            "criterion": "Death (Fatal)",
+            "count": 68,
+            "percentage": 6.64
+          },
+          "unit": "cases",
+          "source_fields": [
+            "seriousnessdeath"
+          ],
+          "calculation_definition": "COUNT(cases WHERE seriousnessdeath == 'yes')",
+          "scope": "case-level",
+          "supporting_case_ids": null,
+          "notes": "Seriousness criteria are independent, non-mutually exclusive flags."
+        },
+        {
+          "evidence_id": "SER-002",
+          "metric_name": "seriousness_criterion_seriousnesslifethreatening",
+          "value": {
+            "criterion": "Life-threatening",
+            "count": 105,
+            "percentage": 10.25
+          },
+          "unit": "cases",
+          "source_fields": [
+            "seriousnesslifethreatening"
+          ],
+          "calculation_definition": "COUNT(cases WHERE seriousnesslifethreatening == 'yes')",
+          "scope": "case-level",
+          "supporting_case_ids": null,
+          "notes": "Seriousness criteria are independent, non-mutually exclusive flags."
+        },
+        {
+          "evidence_id": "SER-003",
+          "metric_name": "seriousness_criterion_seriousnesshospitalization",
+          "value": {
+            "criterion": "Hospitalization / Prolonged",
+            "count": 482,
+            "percentage": 47.07
+          },
+          "unit": "cases",
+          "source_fields": [
+            "seriousnesshospitalization"
+          ],
+          "calculation_definition": "COUNT(cases WHERE seriousnesshospitalization == 'yes')",
+          "scope": "case-level",
+          "supporting_case_ids": null,
+          "notes": "Seriousness criteria are independent, non-mutually exclusive flags."
+        },
+        {
+          "evidence_id": "SER-004",
+          "metric_name": "seriousness_criterion_seriousnessdisabling",
+          "value": {
+            "criterion": "Disability / Incapacity",
+            "count": 44,
+            "percentage": 4.3
+          },
+          "unit": "cases",
+          "source_fields": [
+            "seriousnessdisabling"
+          ],
+          "calculation_definition": "COUNT(cases WHERE seriousnessdisabling == 'yes')",
+          "scope": "case-level",
+          "supporting_case_ids": null,
+          "notes": "Seriousness criteria are independent, non-mutually exclusive flags."
+        },
+        {
+          "evidence_id": "SER-005",
+          "metric_name": "seriousness_criterion_seriousnesscongenitalanomali",
+          "value": {
+            "criterion": "Congenital Anomaly",
+            "count": 7,
+            "percentage": 0.68
+          },
+          "unit": "cases",
+          "source_fields": [
+            "seriousnesscongenitalanomali"
+          ],
+          "calculation_definition": "COUNT(cases WHERE seriousnesscongenitalanomali == 'yes')",
+          "scope": "case-level",
+          "supporting_case_ids": null,
+          "notes": "Seriousness criteria are independent, non-mutually exclusive flags."
+        },
+        {
+          "evidence_id": "SER-006",
+          "metric_name": "seriousness_criterion_seriousnessother",
+          "value": {
+            "criterion": "Other Medically Important",
+            "count": 905,
+            "percentage": 88.38
+          },
+          "unit": "cases",
+          "source_fields": [
+            "seriousnessother"
+          ],
+          "calculation_definition": "COUNT(cases WHERE seriousnessother == 'yes')",
+          "scope": "case-level",
+          "supporting_case_ids": null,
+          "notes": "Seriousness criteria are independent, non-mutually exclusive flags."
+        },
+        {
+          "evidence_id": "SER-SUMMARY",
+          "metric_name": "seriousness_criteria_breakdown",
+          "value": {
+            "Death (Fatal)": {
+              "count": 68,
+              "percentage": 6.64
+            },
+            "Life-threatening": {
+              "count": 105,
+              "percentage": 10.25
+            },
+            "Hospitalization / Prolonged": {
+              "count": 482,
+              "percentage": 47.07
+            },
+            "Disability / Incapacity": {
+              "count": 44,
+              "percentage": 4.3
+            },
+            "Congenital Anomaly": {
+              "count": 7,
+              "percentage": 0.68
+            },
+            "Other Medically Important": {
+              "count": 905,
+              "percentage": 88.38
+            }
+          },
+          "unit": null,
+          "source_fields": [
+            "seriousnessdeath",
+            "seriousnesslifethreatening",
+            "seriousnesshospitalization",
+            "seriousnessdisabling",
+            "seriousnesscongenitalanomali",
+            "seriousnessother"
+          ],
+          "calculation_definition": "Aggregation of independent seriousness criteria flags",
+          "scope": "case-level",
+          "supporting_case_ids": null,
+          "notes": null
+        },
+        {
+          "evidence_id": "SER-MULTI",
+          "metric_name": "multi_criteria_distribution",
+          "value": {
+            "1_criterion": 528,
+            "2_criteria": 414,
+            "3_or_more_criteria": 81
+          },
+          "unit": "cases",
+          "source_fields": [
+            "seriousnessdeath",
+            "seriousnesslifethreatening",
+            "seriousnesshospitalization",
+            "seriousnessdisabling",
+            "seriousnesscongenitalanomali",
+            "seriousnessother"
+          ],
+          "calculation_definition": "Count of cases meeting 1, 2, or >=3 criteria simultaneously",
+          "scope": "case-level",
+          "supporting_case_ids": null,
+          "notes": null
+        },
+        {
+          "evidence_id": "CO-RT-001",
+          "metric_name": "report_type_distribution",
+          "value": {
+            "spontaneous report": {
+              "count": 1014,
+              "percentage": 99.02
+            },
+            "report from study": {
+              "count": 10,
+              "percentage": 0.98
+            }
+          },
+          "unit": "cases",
+          "source_fields": [
+            "reporttype"
+          ],
+          "calculation_definition": "GROUP BY reporttype -> count and percentage",
+          "scope": "case-level",
+          "supporting_case_ids": null,
+          "notes": null
+        },
+        {
+          "evidence_id": "CO-QUAL-001",
+          "metric_name": "reporter_qualification_distribution",
+          "value": {
+            "physician": {
+              "count": 492,
+              "percentage": 48.05
+            },
+            "pharmacist": {
+              "count": 255,
+              "percentage": 24.9
+            },
+            "other health professional": {
+              "count": 162,
+              "percentage": 15.82
+            },
+            "consumer or non-health professional": {
+              "count": 115,
+              "percentage": 11.23
+            }
+          },
+          "unit": "cases",
+          "source_fields": [
+            "primarysource_qualification"
+          ],
+          "calculation_definition": "GROUP BY primarysource_qualification -> count and percentage",
+          "scope": "case-level",
+          "supporting_case_ids": null,
+          "notes": null
+        },
+        {
+          "evidence_id": "DC-ROLE-001",
+          "metric_name": "bisoprolol_role_distribution",
+          "value": {
+            "concomitant": {
+              "count": 666,
+              "percentage": 65.04
+            },
+            "suspect": {
+              "count": 340,
+              "percentage": 33.2
+            },
+            "interacting": {
+              "count": 17,
+              "percentage": 1.66
+            },
+            "unknown": {
+              "count": 1,
+              "percentage": 0.1
+            }
+          },
+          "unit": "cases",
+          "source_fields": [
+            "patient_drug_medicinalproduct",
+            "patient_drug_drugcharacterization"
+          ],
+          "calculation_definition": "Extracted characterization role for 'Bisoprolol' across all cases",
+          "scope": "case-level",
+          "supporting_case_ids": null,
+          "notes": "Highlights suspect vs concomitant vs interacting distribution."
+        }
+      ],
+      "metadata": {
+        "total_cases_analyzed": 1024
+      },
+      "computed_at": "2026-08-15T17:04:30.006576+00:00"
+    },
+    "demographic_analysis": {
+      "section_id": "demographic_analysis",
+      "section_title": "Patient Demographics and Geographic Distribution",
+      "metrics": [
+        {
+          "evidence_id": "DEMO-SEX-FEMALE",
+          "metric_name": "sex_count_female",
+          "value": {
+            "count": 503,
+            "percentage": 49.12
+          },
+          "unit": "cases",
+          "source_fields": [
+            "patient_patientsex"
+          ],
+          "calculation_definition": "COUNT(cases WHERE patient_patientsex == 'female')",
+          "scope": "case-level",
+          "supporting_case_ids": null,
+          "notes": null
+        },
+        {
+          "evidence_id": "DEMO-SEX-MALE",
+          "metric_name": "sex_count_male",
+          "value": {
+            "count": 493,
+            "percentage": 48.14
+          },
+          "unit": "cases",
+          "source_fields": [
+            "patient_patientsex"
+          ],
+          "calculation_definition": "COUNT(cases WHERE patient_patientsex == 'male')",
+          "scope": "case-level",
+          "supporting_case_ids": null,
+          "notes": null
+        },
+        {
+          "evidence_id": "DEMO-SEX-UNKNOWN",
+          "metric_name": "sex_count_unknown",
+          "value": {
+            "count": 28,
+            "percentage": 2.73
+          },
+          "unit": "cases",
+          "source_fields": [
+            "patient_patientsex"
+          ],
+          "calculation_definition": "COUNT(cases WHERE patient_patientsex == 'unknown')",
+          "scope": "case-level",
+          "supporting_case_ids": null,
+          "notes": null
+        },
+        {
+          "evidence_id": "DEMO-SEX-ALL",
+          "metric_name": "sex_distribution_breakdown",
+          "value": {
+            "female": {
+              "count": 503,
+              "percentage": 49.12
+            },
+            "male": {
+              "count": 493,
+              "percentage": 48.14
+            },
+            "unknown": {
+              "count": 28,
+              "percentage": 2.73
+            }
+          },
+          "unit": "cases",
+          "source_fields": [
+            "patient_patientsex"
+          ],
+          "calculation_definition": "Complete sex breakdown with percentages",
+          "scope": "case-level",
+          "supporting_case_ids": null,
+          "notes": null
+        },
+        {
+          "evidence_id": "DEMO-AGE-STATS",
+          "metric_name": "patient_age_summary_statistics",
+          "value": {
+            "count_with_age": 941,
+            "count_missing_age": 83,
+            "mean": 70.05,
+            "median": 73.0,
+            "min": 0.08,
+            "max": 104.0,
+            "std": 15.96
+          },
+          "unit": "years",
+          "source_fields": [
+            "patient_patientonsetage",
+            "patient_patientonsetageunit"
+          ],
+          "calculation_definition": "Summary statistics on patient age converted to years",
+          "scope": "case-level",
+          "supporting_case_ids": null,
+          "notes": null
+        },
+        {
+          "evidence_id": "DEMO-AGEGROUP-NEONATE",
+          "metric_name": "age_group_Neonate",
+          "value": {
+            "count": 0,
+            "percentage": 0.0
+          },
+          "unit": "cases",
+          "source_fields": [
+            "patient_patientonsetage",
+            "patient_patientonsetageunit"
+          ],
+          "calculation_definition": "COUNT(cases WHERE age in bucket 'Neonate')",
+          "scope": "case-level",
+          "supporting_case_ids": null,
+          "notes": null
+        },
+        {
+          "evidence_id": "DEMO-AGEGROUP-INFANT_TODDLER",
+          "metric_name": "age_group_Infant/Toddler",
+          "value": {
+            "count": 6,
+            "percentage": 0.59
+          },
+          "unit": "cases",
+          "source_fields": [
+            "patient_patientonsetage",
+            "patient_patientonsetageunit"
+          ],
+          "calculation_definition": "COUNT(cases WHERE age in bucket 'Infant/Toddler')",
+          "scope": "case-level",
+          "supporting_case_ids": null,
+          "notes": null
+        },
+        {
+          "evidence_id": "DEMO-AGEGROUP-CHILD",
+          "metric_name": "age_group_Child",
+          "value": {
+            "count": 4,
+            "percentage": 0.39
+          },
+          "unit": "cases",
+          "source_fields": [
+            "patient_patientonsetage",
+            "patient_patientonsetageunit"
+          ],
+          "calculation_definition": "COUNT(cases WHERE age in bucket 'Child')",
+          "scope": "case-level",
+          "supporting_case_ids": null,
+          "notes": null
+        },
+        {
+          "evidence_id": "DEMO-AGEGROUP-ADOLESCENT",
+          "metric_name": "age_group_Adolescent",
+          "value": {
+            "count": 6,
+            "percentage": 0.59
+          },
+          "unit": "cases",
+          "source_fields": [
+            "patient_patientonsetage",
+            "patient_patientonsetageunit"
+          ],
+          "calculation_definition": "COUNT(cases WHERE age in bucket 'Adolescent')",
+          "scope": "case-level",
+          "supporting_case_ids": null,
+          "notes": null
+        },
+        {
+          "evidence_id": "DEMO-AGEGROUP-ADULT",
+          "metric_name": "age_group_Adult",
+          "value": {
+            "count": 249,
+            "percentage": 24.32
+          },
+          "unit": "cases",
+          "source_fields": [
+            "patient_patientonsetage",
+            "patient_patientonsetageunit"
+          ],
+          "calculation_definition": "COUNT(cases WHERE age in bucket 'Adult')",
+          "scope": "case-level",
+          "supporting_case_ids": null,
+          "notes": null
+        },
+        {
+          "evidence_id": "DEMO-AGEGROUP-ELDERLY",
+          "metric_name": "age_group_Elderly",
+          "value": {
+            "count": 676,
+            "percentage": 66.02
+          },
+          "unit": "cases",
+          "source_fields": [
+            "patient_patientonsetage",
+            "patient_patientonsetageunit"
+          ],
+          "calculation_definition": "COUNT(cases WHERE age in bucket 'Elderly')",
+          "scope": "case-level",
+          "supporting_case_ids": null,
+          "notes": null
+        },
+        {
+          "evidence_id": "DEMO-AGEGROUP-ALL",
+          "metric_name": "age_group_distribution_breakdown",
+          "value": {
+            "Neonate": {
+              "count": 0,
+              "percentage": 0.0
+            },
+            "Infant/Toddler": {
+              "count": 6,
+              "percentage": 0.59
+            },
+            "Child": {
+              "count": 4,
+              "percentage": 0.39
+            },
+            "Adolescent": {
+              "count": 6,
+              "percentage": 0.59
+            },
+            "Adult": {
+              "count": 249,
+              "percentage": 24.32
+            },
+            "Elderly": {
+              "count": 676,
+              "percentage": 66.02
+            },
+            "Age Missing / Not Reported": {
+              "count": 83,
+              "percentage": 8.11
+            }
+          },
+          "unit": "cases",
+          "source_fields": [
+            "patient_patientonsetage",
+            "patient_patientonsetageunit"
+          ],
+          "calculation_definition": "Complete WHO/ICH age group distribution",
+          "scope": "case-level",
+          "supporting_case_ids": null,
+          "notes": null
+        },
+        {
+          "evidence_id": "DEMO-GEO-ALL",
+          "metric_name": "geographic_country_distribution",
+          "value": {
+            "EU (Regional)": {
+              "count": 345,
+              "percentage": 33.69
+            },
+            "United Kingdom": {
+              "count": 281,
+              "percentage": 27.44
+            },
+            "France": {
+              "count": 185,
+              "percentage": 18.07
+            },
+            "Canada": {
+              "count": 56,
+              "percentage": 5.47
+            },
+            "Italy": {
+              "count": 51,
+              "percentage": 4.98
+            },
+            "Germany": {
+              "count": 33,
+              "percentage": 3.22
+            },
+            "Spain": {
+              "count": 24,
+              "percentage": 2.34
+            },
+            "Poland": {
+              "count": 18,
+              "percentage": 1.76
+            },
+            "Portugal": {
+              "count": 8,
+              "percentage": 0.78
+            },
+            "United States": {
+              "count": 4,
+              "percentage": 0.39
+            },
+            "Ie": {
+              "count": 3,
+              "percentage": 0.29
+            },
+            "Belgium": {
+              "count": 2,
+              "percentage": 0.2
+            },
+            "Ro": {
+              "count": 2,
+              "percentage": 0.2
+            },
+            "Sa": {
+              "count": 2,
+              "percentage": 0.2
+            },
+            "Hr": {
+              "count": 2,
+              "percentage": 0.2
+            },
+            "Ua": {
+              "count": 2,
+              "percentage": 0.2
+            },
+            "Sweden": {
+              "count": 2,
+              "percentage": 0.2
+            },
+            "Fi": {
+              "count": 1,
+              "percentage": 0.1
+            },
+            "Australia": {
+              "count": 1,
+              "percentage": 0.1
+            },
+            "Indonesia": {
+              "count": 1,
+              "percentage": 0.1
+            },
+            "China": {
+              "count": 1,
+              "percentage": 0.1
+            }
+          },
+          "unit": "cases",
+          "source_fields": [
+            "primarysourcecountry"
+          ],
+          "calculation_definition": "COUNT(cases) GROUP BY primarysourcecountry (normalized)",
+          "scope": "case-level",
+          "supporting_case_ids": null,
+          "notes": "primarysourcecountry is selected as the primary geographic field; ISO 2-letter codes mapped to full country names."
+        }
+      ],
+      "metadata": {
+        "selected_country_field": "primarysourcecountry",
+        "age_conversion_units_handled": [
+          "year",
+          "month",
+          "week",
+          "day",
+          "800 (decade)"
+        ]
+      },
+      "computed_at": "2026-08-15T17:04:30.018268+00:00"
+    },
+    "reaction_analysis": {
+      "section_id": "reaction_analysis",
+      "section_title": "Adverse Reaction / Preferred Term Analysis",
+      "metrics": [
+        {
+          "evidence_id": "RXN-001",
+          "metric_name": "total_reaction_occurrences",
+          "value": 3429,
+          "unit": "reactions",
+          "source_fields": [
+            "patient_reaction_reactionmeddrapt"
+          ],
+          "calculation_definition": "Total count of exploded Preferred Term instances across unique cases",
+          "scope": "reaction-level",
+          "supporting_case_ids": null,
+          "notes": "Unpacked from comma-separated string across 1,024 unique deduplicated cases."
+        },
+        {
+          "evidence_id": "RXN-002",
+          "metric_name": "unique_preferred_terms_count",
+          "value": 1122,
+          "unit": "terms",
+          "source_fields": [
+            "patient_reaction_reactionmeddrapt"
+          ],
+          "calculation_definition": "COUNT(DISTINCT pt) across all unpacked reactions",
+          "scope": "reaction-level",
+          "supporting_case_ids": null,
+          "notes": null
+        },
+        {
+          "evidence_id": "RXN-TOP-01",
+          "metric_name": "top_01_reaction_acute_kidney_injury",
+          "value": {
+            "rank": 1,
+            "preferred_term": "Acute kidney injury",
+            "total_occurrences": 80,
+            "percentage_of_reactions": 2.33,
+            "distinct_case_count": 80,
+            "percentage_of_cases": 7.81
+          },
+          "unit": "reactions",
+          "source_fields": [
+            "patient_reaction_reactionmeddrapt"
+          ],
+          "calculation_definition": "Total occurrences and distinct case count for Preferred Term",
+          "scope": "reaction-level",
+          "supporting_case_ids": null,
+          "notes": null
+        },
+        {
+          "evidence_id": "RXN-TOP-02",
+          "metric_name": "top_02_reaction_drug_ineffective",
+          "value": {
+            "rank": 2,
+            "preferred_term": "Drug ineffective",
+            "total_occurrences": 54,
+            "percentage_of_reactions": 1.57,
+            "distinct_case_count": 54,
+            "percentage_of_cases": 5.27
+          },
+          "unit": "reactions",
+          "source_fields": [
+            "patient_reaction_reactionmeddrapt"
+          ],
+          "calculation_definition": "Total occurrences and distinct case count for Preferred Term",
+          "scope": "reaction-level",
+          "supporting_case_ids": null,
+          "notes": null
+        },
+        {
+          "evidence_id": "RXN-TOP-03",
+          "metric_name": "top_03_reaction_hypotension",
+          "value": {
+            "rank": 3,
+            "preferred_term": "Hypotension",
+            "total_occurrences": 46,
+            "percentage_of_reactions": 1.34,
+            "distinct_case_count": 46,
+            "percentage_of_cases": 4.49
+          },
+          "unit": "reactions",
+          "source_fields": [
+            "patient_reaction_reactionmeddrapt"
+          ],
+          "calculation_definition": "Total occurrences and distinct case count for Preferred Term",
+          "scope": "reaction-level",
+          "supporting_case_ids": null,
+          "notes": null
+        },
+        {
+          "evidence_id": "RXN-TOP-04",
+          "metric_name": "top_04_reaction_drug_interaction",
+          "value": {
+            "rank": 4,
+            "preferred_term": "Drug interaction",
+            "total_occurrences": 43,
+            "percentage_of_reactions": 1.25,
+            "distinct_case_count": 43,
+            "percentage_of_cases": 4.2
+          },
+          "unit": "reactions",
+          "source_fields": [
+            "patient_reaction_reactionmeddrapt"
+          ],
+          "calculation_definition": "Total occurrences and distinct case count for Preferred Term",
+          "scope": "reaction-level",
+          "supporting_case_ids": null,
+          "notes": null
+        },
+        {
+          "evidence_id": "RXN-TOP-05",
+          "metric_name": "top_05_reaction_dyspnoea",
+          "value": {
+            "rank": 5,
+            "preferred_term": "Dyspnoea",
+            "total_occurrences": 38,
+            "percentage_of_reactions": 1.11,
+            "distinct_case_count": 38,
+            "percentage_of_cases": 3.71
+          },
+          "unit": "reactions",
+          "source_fields": [
+            "patient_reaction_reactionmeddrapt"
+          ],
+          "calculation_definition": "Total occurrences and distinct case count for Preferred Term",
+          "scope": "reaction-level",
+          "supporting_case_ids": null,
+          "notes": null
+        },
+        {
+          "evidence_id": "RXN-TOP-06",
+          "metric_name": "top_06_reaction_bradycardia",
+          "value": {
+            "rank": 6,
+            "preferred_term": "Bradycardia",
+            "total_occurrences": 37,
+            "percentage_of_reactions": 1.08,
+            "distinct_case_count": 37,
+            "percentage_of_cases": 3.61
+          },
+          "unit": "reactions",
+          "source_fields": [
+            "patient_reaction_reactionmeddrapt"
+          ],
+          "calculation_definition": "Total occurrences and distinct case count for Preferred Term",
+          "scope": "reaction-level",
+          "supporting_case_ids": null,
+          "notes": null
+        },
+        {
+          "evidence_id": "RXN-TOP-07",
+          "metric_name": "top_07_reaction_dizziness",
+          "value": {
+            "rank": 7,
+            "preferred_term": "Dizziness",
+            "total_occurrences": 36,
+            "percentage_of_reactions": 1.05,
+            "distinct_case_count": 36,
+            "percentage_of_cases": 3.52
+          },
+          "unit": "reactions",
+          "source_fields": [
+            "patient_reaction_reactionmeddrapt"
+          ],
+          "calculation_definition": "Total occurrences and distinct case count for Preferred Term",
+          "scope": "reaction-level",
+          "supporting_case_ids": null,
+          "notes": null
+        },
+        {
+          "evidence_id": "RXN-TOP-08",
+          "metric_name": "top_08_reaction_fatigue",
+          "value": {
+            "rank": 8,
+            "preferred_term": "Fatigue",
+            "total_occurrences": 33,
+            "percentage_of_reactions": 0.96,
+            "distinct_case_count": 33,
+            "percentage_of_cases": 3.22
+          },
+          "unit": "reactions",
+          "source_fields": [
+            "patient_reaction_reactionmeddrapt"
+          ],
+          "calculation_definition": "Total occurrences and distinct case count for Preferred Term",
+          "scope": "reaction-level",
+          "supporting_case_ids": null,
+          "notes": null
+        },
+        {
+          "evidence_id": "RXN-TOP-09",
+          "metric_name": "top_09_reaction_off_label_use",
+          "value": {
+            "rank": 9,
+            "preferred_term": "Off label use",
+            "total_occurrences": 31,
+            "percentage_of_reactions": 0.9,
+            "distinct_case_count": 31,
+            "percentage_of_cases": 3.03
+          },
+          "unit": "reactions",
+          "source_fields": [
+            "patient_reaction_reactionmeddrapt"
+          ],
+          "calculation_definition": "Total occurrences and distinct case count for Preferred Term",
+          "scope": "reaction-level",
+          "supporting_case_ids": null,
+          "notes": null
+        },
+        {
+          "evidence_id": "RXN-TOP-10",
+          "metric_name": "top_10_reaction_diarrhoea",
+          "value": {
+            "rank": 10,
+            "preferred_term": "Diarrhoea",
+            "total_occurrences": 30,
+            "percentage_of_reactions": 0.87,
+            "distinct_case_count": 30,
+            "percentage_of_cases": 2.93
+          },
+          "unit": "reactions",
+          "source_fields": [
+            "patient_reaction_reactionmeddrapt"
+          ],
+          "calculation_definition": "Total occurrences and distinct case count for Preferred Term",
+          "scope": "reaction-level",
+          "supporting_case_ids": null,
+          "notes": null
+        },
+        {
+          "evidence_id": "RXN-TOP-11",
+          "metric_name": "top_11_reaction_fall",
+          "value": {
+            "rank": 11,
+            "preferred_term": "Fall",
+            "total_occurrences": 30,
+            "percentage_of_reactions": 0.87,
+            "distinct_case_count": 30,
+            "percentage_of_cases": 2.93
+          },
+          "unit": "reactions",
+          "source_fields": [
+            "patient_reaction_reactionmeddrapt"
+          ],
+          "calculation_definition": "Total occurrences and distinct case count for Preferred Term",
+          "scope": "reaction-level",
+          "supporting_case_ids": null,
+          "notes": null
+        },
+        {
+          "evidence_id": "RXN-TOP-12",
+          "metric_name": "top_12_reaction_condition_aggravated",
+          "value": {
+            "rank": 12,
+            "preferred_term": "Condition aggravated",
+            "total_occurrences": 27,
+            "percentage_of_reactions": 0.79,
+            "distinct_case_count": 27,
+            "percentage_of_cases": 2.64
+          },
+          "unit": "reactions",
+          "source_fields": [
+            "patient_reaction_reactionmeddrapt"
+          ],
+          "calculation_definition": "Total occurrences and distinct case count for Preferred Term",
+          "scope": "reaction-level",
+          "supporting_case_ids": null,
+          "notes": null
+        },
+        {
+          "evidence_id": "RXN-TOP-13",
+          "metric_name": "top_13_reaction_hypokalaemia",
+          "value": {
+            "rank": 13,
+            "preferred_term": "Hypokalaemia",
+            "total_occurrences": 27,
+            "percentage_of_reactions": 0.79,
+            "distinct_case_count": 27,
+            "percentage_of_cases": 2.64
+          },
+          "unit": "reactions",
+          "source_fields": [
+            "patient_reaction_reactionmeddrapt"
+          ],
+          "calculation_definition": "Total occurrences and distinct case count for Preferred Term",
+          "scope": "reaction-level",
+          "supporting_case_ids": null,
+          "notes": null
+        },
+        {
+          "evidence_id": "RXN-TOP-14",
+          "metric_name": "top_14_reaction_medication_error",
+          "value": {
+            "rank": 14,
+            "preferred_term": "Medication error",
+            "total_occurrences": 25,
+            "percentage_of_reactions": 0.73,
+            "distinct_case_count": 25,
+            "percentage_of_cases": 2.44
+          },
+          "unit": "reactions",
+          "source_fields": [
+            "patient_reaction_reactionmeddrapt"
+          ],
+          "calculation_definition": "Total occurrences and distinct case count for Preferred Term",
+          "scope": "reaction-level",
+          "supporting_case_ids": null,
+          "notes": null
+        },
+        {
+          "evidence_id": "RXN-TOP-15",
+          "metric_name": "top_15_reaction_asthenia",
+          "value": {
+            "rank": 15,
+            "preferred_term": "Asthenia",
+            "total_occurrences": 25,
+            "percentage_of_reactions": 0.73,
+            "distinct_case_count": 25,
+            "percentage_of_cases": 2.44
+          },
+          "unit": "reactions",
+          "source_fields": [
+            "patient_reaction_reactionmeddrapt"
+          ],
+          "calculation_definition": "Total occurrences and distinct case count for Preferred Term",
+          "scope": "reaction-level",
+          "supporting_case_ids": null,
+          "notes": null
+        },
+        {
+          "evidence_id": "RXN-TOP-16",
+          "metric_name": "top_16_reaction_hyponatraemia",
+          "value": {
+            "rank": 16,
+            "preferred_term": "Hyponatraemia",
+            "total_occurrences": 24,
+            "percentage_of_reactions": 0.7,
+            "distinct_case_count": 24,
+            "percentage_of_cases": 2.34
+          },
+          "unit": "reactions",
+          "source_fields": [
+            "patient_reaction_reactionmeddrapt"
+          ],
+          "calculation_definition": "Total occurrences and distinct case count for Preferred Term",
+          "scope": "reaction-level",
+          "supporting_case_ids": null,
+          "notes": null
+        },
+        {
+          "evidence_id": "RXN-TOP-17",
+          "metric_name": "top_17_reaction_toxicity_to_various_agents",
+          "value": {
+            "rank": 17,
+            "preferred_term": "Toxicity to various agents",
+            "total_occurrences": 23,
+            "percentage_of_reactions": 0.67,
+            "distinct_case_count": 23,
+            "percentage_of_cases": 2.25
+          },
+          "unit": "reactions",
+          "source_fields": [
+            "patient_reaction_reactionmeddrapt"
+          ],
+          "calculation_definition": "Total occurrences and distinct case count for Preferred Term",
+          "scope": "reaction-level",
+          "supporting_case_ids": null,
+          "notes": null
+        },
+        {
+          "evidence_id": "RXN-TOP-18",
+          "metric_name": "top_18_reaction_confusional_state",
+          "value": {
+            "rank": 18,
+            "preferred_term": "Confusional state",
+            "total_occurrences": 23,
+            "percentage_of_reactions": 0.67,
+            "distinct_case_count": 23,
+            "percentage_of_cases": 2.25
+          },
+          "unit": "reactions",
+          "source_fields": [
+            "patient_reaction_reactionmeddrapt"
+          ],
+          "calculation_definition": "Total occurrences and distinct case count for Preferred Term",
+          "scope": "reaction-level",
+          "supporting_case_ids": null,
+          "notes": null
+        },
+        {
+          "evidence_id": "RXN-TOP-19",
+          "metric_name": "top_19_reaction_arthralgia",
+          "value": {
+            "rank": 19,
+            "preferred_term": "Arthralgia",
+            "total_occurrences": 22,
+            "percentage_of_reactions": 0.64,
+            "distinct_case_count": 22,
+            "percentage_of_cases": 2.15
+          },
+          "unit": "reactions",
+          "source_fields": [
+            "patient_reaction_reactionmeddrapt"
+          ],
+          "calculation_definition": "Total occurrences and distinct case count for Preferred Term",
+          "scope": "reaction-level",
+          "supporting_case_ids": null,
+          "notes": null
+        },
+        {
+          "evidence_id": "RXN-TOP-20",
+          "metric_name": "top_20_reaction_syncope",
+          "value": {
+            "rank": 20,
+            "preferred_term": "Syncope",
+            "total_occurrences": 20,
+            "percentage_of_reactions": 0.58,
+            "distinct_case_count": 20,
+            "percentage_of_cases": 1.95
+          },
+          "unit": "reactions",
+          "source_fields": [
+            "patient_reaction_reactionmeddrapt"
+          ],
+          "calculation_definition": "Total occurrences and distinct case count for Preferred Term",
+          "scope": "reaction-level",
+          "supporting_case_ids": null,
+          "notes": null
+        },
+        {
+          "evidence_id": "RXN-TOP20-TABLE",
+          "metric_name": "top_20_preferred_terms_table",
+          "value": [
+            {
+              "rank": 1,
+              "preferred_term": "Acute kidney injury",
+              "total_occurrences": 80,
+              "percentage_of_reactions": 2.33,
+              "distinct_case_count": 80,
+              "percentage_of_cases": 7.81
+            },
+            {
+              "rank": 2,
+              "preferred_term": "Drug ineffective",
+              "total_occurrences": 54,
+              "percentage_of_reactions": 1.57,
+              "distinct_case_count": 54,
+              "percentage_of_cases": 5.27
+            },
+            {
+              "rank": 3,
+              "preferred_term": "Hypotension",
+              "total_occurrences": 46,
+              "percentage_of_reactions": 1.34,
+              "distinct_case_count": 46,
+              "percentage_of_cases": 4.49
+            },
+            {
+              "rank": 4,
+              "preferred_term": "Drug interaction",
+              "total_occurrences": 43,
+              "percentage_of_reactions": 1.25,
+              "distinct_case_count": 43,
+              "percentage_of_cases": 4.2
+            },
+            {
+              "rank": 5,
+              "preferred_term": "Dyspnoea",
+              "total_occurrences": 38,
+              "percentage_of_reactions": 1.11,
+              "distinct_case_count": 38,
+              "percentage_of_cases": 3.71
+            },
+            {
+              "rank": 6,
+              "preferred_term": "Bradycardia",
+              "total_occurrences": 37,
+              "percentage_of_reactions": 1.08,
+              "distinct_case_count": 37,
+              "percentage_of_cases": 3.61
+            },
+            {
+              "rank": 7,
+              "preferred_term": "Dizziness",
+              "total_occurrences": 36,
+              "percentage_of_reactions": 1.05,
+              "distinct_case_count": 36,
+              "percentage_of_cases": 3.52
+            },
+            {
+              "rank": 8,
+              "preferred_term": "Fatigue",
+              "total_occurrences": 33,
+              "percentage_of_reactions": 0.96,
+              "distinct_case_count": 33,
+              "percentage_of_cases": 3.22
+            },
+            {
+              "rank": 9,
+              "preferred_term": "Off label use",
+              "total_occurrences": 31,
+              "percentage_of_reactions": 0.9,
+              "distinct_case_count": 31,
+              "percentage_of_cases": 3.03
+            },
+            {
+              "rank": 10,
+              "preferred_term": "Diarrhoea",
+              "total_occurrences": 30,
+              "percentage_of_reactions": 0.87,
+              "distinct_case_count": 30,
+              "percentage_of_cases": 2.93
+            },
+            {
+              "rank": 11,
+              "preferred_term": "Fall",
+              "total_occurrences": 30,
+              "percentage_of_reactions": 0.87,
+              "distinct_case_count": 30,
+              "percentage_of_cases": 2.93
+            },
+            {
+              "rank": 12,
+              "preferred_term": "Condition aggravated",
+              "total_occurrences": 27,
+              "percentage_of_reactions": 0.79,
+              "distinct_case_count": 27,
+              "percentage_of_cases": 2.64
+            },
+            {
+              "rank": 13,
+              "preferred_term": "Hypokalaemia",
+              "total_occurrences": 27,
+              "percentage_of_reactions": 0.79,
+              "distinct_case_count": 27,
+              "percentage_of_cases": 2.64
+            },
+            {
+              "rank": 14,
+              "preferred_term": "Medication error",
+              "total_occurrences": 25,
+              "percentage_of_reactions": 0.73,
+              "distinct_case_count": 25,
+              "percentage_of_cases": 2.44
+            },
+            {
+              "rank": 15,
+              "preferred_term": "Asthenia",
+              "total_occurrences": 25,
+              "percentage_of_reactions": 0.73,
+              "distinct_case_count": 25,
+              "percentage_of_cases": 2.44
+            },
+            {
+              "rank": 16,
+              "preferred_term": "Hyponatraemia",
+              "total_occurrences": 24,
+              "percentage_of_reactions": 0.7,
+              "distinct_case_count": 24,
+              "percentage_of_cases": 2.34
+            },
+            {
+              "rank": 17,
+              "preferred_term": "Toxicity to various agents",
+              "total_occurrences": 23,
+              "percentage_of_reactions": 0.67,
+              "distinct_case_count": 23,
+              "percentage_of_cases": 2.25
+            },
+            {
+              "rank": 18,
+              "preferred_term": "Confusional state",
+              "total_occurrences": 23,
+              "percentage_of_reactions": 0.67,
+              "distinct_case_count": 23,
+              "percentage_of_cases": 2.25
+            },
+            {
+              "rank": 19,
+              "preferred_term": "Arthralgia",
+              "total_occurrences": 22,
+              "percentage_of_reactions": 0.64,
+              "distinct_case_count": 22,
+              "percentage_of_cases": 2.15
+            },
+            {
+              "rank": 20,
+              "preferred_term": "Syncope",
+              "total_occurrences": 20,
+              "percentage_of_reactions": 0.58,
+              "distinct_case_count": 20,
+              "percentage_of_cases": 1.95
+            }
+          ],
+          "unit": null,
+          "source_fields": [
+            "patient_reaction_reactionmeddrapt"
+          ],
+          "calculation_definition": "Top 20 most frequent Preferred Terms ranked by total occurrences",
+          "scope": "reaction-level",
+          "supporting_case_ids": null,
+          "notes": null
+        },
+        {
+          "evidence_id": "RXN-SERIOUS-TOP20",
+          "metric_name": "top_20_serious_reactions_table",
+          "value": [
+            {
+              "rank": 1,
+              "preferred_term": "Acute kidney injury",
+              "serious_reaction_count": 80,
+              "distinct_case_count": 80
+            },
+            {
+              "rank": 2,
+              "preferred_term": "Drug ineffective",
+              "serious_reaction_count": 53,
+              "distinct_case_count": 53
+            },
+            {
+              "rank": 3,
+              "preferred_term": "Hypotension",
+              "serious_reaction_count": 46,
+              "distinct_case_count": 46
+            },
+            {
+              "rank": 4,
+              "preferred_term": "Drug interaction",
+              "serious_reaction_count": 43,
+              "distinct_case_count": 43
+            },
+            {
+              "rank": 5,
+              "preferred_term": "Dyspnoea",
+              "serious_reaction_count": 38,
+              "distinct_case_count": 38
+            },
+            {
+              "rank": 6,
+              "preferred_term": "Bradycardia",
+              "serious_reaction_count": 37,
+              "distinct_case_count": 37
+            },
+            {
+              "rank": 7,
+              "preferred_term": "Dizziness",
+              "serious_reaction_count": 36,
+              "distinct_case_count": 36
+            },
+            {
+              "rank": 8,
+              "preferred_term": "Fatigue",
+              "serious_reaction_count": 33,
+              "distinct_case_count": 33
+            },
+            {
+              "rank": 9,
+              "preferred_term": "Off label use",
+              "serious_reaction_count": 31,
+              "distinct_case_count": 31
+            },
+            {
+              "rank": 10,
+              "preferred_term": "Fall",
+              "serious_reaction_count": 30,
+              "distinct_case_count": 30
+            },
+            {
+              "rank": 11,
+              "preferred_term": "Diarrhoea",
+              "serious_reaction_count": 30,
+              "distinct_case_count": 30
+            },
+            {
+              "rank": 12,
+              "preferred_term": "Hypokalaemia",
+              "serious_reaction_count": 27,
+              "distinct_case_count": 27
+            },
+            {
+              "rank": 13,
+              "preferred_term": "Condition aggravated",
+              "serious_reaction_count": 27,
+              "distinct_case_count": 27
+            },
+            {
+              "rank": 14,
+              "preferred_term": "Asthenia",
+              "serious_reaction_count": 25,
+              "distinct_case_count": 25
+            },
+            {
+              "rank": 15,
+              "preferred_term": "Medication error",
+              "serious_reaction_count": 25,
+              "distinct_case_count": 25
+            },
+            {
+              "rank": 16,
+              "preferred_term": "Hyponatraemia",
+              "serious_reaction_count": 24,
+              "distinct_case_count": 24
+            },
+            {
+              "rank": 17,
+              "preferred_term": "Confusional state",
+              "serious_reaction_count": 23,
+              "distinct_case_count": 23
+            },
+            {
+              "rank": 18,
+              "preferred_term": "Toxicity to various agents",
+              "serious_reaction_count": 23,
+              "distinct_case_count": 23
+            },
+            {
+              "rank": 19,
+              "preferred_term": "Arthralgia",
+              "serious_reaction_count": 22,
+              "distinct_case_count": 22
+            },
+            {
+              "rank": 20,
+              "preferred_term": "Syncope",
+              "serious_reaction_count": 20,
+              "distinct_case_count": 20
+            }
+          ],
+          "unit": null,
+          "source_fields": [
+            "patient_reaction_reactionmeddrapt",
+            "serious"
+          ],
+          "calculation_definition": "Top 20 Preferred Terms reported within serious cases",
+          "scope": "reaction-level",
+          "supporting_case_ids": null,
+          "notes": null
+        },
+        {
+          "evidence_id": "RXN-SOC-NOTICE",
+          "metric_name": "soc_analysis_availability",
+          "value": "UNAVAILABLE - No System Organ Class field supplied in dataset",
+          "unit": null,
+          "source_fields": [
+            "patient_reaction_reactionmeddrapt"
+          ],
+          "calculation_definition": "Compliance requirement: No MedDRA SOC inference performed without external dictionary",
+          "scope": "dataset-level",
+          "supporting_case_ids": null,
+          "notes": "Explicitly conforms to the challenge constraint: only MedDRA PT level analysis is performed."
+        }
+      ],
+      "metadata": {
+        "total_reaction_records": 3429,
+        "soc_field_present": false
+      },
+      "computed_at": "2026-08-15T17:04:30.064464+00:00"
+    },
+    "outcome_analysis": {
+      "section_id": "outcome_analysis",
+      "section_title": "Reaction and Case-Level Outcome Analysis",
+      "metrics": [
+        {
+          "evidence_id": "OUT-RXN-ALL",
+          "metric_name": "reaction_level_outcome_distribution",
+          "value": {
+            "recovered/resolved": {
+              "count": 1280,
+              "percentage": 37.33
+            },
+            "unknown": {
+              "count": 1039,
+              "percentage": 30.3
+            },
+            "not recovered/not resolved/ongoing": {
+              "count": 536,
+              "percentage": 15.63
+            },
+            "recovering/resolving": {
+              "count": 406,
+              "percentage": 11.84
+            },
+            "fatal": {
+              "count": 134,
+              "percentage": 3.91
+            },
+            "recovered/resolved with sequelae": {
+              "count": 34,
+              "percentage": 0.99
+            }
+          },
+          "unit": "reactions",
+          "source_fields": [
+            "patient_reaction_reactionoutcome"
+          ],
+          "calculation_definition": "COUNT(reactions) GROUP BY outcome",
+          "scope": "reaction-level",
+          "supporting_case_ids": null,
+          "notes": null
+        },
+        {
+          "evidence_id": "OUT-CASE-ALL",
+          "metric_name": "case_level_worst_outcome_distribution",
+          "value": {
+            "recovered/resolved": {
+              "count": 397,
+              "percentage": 38.77
+            },
+            "recovering/resolving": {
+              "count": 202,
+              "percentage": 19.73
+            },
+            "not recovered/not resolved/ongoing": {
+              "count": 184,
+              "percentage": 17.97
+            },
+            "unknown": {
+              "count": 159,
+              "percentage": 15.53
+            },
+            "fatal": {
+              "count": 68,
+              "percentage": 6.64
+            },
+            "recovered/resolved with sequelae": {
+              "count": 14,
+              "percentage": 1.37
+            }
+          },
+          "unit": "cases",
+          "source_fields": [
+            "patient_reaction_reactionoutcome"
+          ],
+          "calculation_definition": "Worst reaction outcome per case based on clinical severity hierarchy (Fatal > Not recovered > Recovering > Recovered > Unknown)",
+          "scope": "case-level",
+          "supporting_case_ids": null,
+          "notes": null
+        },
+        {
+          "evidence_id": "OUT-CROSSTAB-TOP5",
+          "metric_name": "top_5_pts_outcome_crosstab",
+          "value": {
+            "Acute kidney injury": {
+              "recovered/resolved": 44,
+              "recovering/resolving": 14,
+              "unknown": 8,
+              "fatal": 7,
+              "not recovered/not resolved/ongoing": 5,
+              "recovered/resolved with sequelae": 2
+            },
+            "Drug ineffective": {
+              "unknown": 40,
+              "recovered/resolved": 7,
+              "recovering/resolving": 5,
+              "not recovered/not resolved/ongoing": 2
+            },
+            "Hypotension": {
+              "recovered/resolved": 24,
+              "unknown": 9,
+              "recovering/resolving": 8,
+              "not recovered/not resolved/ongoing": 3,
+              "recovered/resolved with sequelae": 1,
+              "fatal": 1
+            },
+            "Drug interaction": {
+              "unknown": 22,
+              "recovered/resolved": 18,
+              "recovering/resolving": 1,
+              "not recovered/not resolved/ongoing": 1,
+              "fatal": 1
+            },
+            "Dyspnoea": {
+              "recovered/resolved": 14,
+              "unknown": 10,
+              "not recovered/not resolved/ongoing": 5,
+              "recovering/resolving": 4,
+              "fatal": 3,
+              "recovered/resolved with sequelae": 2
+            }
+          },
+          "unit": "reactions",
+          "source_fields": [
+            "patient_reaction_reactionmeddrapt",
+            "patient_reaction_reactionoutcome"
+          ],
+          "calculation_definition": "Crosstabulation of reaction outcomes for top 5 Preferred Terms",
+          "scope": "reaction-level",
+          "supporting_case_ids": null,
+          "notes": null
+        }
+      ],
+      "metadata": {
+        "outcome_categories_detected": [
+          "recovered/resolved",
+          "unknown",
+          "not recovered/not resolved/ongoing",
+          "recovering/resolving",
+          "fatal",
+          "recovered/resolved with sequelae"
+        ],
+        "severity_hierarchy": [
+          "unknown",
+          "recovered/resolved",
+          "recovered/resolved with sequelae",
+          "recovering/resolving",
+          "not recovered/not resolved/ongoing",
+          "fatal"
+        ]
+      },
+      "computed_at": "2026-08-15T17:04:30.125168+00:00"
+    },
+    "trend_analysis": {
+      "section_id": "trend_analysis",
+      "section_title": "Reporting Volume and Temporal Trend Analysis",
+      "metrics": [
+        {
+          "evidence_id": "TIME-PERIOD-001",
+          "metric_name": "reporting_period_interval",
+          "value": {
+            "start_date": "2024-12-27",
+            "end_date": "2025-12-26",
+            "duration_days": 364,
+            "total_cases_in_period": 1024
+          },
+          "unit": "days",
+          "source_fields": [
+            "receivedate"
+          ],
+          "calculation_definition": "MIN(parsed_receivedate) to MAX(parsed_receivedate)",
+          "scope": "dataset-level",
+          "supporting_case_ids": null,
+          "notes": null
+        },
+        {
+          "evidence_id": "TIME-MONTHLY-COUNTS",
+          "metric_name": "monthly_case_volume_distribution",
+          "value": {
+            "2024-12": 21,
+            "2025-01": 75,
+            "2025-02": 94,
+            "2025-03": 83,
+            "2025-04": 78,
+            "2025-05": 80,
+            "2025-06": 84,
+            "2025-07": 109,
+            "2025-08": 64,
+            "2025-09": 76,
+            "2025-10": 102,
+            "2025-11": 75,
+            "2025-12": 83
+          },
+          "unit": "cases",
+          "source_fields": [
+            "receivedate"
+          ],
+          "calculation_definition": "GROUP BY Year-Month(receivedate) -> count",
+          "scope": "case-level",
+          "supporting_case_ids": null,
+          "notes": null
+        },
+        {
+          "evidence_id": "TIME-QUARTERLY-COUNTS",
+          "metric_name": "quarterly_case_volume_distribution",
+          "value": {
+            "2024Q4": 21,
+            "2025Q1": 252,
+            "2025Q2": 242,
+            "2025Q3": 249,
+            "2025Q4": 260
+          },
+          "unit": "cases",
+          "source_fields": [
+            "receivedate"
+          ],
+          "calculation_definition": "GROUP BY Year-Quarter(receivedate) -> count",
+          "scope": "case-level",
+          "supporting_case_ids": null,
+          "notes": null
+        },
+        {
+          "evidence_id": "TIME-VELOCITY-001",
+          "metric_name": "reporting_volume_velocity",
+          "value": {
+            "first_half_cases": 511,
+            "second_half_cases": 513,
+            "percentage_change": 0.39,
+            "trend_direction": "stable"
+          },
+          "unit": "cases",
+          "source_fields": [
+            "receivedate"
+          ],
+          "calculation_definition": "Comparison of case volume in first half vs second half of reporting interval",
+          "scope": "dataset-level",
+          "supporting_case_ids": null,
+          "notes": "Evaluates baseline stability. Fluctuation within +/-15% is classified as stable."
+        },
+        {
+          "evidence_id": "TIME-PT-TRAJECTORY",
+          "metric_name": "top_5_pts_monthly_trajectories",
+          "value": {
+            "Acute kidney injury": {
+              "2024-12": 1,
+              "2025-01": 9,
+              "2025-02": 7,
+              "2025-03": 9,
+              "2025-04": 7,
+              "2025-05": 7,
+              "2025-06": 8,
+              "2025-07": 4,
+              "2025-08": 9,
+              "2025-09": 5,
+              "2025-10": 7,
+              "2025-11": 2,
+              "2025-12": 5
+            },
+            "Drug ineffective": {
+              "2024-12": 1,
+              "2025-01": 3,
+              "2025-02": 7,
+              "2025-03": 2,
+              "2025-04": 3,
+              "2025-05": 2,
+              "2025-06": 7,
+              "2025-07": 6,
+              "2025-08": 10,
+              "2025-09": 6,
+              "2025-10": 1,
+              "2025-11": 5,
+              "2025-12": 1
+            },
+            "Hypotension": {
+              "2025-01": 3,
+              "2025-02": 3,
+              "2025-03": 3,
+              "2025-04": 5,
+              "2025-05": 4,
+              "2025-06": 3,
+              "2025-07": 3,
+              "2025-08": 8,
+              "2025-09": 4,
+              "2025-10": 3,
+              "2025-11": 6,
+              "2025-12": 1
+            },
+            "Drug interaction": {
+              "2024-12": 1,
+              "2025-01": 2,
+              "2025-02": 3,
+              "2025-03": 6,
+              "2025-04": 4,
+              "2025-05": 5,
+              "2025-06": 1,
+              "2025-07": 5,
+              "2025-08": 3,
+              "2025-09": 3,
+              "2025-10": 3,
+              "2025-11": 2,
+              "2025-12": 5
+            },
+            "Dyspnoea": {
+              "2024-12": 1,
+              "2025-01": 2,
+              "2025-03": 4,
+              "2025-04": 3,
+              "2025-05": 2,
+              "2025-06": 4,
+              "2025-07": 3,
+              "2025-08": 6,
+              "2025-09": 4,
+              "2025-10": 5,
+              "2025-11": 2,
+              "2025-12": 2
+            }
+          },
+          "unit": "reactions",
+          "source_fields": [
+            "receivedate",
+            "patient_reaction_reactionmeddrapt"
+          ],
+          "calculation_definition": "Monthly frequency trajectory for top 5 Preferred Terms",
+          "scope": "reaction-level",
+          "supporting_case_ids": null,
+          "notes": "Factual temporal observations only. Statistical variations are not designated as safety signals."
+        }
+      ],
+      "metadata": {
+        "reporting_start": "2024-12-27",
+        "reporting_end": "2025-12-26",
+        "duration_days": 364
+      },
+      "computed_at": "2026-08-15T17:04:30.177933+00:00"
+    },
+    "alert_analysis": {
+      "section_id": "alert_and_regulatory_analysis",
+      "section_title": "15-Day Expedited Alerts and Regulatory Declarations",
+      "metrics": [
+        {
+          "evidence_id": "ALERT-001",
+          "metric_name": "expedited_15day_alert_cases_count",
+          "value": 1023,
+          "unit": "cases",
+          "source_fields": [
+            "fulfillexpeditecriteria"
+          ],
+          "calculation_definition": "COUNT(cases WHERE fulfillexpeditecriteria == 'yes')",
+          "scope": "case-level",
+          "supporting_case_ids": null,
+          "notes": null
+        },
+        {
+          "evidence_id": "ALERT-002",
+          "metric_name": "expedited_15day_alert_cases_percentage",
+          "value": 99.9,
+          "unit": "%",
+          "source_fields": [
+            "fulfillexpeditecriteria"
+          ],
+          "calculation_definition": "(expedited_15day_alert_cases_count / total_unique_cases) * 100",
+          "scope": "case-level",
+          "supporting_case_ids": null,
+          "notes": null
+        },
+        {
+          "evidence_id": "ALERT-SERIOUS-CROSSTAB",
+          "metric_name": "expedited_vs_serious_crosstab",
+          "value": {
+            "not serious": {
+              "no": 1,
+              "yes": 0
+            },
+            "serious": {
+              "no": 0,
+              "yes": 1023
+            }
+          },
+          "unit": "cases",
+          "source_fields": [
+            "fulfillexpeditecriteria",
+            "serious"
+          ],
+          "calculation_definition": "Cross-tabulation of fulfillexpeditecriteria by serious classification",
+          "scope": "case-level",
+          "supporting_case_ids": null,
+          "notes": "Evaluates mathematical independence of seriousness and expedited flags."
+        },
+        {
+          "evidence_id": "ALERT-FATAL-SPLIT",
+          "metric_name": "expedited_cases_fatal_split",
+          "value": {
+            "fatal_expedited_cases": 68,
+            "non_fatal_expedited_cases": 955,
+            "total_expedited_cases": 1023
+          },
+          "unit": "cases",
+          "source_fields": [
+            "fulfillexpeditecriteria",
+            "seriousnessdeath"
+          ],
+          "calculation_definition": "COUNT(cases WHERE fulfillexpeditecriteria == 'yes') broken down by seriousnessdeath == 'yes'",
+          "scope": "case-level",
+          "supporting_case_ids": null,
+          "notes": null
+        },
+        {
+          "evidence_id": "ALERT-REPORT-TYPE",
+          "metric_name": "expedited_cases_report_type_breakdown",
+          "value": {
+            "spontaneous report": 1013,
+            "report from study": 10
+          },
+          "unit": "cases",
+          "source_fields": [
+            "fulfillexpeditecriteria",
+            "reporttype"
+          ],
+          "calculation_definition": "GROUP BY reporttype WHERE fulfillexpeditecriteria == 'yes'",
+          "scope": "case-level",
+          "supporting_case_ids": null,
+          "notes": null
+        },
+        {
+          "evidence_id": "HIST-ACTION-001",
+          "metric_name": "history_of_actions_status",
+          "value": {
+            "actions_reported_in_dataset": false,
+            "action_count": 0,
+            "formal_statement": "No safety-related regulatory actions, labeling modifications, or risk-minimization interventions were reported during the interval covered by this report. No history-of-actions records were supplied in the dataset."
+          },
+          "unit": null,
+          "source_fields": [
+            "safetyreportid"
+          ],
+          "calculation_definition": "Regulatory compliance verification: Explicit confirmation of absence of reported actions",
+          "scope": "dataset-level",
+          "supporting_case_ids": null,
+          "notes": "Strict grounding rule: Do not invent safety or regulatory actions."
+        },
+        {
+          "evidence_id": "EXPECT-SCOPE-001",
+          "metric_name": "expectedness_assessment_status",
+          "value": {
+            "expectedness_calculated": false,
+            "reason": "No approved Company Core Data Sheet (CCDS) or Reference Safety Information (RSI) label was provided with the dataset for Version 0."
+          },
+          "unit": null,
+          "source_fields": [
+            "patient_reaction_reactionmeddrapt"
+          ],
+          "calculation_definition": "Compliance check: Expectedness analysis omitted due to lack of reference label",
+          "scope": "dataset-level",
+          "supporting_case_ids": null,
+          "notes": null
+        }
+      ],
+      "metadata": {
+        "total_expedited_cases": 1023
+      },
+      "computed_at": "2026-08-15T17:04:30.189780+00:00"
+    }
+  },
+  "generated_at": "2026-08-15T17:04:30.190081+00:00"
+}

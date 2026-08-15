@@ -1,0 +1,343 @@
+{
+  "section_id": "case_summary",
+  "report_type": "PADER",
+  "product_name": "Bisoprolol",
+  "reporting_period": {
+    "start_date": "2024-12-27",
+    "end_date": "2025-12-26",
+    "duration_days": 364
+  },
+  "analyses": {
+    "case_overview": {
+      "analysis_name": "case_overview",
+      "computed_at": "2026-08-15T15:56:49.703722+00:00",
+      "figures": {
+        "total_cases": 1024,
+        "serious_cases": 1023,
+        "non_serious_cases": 1,
+        "serious_pct": 99.9,
+        "expedited_cases": 1023,
+        "non_expedited_cases": 1,
+        "report_type": {
+          "spontaneous report": 1014,
+          "report from study": 10
+        },
+        "reporter_qualification": {
+          "physician": 492,
+          "pharmacist": 255,
+          "other health professional": 162,
+          "consumer or non-health professional": 115
+        },
+        "reporting_period": {
+          "start_date": "2024-12-27",
+          "end_date": "2025-12-26",
+          "duration_days": 364
+        }
+      },
+      "notes": [
+        "Case counts based on deduplicated dataset (latest version per safetyreportid).",
+        "Seriousness field values: 'serious' / 'not serious'.",
+        "Almost all cases (99.9%) are classified as serious \u2014 typical for spontaneous ICSR data."
+      ]
+    },
+    "demographics": {
+      "analysis_name": "demographics",
+      "computed_at": "2026-08-15T15:56:49.709989+00:00",
+      "figures": {
+        "sex": {
+          "counts": {
+            "female": 503,
+            "male": 493,
+            "unknown": 28
+          },
+          "percentages": {
+            "female": 49.1,
+            "male": 48.1,
+            "unknown": 2.7
+          }
+        },
+        "age": {
+          "total_with_age": 938,
+          "total_missing_age": 86,
+          "statistics": {
+            "mean": 70.1,
+            "median": 73.0,
+            "min": 0.1,
+            "max": 104.0,
+            "std": 15.9
+          },
+          "age_groups": {
+            "Elderly": 674,
+            "Adult": 248,
+            "Adolescent": 6,
+            "Infant/Toddler": 6,
+            "Child": 4,
+            "Neonate": 0
+          }
+        },
+        "country": {
+          "counts": {
+            "Eu": 345,
+            "United Kingdom": 281,
+            "France": 185,
+            "Canada": 56,
+            "Italy": 51,
+            "Germany": 33,
+            "Spain": 24,
+            "Poland": 18,
+            "Portugal": 8,
+            "United States": 4,
+            "Ireland": 3,
+            "Belgium": 2,
+            "Romania": 2,
+            "Saudi Arabia": 2,
+            "Croatia": 2,
+            "Ukraine": 2,
+            "Sweden": 2,
+            "Finland": 1,
+            "Australia": 1,
+            "Indonesia": 1,
+            "China": 1
+          },
+          "total_countries": 21
+        }
+      },
+      "notes": [
+        "Age unit '800' interpreted as decade (FAERS convention).",
+        "Ages converted to years for bucketing. Non-convertible ages treated as missing.",
+        "Country: using primarysourcecountry field. 'eu' treated as geographic unit, not mapped to individual countries.",
+        "ISO 2-letter codes (IE, RO, etc.) normalized to full country names."
+      ]
+    },
+    "seriousness": {
+      "analysis_name": "seriousness",
+      "computed_at": "2026-08-15T15:56:49.764205+00:00",
+      "figures": {
+        "criteria_breakdown": {
+          "Death": {
+            "count": 68,
+            "pct": 6.6,
+            "column": "seriousnessdeath"
+          },
+          "Life-threatening": {
+            "count": 105,
+            "pct": 10.3,
+            "column": "seriousnesslifethreatening"
+          },
+          "Hospitalization": {
+            "count": 482,
+            "pct": 47.1,
+            "column": "seriousnesshospitalization"
+          },
+          "Disability/incapacity": {
+            "count": 44,
+            "pct": 4.3,
+            "column": "seriousnessdisabling"
+          },
+          "Congenital anomaly": {
+            "count": 7,
+            "pct": 0.7,
+            "column": "seriousnesscongenitalanomali"
+          },
+          "Other medically important": {
+            "count": 905,
+            "pct": 88.4,
+            "column": "seriousnessother"
+          }
+        },
+        "multi_criteria_distribution": {
+          "cases_with_0_criteria": 1,
+          "cases_with_1_criterion": 528,
+          "cases_with_2_criteria": 414,
+          "cases_with_3_plus_criteria": 81
+        },
+        "fatal_cases": 68,
+        "fatal_pct": 6.6
+      },
+      "notes": [
+        "Seriousness criteria are independent yes/no flags, not mutually exclusive.",
+        "A single case can meet multiple seriousness criteria.",
+        "'Other medically important' is the most common criterion in this dataset."
+      ]
+    },
+    "drug_characterization": {
+      "analysis_name": "drug_characterization",
+      "computed_at": "2026-08-15T15:56:50.036438+00:00",
+      "figures": {
+        "product_name": "Bisoprolol",
+        "role_distribution": {
+          "counts": {
+            "concomitant": 666,
+            "suspect": 340,
+            "interacting": 17
+          },
+          "percentages": {
+            "concomitant": 65.1,
+            "suspect": 33.2,
+            "interacting": 1.7
+          }
+        },
+        "indications": {
+          "Product used for unknown indication": 558,
+          "Hypertension": 113,
+          "Ill-defined disorder": 56,
+          "Atrial fibrillation": 47,
+          "Cardiac failure": 24,
+          "Myocardial ischaemia": 16,
+          "Adverse drug reaction": 15,
+          "Prophylaxis": 10,
+          "Product use in unapproved indication": 9,
+          "Arrhythmia": 9,
+          "Essential hypertension": 8,
+          "Cardiac disorder": 7,
+          "Tachycardia": 5,
+          "Myocardial infarction": 5,
+          "Atrial flutter": 4,
+          "Cardiomyopathy": 4,
+          "Heart failure with reduced ejection fraction": 4,
+          "Supraventricular tachycardia": 4,
+          "Ventricular extrasystoles": 3,
+          "Hypertrophic cardiomyopathy": 3,
+          "Cerebrovascular accident": 3,
+          "Heart rate": 3,
+          "Ischaemic heart disease prophylaxis": 2,
+          "Cardiac amyloidosis": 2,
+          "Blood pressure management": 2,
+          "Dilated cardiomyopathy": 2,
+          "Acute myocardial infarction": 2,
+          "Blood pressure measurement": 2,
+          "Ventricular arrhythmia": 2,
+          "Ventricular tachycardia": 2,
+          "Vitamin supplementation": 2,
+          "Blood pressure increased": 2,
+          "Marfan^s syndrome": 2,
+          "Ventricular failure": 1,
+          "Post-acute COVID-19 syndrome": 1,
+          "Wolff-Parkinson-White syndrome": 1,
+          "Cardiovascular disorder": 1,
+          "Hypothyroidism": 1,
+          "Postural orthostatic tachycardia syndrome": 1,
+          "Coronary artery disease": 1,
+          "Heart rate irregular": 1,
+          "Aortic valve replacement": 1,
+          "Sinus tachycardia": 1,
+          "Pain": 1,
+          "Cardiovascular event prophylaxis": 1,
+          "Tachyarrhythmia": 1,
+          "Ischaemic stroke": 1,
+          "Arrhythmic storm": 1,
+          "Coronary arterial stent insertion": 1,
+          "Suicidal ideation": 1,
+          "Diabetic retinopathy": 1,
+          "Extrasystoles": 1,
+          "Cardiac failure congestive": 1,
+          "Systolic dysfunction": 1,
+          "Bradycardia": 1,
+          "Restrictive cardiomyopathy": 1,
+          "Cardiomegaly": 1,
+          "Premedication": 1,
+          "Hypertensive emergency": 1,
+          "Hyperlipidaemia": 1,
+          "Angina unstable": 1,
+          "Hyperuricaemia": 1,
+          "Pneumonia": 1,
+          "Depression": 1,
+          "Diabetes prophylaxis": 1,
+          "Type 2 diabetes mellitus": 1,
+          "Cardiac arrest": 1,
+          "Age-related macular degeneration": 1,
+          "Toxicity to various agents": 1,
+          "Palpitations": 1,
+          "Conduction disorder": 1,
+          "Gastrooesophageal reflux prophylaxis": 1,
+          "Ventricular dyssynchrony": 1,
+          "Hypercholesterolaemia": 1,
+          "Prophylaxis of nausea and vomiting": 1,
+          "Procedural pain": 1,
+          "Arrhythmia supraventricular": 1,
+          "Pseudocellulitis": 1,
+          "Cardiac pacemaker insertion": 1,
+          "Blood pressure fluctuation": 1,
+          "Magnetic resonance imaging heart": 1,
+          "Gastritis": 1,
+          "Sinus bradycardia": 1,
+          "Hypertonia": 1,
+          "Nausea": 1,
+          "Endocrine hypertension": 1,
+          "Acute coronary syndrome": 1
+        },
+        "actions_taken": {
+          "unknown": 697,
+          "drug withdrawn": 104,
+          "not applicable": 103,
+          "dose not changed": 99,
+          "dose reduced": 14,
+          "dose increased": 3
+        },
+        "top_concomitant_drugs": [
+          {
+            "drug": "ATORVASTATIN",
+            "count": 163
+          },
+          {
+            "drug": "FUROSEMIDE",
+            "count": 113
+          },
+          {
+            "drug": "APIXABAN",
+            "count": 100
+          },
+          {
+            "drug": "ASPIRIN",
+            "count": 100
+          },
+          {
+            "drug": "RAMIPRIL",
+            "count": 70
+          },
+          {
+            "drug": "AMLODIPINE",
+            "count": 65
+          },
+          {
+            "drug": "CARBOPLATIN",
+            "count": 62
+          },
+          {
+            "drug": "ACETAMINOPHEN",
+            "count": 61
+          },
+          {
+            "drug": "AMIODARONE",
+            "count": 57
+          },
+          {
+            "drug": "METFORMIN",
+            "count": 56
+          }
+        ]
+      },
+      "notes": [
+        "Bisoprolol is the SUSPECT drug in only ~33% of cases.",
+        "In ~65% of cases, Bisoprolol is listed as a CONCOMITANT drug.",
+        "The report must be transparent about this role distribution.",
+        "Indications: 'Product used for unknown indication' is the most common."
+      ]
+    }
+  },
+  "metadata": {
+    "dataset_file": "Bisoprolol_icsr_sample_1068rows.xlsx",
+    "total_rows": 1068,
+    "unique_cases": 1024,
+    "dedup_method": "keep latest safetyreportversion per safetyreportid",
+    "generated_at": "2026-08-15T15:56:50.036502+00:00"
+  },
+  "unavailable_data": [
+    "System Organ Class (SOC) \u2014 no SOC column in dataset",
+    "Expectedness (labelled/unlabelled) \u2014 no product label/CCDS supplied",
+    "Clinical narratives \u2014 all narrative fields are date stubs only",
+    "Exposure data \u2014 no patient-years or denominator available",
+    "Prior period data \u2014 this is the first reporting period",
+    "History of actions \u2014 no action data supplied"
+  ]
+}

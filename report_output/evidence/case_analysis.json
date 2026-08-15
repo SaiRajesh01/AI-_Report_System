@@ -1,0 +1,337 @@
+{
+  "section_id": "case_analysis",
+  "section_title": "Case Volume and Seriousness Analysis",
+  "metrics": [
+    {
+      "evidence_id": "CO-001",
+      "metric_name": "total_unique_cases",
+      "value": 1024,
+      "unit": "cases",
+      "source_fields": [
+        "safetyreportid",
+        "safetyreportversion"
+      ],
+      "calculation_definition": "COUNT(DISTINCT safetyreportid) taking the highest safetyreportversion",
+      "scope": "case-level",
+      "supporting_case_ids": [
+        24780403,
+        24780599,
+        24780680,
+        24784771,
+        24784845,
+        24784920,
+        24784985,
+        24784989,
+        24787006,
+        24787240
+      ],
+      "notes": null
+    },
+    {
+      "evidence_id": "CO-002",
+      "metric_name": "serious_cases_count",
+      "value": 1023,
+      "unit": "cases",
+      "source_fields": [
+        "serious"
+      ],
+      "calculation_definition": "COUNT(cases WHERE serious == 'serious')",
+      "scope": "case-level",
+      "supporting_case_ids": null,
+      "notes": null
+    },
+    {
+      "evidence_id": "CO-003",
+      "metric_name": "serious_cases_percentage",
+      "value": 99.9,
+      "unit": "%",
+      "source_fields": [
+        "serious"
+      ],
+      "calculation_definition": "(serious_cases_count / total_unique_cases) * 100",
+      "scope": "case-level",
+      "supporting_case_ids": null,
+      "notes": null
+    },
+    {
+      "evidence_id": "CO-004",
+      "metric_name": "non_serious_cases_count",
+      "value": 1,
+      "unit": "cases",
+      "source_fields": [
+        "serious"
+      ],
+      "calculation_definition": "COUNT(cases WHERE serious == 'not serious')",
+      "scope": "case-level",
+      "supporting_case_ids": null,
+      "notes": null
+    },
+    {
+      "evidence_id": "CO-005",
+      "metric_name": "non_serious_cases_percentage",
+      "value": 0.1,
+      "unit": "%",
+      "source_fields": [
+        "serious"
+      ],
+      "calculation_definition": "(non_serious_cases_count / total_unique_cases) * 100",
+      "scope": "case-level",
+      "supporting_case_ids": null,
+      "notes": null
+    },
+    {
+      "evidence_id": "SER-001",
+      "metric_name": "seriousness_criterion_seriousnessdeath",
+      "value": {
+        "criterion": "Death (Fatal)",
+        "count": 68,
+        "percentage": 6.64
+      },
+      "unit": "cases",
+      "source_fields": [
+        "seriousnessdeath"
+      ],
+      "calculation_definition": "COUNT(cases WHERE seriousnessdeath == 'yes')",
+      "scope": "case-level",
+      "supporting_case_ids": null,
+      "notes": "Seriousness criteria are independent, non-mutually exclusive flags."
+    },
+    {
+      "evidence_id": "SER-002",
+      "metric_name": "seriousness_criterion_seriousnesslifethreatening",
+      "value": {
+        "criterion": "Life-threatening",
+        "count": 105,
+        "percentage": 10.25
+      },
+      "unit": "cases",
+      "source_fields": [
+        "seriousnesslifethreatening"
+      ],
+      "calculation_definition": "COUNT(cases WHERE seriousnesslifethreatening == 'yes')",
+      "scope": "case-level",
+      "supporting_case_ids": null,
+      "notes": "Seriousness criteria are independent, non-mutually exclusive flags."
+    },
+    {
+      "evidence_id": "SER-003",
+      "metric_name": "seriousness_criterion_seriousnesshospitalization",
+      "value": {
+        "criterion": "Hospitalization / Prolonged",
+        "count": 482,
+        "percentage": 47.07
+      },
+      "unit": "cases",
+      "source_fields": [
+        "seriousnesshospitalization"
+      ],
+      "calculation_definition": "COUNT(cases WHERE seriousnesshospitalization == 'yes')",
+      "scope": "case-level",
+      "supporting_case_ids": null,
+      "notes": "Seriousness criteria are independent, non-mutually exclusive flags."
+    },
+    {
+      "evidence_id": "SER-004",
+      "metric_name": "seriousness_criterion_seriousnessdisabling",
+      "value": {
+        "criterion": "Disability / Incapacity",
+        "count": 44,
+        "percentage": 4.3
+      },
+      "unit": "cases",
+      "source_fields": [
+        "seriousnessdisabling"
+      ],
+      "calculation_definition": "COUNT(cases WHERE seriousnessdisabling == 'yes')",
+      "scope": "case-level",
+      "supporting_case_ids": null,
+      "notes": "Seriousness criteria are independent, non-mutually exclusive flags."
+    },
+    {
+      "evidence_id": "SER-005",
+      "metric_name": "seriousness_criterion_seriousnesscongenitalanomali",
+      "value": {
+        "criterion": "Congenital Anomaly",
+        "count": 7,
+        "percentage": 0.68
+      },
+      "unit": "cases",
+      "source_fields": [
+        "seriousnesscongenitalanomali"
+      ],
+      "calculation_definition": "COUNT(cases WHERE seriousnesscongenitalanomali == 'yes')",
+      "scope": "case-level",
+      "supporting_case_ids": null,
+      "notes": "Seriousness criteria are independent, non-mutually exclusive flags."
+    },
+    {
+      "evidence_id": "SER-006",
+      "metric_name": "seriousness_criterion_seriousnessother",
+      "value": {
+        "criterion": "Other Medically Important",
+        "count": 905,
+        "percentage": 88.38
+      },
+      "unit": "cases",
+      "source_fields": [
+        "seriousnessother"
+      ],
+      "calculation_definition": "COUNT(cases WHERE seriousnessother == 'yes')",
+      "scope": "case-level",
+      "supporting_case_ids": null,
+      "notes": "Seriousness criteria are independent, non-mutually exclusive flags."
+    },
+    {
+      "evidence_id": "SER-SUMMARY",
+      "metric_name": "seriousness_criteria_breakdown",
+      "value": {
+        "Death (Fatal)": {
+          "count": 68,
+          "percentage": 6.64
+        },
+        "Life-threatening": {
+          "count": 105,
+          "percentage": 10.25
+        },
+        "Hospitalization / Prolonged": {
+          "count": 482,
+          "percentage": 47.07
+        },
+        "Disability / Incapacity": {
+          "count": 44,
+          "percentage": 4.3
+        },
+        "Congenital Anomaly": {
+          "count": 7,
+          "percentage": 0.68
+        },
+        "Other Medically Important": {
+          "count": 905,
+          "percentage": 88.38
+        }
+      },
+      "unit": null,
+      "source_fields": [
+        "seriousnessdeath",
+        "seriousnesslifethreatening",
+        "seriousnesshospitalization",
+        "seriousnessdisabling",
+        "seriousnesscongenitalanomali",
+        "seriousnessother"
+      ],
+      "calculation_definition": "Aggregation of independent seriousness criteria flags",
+      "scope": "case-level",
+      "supporting_case_ids": null,
+      "notes": null
+    },
+    {
+      "evidence_id": "SER-MULTI",
+      "metric_name": "multi_criteria_distribution",
+      "value": {
+        "1_criterion": 528,
+        "2_criteria": 414,
+        "3_or_more_criteria": 81
+      },
+      "unit": "cases",
+      "source_fields": [
+        "seriousnessdeath",
+        "seriousnesslifethreatening",
+        "seriousnesshospitalization",
+        "seriousnessdisabling",
+        "seriousnesscongenitalanomali",
+        "seriousnessother"
+      ],
+      "calculation_definition": "Count of cases meeting 1, 2, or >=3 criteria simultaneously",
+      "scope": "case-level",
+      "supporting_case_ids": null,
+      "notes": null
+    },
+    {
+      "evidence_id": "CO-RT-001",
+      "metric_name": "report_type_distribution",
+      "value": {
+        "spontaneous report": {
+          "count": 1014,
+          "percentage": 99.02
+        },
+        "report from study": {
+          "count": 10,
+          "percentage": 0.98
+        }
+      },
+      "unit": "cases",
+      "source_fields": [
+        "reporttype"
+      ],
+      "calculation_definition": "GROUP BY reporttype -> count and percentage",
+      "scope": "case-level",
+      "supporting_case_ids": null,
+      "notes": null
+    },
+    {
+      "evidence_id": "CO-QUAL-001",
+      "metric_name": "reporter_qualification_distribution",
+      "value": {
+        "physician": {
+          "count": 492,
+          "percentage": 48.05
+        },
+        "pharmacist": {
+          "count": 255,
+          "percentage": 24.9
+        },
+        "other health professional": {
+          "count": 162,
+          "percentage": 15.82
+        },
+        "consumer or non-health professional": {
+          "count": 115,
+          "percentage": 11.23
+        }
+      },
+      "unit": "cases",
+      "source_fields": [
+        "primarysource_qualification"
+      ],
+      "calculation_definition": "GROUP BY primarysource_qualification -> count and percentage",
+      "scope": "case-level",
+      "supporting_case_ids": null,
+      "notes": null
+    },
+    {
+      "evidence_id": "DC-ROLE-001",
+      "metric_name": "bisoprolol_role_distribution",
+      "value": {
+        "concomitant": {
+          "count": 666,
+          "percentage": 65.04
+        },
+        "suspect": {
+          "count": 340,
+          "percentage": 33.2
+        },
+        "interacting": {
+          "count": 17,
+          "percentage": 1.66
+        },
+        "unknown": {
+          "count": 1,
+          "percentage": 0.1
+        }
+      },
+      "unit": "cases",
+      "source_fields": [
+        "patient_drug_medicinalproduct",
+        "patient_drug_drugcharacterization"
+      ],
+      "calculation_definition": "Extracted characterization role for 'Bisoprolol' across all cases",
+      "scope": "case-level",
+      "supporting_case_ids": null,
+      "notes": "Highlights suspect vs concomitant vs interacting distribution."
+    }
+  ],
+  "metadata": {
+    "total_cases_analyzed": 1024
+  },
+  "computed_at": "2026-08-15T17:04:30.006576+00:00"
+}

@@ -1,0 +1,356 @@
+{
+  "section_id": "demographic_analysis",
+  "section_title": "Patient Demographics and Geographic Distribution",
+  "metrics": [
+    {
+      "evidence_id": "DEMO-SEX-FEMALE",
+      "metric_name": "sex_count_female",
+      "value": {
+        "count": 503,
+        "percentage": 49.12
+      },
+      "unit": "cases",
+      "source_fields": [
+        "patient_patientsex"
+      ],
+      "calculation_definition": "COUNT(cases WHERE patient_patientsex == 'female')",
+      "scope": "case-level",
+      "supporting_case_ids": null,
+      "notes": null
+    },
+    {
+      "evidence_id": "DEMO-SEX-MALE",
+      "metric_name": "sex_count_male",
+      "value": {
+        "count": 493,
+        "percentage": 48.14
+      },
+      "unit": "cases",
+      "source_fields": [
+        "patient_patientsex"
+      ],
+      "calculation_definition": "COUNT(cases WHERE patient_patientsex == 'male')",
+      "scope": "case-level",
+      "supporting_case_ids": null,
+      "notes": null
+    },
+    {
+      "evidence_id": "DEMO-SEX-UNKNOWN",
+      "metric_name": "sex_count_unknown",
+      "value": {
+        "count": 28,
+        "percentage": 2.73
+      },
+      "unit": "cases",
+      "source_fields": [
+        "patient_patientsex"
+      ],
+      "calculation_definition": "COUNT(cases WHERE patient_patientsex == 'unknown')",
+      "scope": "case-level",
+      "supporting_case_ids": null,
+      "notes": null
+    },
+    {
+      "evidence_id": "DEMO-SEX-ALL",
+      "metric_name": "sex_distribution_breakdown",
+      "value": {
+        "female": {
+          "count": 503,
+          "percentage": 49.12
+        },
+        "male": {
+          "count": 493,
+          "percentage": 48.14
+        },
+        "unknown": {
+          "count": 28,
+          "percentage": 2.73
+        }
+      },
+      "unit": "cases",
+      "source_fields": [
+        "patient_patientsex"
+      ],
+      "calculation_definition": "Complete sex breakdown with percentages",
+      "scope": "case-level",
+      "supporting_case_ids": null,
+      "notes": null
+    },
+    {
+      "evidence_id": "DEMO-AGE-STATS",
+      "metric_name": "patient_age_summary_statistics",
+      "value": {
+        "count_with_age": 941,
+        "count_missing_age": 83,
+        "mean": 70.05,
+        "median": 73.0,
+        "min": 0.08,
+        "max": 104.0,
+        "std": 15.96
+      },
+      "unit": "years",
+      "source_fields": [
+        "patient_patientonsetage",
+        "patient_patientonsetageunit"
+      ],
+      "calculation_definition": "Summary statistics on patient age converted to years",
+      "scope": "case-level",
+      "supporting_case_ids": null,
+      "notes": null
+    },
+    {
+      "evidence_id": "DEMO-AGEGROUP-NEONATE",
+      "metric_name": "age_group_Neonate",
+      "value": {
+        "count": 0,
+        "percentage": 0.0
+      },
+      "unit": "cases",
+      "source_fields": [
+        "patient_patientonsetage",
+        "patient_patientonsetageunit"
+      ],
+      "calculation_definition": "COUNT(cases WHERE age in bucket 'Neonate')",
+      "scope": "case-level",
+      "supporting_case_ids": null,
+      "notes": null
+    },
+    {
+      "evidence_id": "DEMO-AGEGROUP-INFANT_TODDLER",
+      "metric_name": "age_group_Infant/Toddler",
+      "value": {
+        "count": 6,
+        "percentage": 0.59
+      },
+      "unit": "cases",
+      "source_fields": [
+        "patient_patientonsetage",
+        "patient_patientonsetageunit"
+      ],
+      "calculation_definition": "COUNT(cases WHERE age in bucket 'Infant/Toddler')",
+      "scope": "case-level",
+      "supporting_case_ids": null,
+      "notes": null
+    },
+    {
+      "evidence_id": "DEMO-AGEGROUP-CHILD",
+      "metric_name": "age_group_Child",
+      "value": {
+        "count": 4,
+        "percentage": 0.39
+      },
+      "unit": "cases",
+      "source_fields": [
+        "patient_patientonsetage",
+        "patient_patientonsetageunit"
+      ],
+      "calculation_definition": "COUNT(cases WHERE age in bucket 'Child')",
+      "scope": "case-level",
+      "supporting_case_ids": null,
+      "notes": null
+    },
+    {
+      "evidence_id": "DEMO-AGEGROUP-ADOLESCENT",
+      "metric_name": "age_group_Adolescent",
+      "value": {
+        "count": 6,
+        "percentage": 0.59
+      },
+      "unit": "cases",
+      "source_fields": [
+        "patient_patientonsetage",
+        "patient_patientonsetageunit"
+      ],
+      "calculation_definition": "COUNT(cases WHERE age in bucket 'Adolescent')",
+      "scope": "case-level",
+      "supporting_case_ids": null,
+      "notes": null
+    },
+    {
+      "evidence_id": "DEMO-AGEGROUP-ADULT",
+      "metric_name": "age_group_Adult",
+      "value": {
+        "count": 249,
+        "percentage": 24.32
+      },
+      "unit": "cases",
+      "source_fields": [
+        "patient_patientonsetage",
+        "patient_patientonsetageunit"
+      ],
+      "calculation_definition": "COUNT(cases WHERE age in bucket 'Adult')",
+      "scope": "case-level",
+      "supporting_case_ids": null,
+      "notes": null
+    },
+    {
+      "evidence_id": "DEMO-AGEGROUP-ELDERLY",
+      "metric_name": "age_group_Elderly",
+      "value": {
+        "count": 676,
+        "percentage": 66.02
+      },
+      "unit": "cases",
+      "source_fields": [
+        "patient_patientonsetage",
+        "patient_patientonsetageunit"
+      ],
+      "calculation_definition": "COUNT(cases WHERE age in bucket 'Elderly')",
+      "scope": "case-level",
+      "supporting_case_ids": null,
+      "notes": null
+    },
+    {
+      "evidence_id": "DEMO-AGEGROUP-ALL",
+      "metric_name": "age_group_distribution_breakdown",
+      "value": {
+        "Neonate": {
+          "count": 0,
+          "percentage": 0.0
+        },
+        "Infant/Toddler": {
+          "count": 6,
+          "percentage": 0.59
+        },
+        "Child": {
+          "count": 4,
+          "percentage": 0.39
+        },
+        "Adolescent": {
+          "count": 6,
+          "percentage": 0.59
+        },
+        "Adult": {
+          "count": 249,
+          "percentage": 24.32
+        },
+        "Elderly": {
+          "count": 676,
+          "percentage": 66.02
+        },
+        "Age Missing / Not Reported": {
+          "count": 83,
+          "percentage": 8.11
+        }
+      },
+      "unit": "cases",
+      "source_fields": [
+        "patient_patientonsetage",
+        "patient_patientonsetageunit"
+      ],
+      "calculation_definition": "Complete WHO/ICH age group distribution",
+      "scope": "case-level",
+      "supporting_case_ids": null,
+      "notes": null
+    },
+    {
+      "evidence_id": "DEMO-GEO-ALL",
+      "metric_name": "geographic_country_distribution",
+      "value": {
+        "EU (Regional)": {
+          "count": 345,
+          "percentage": 33.69
+        },
+        "United Kingdom": {
+          "count": 281,
+          "percentage": 27.44
+        },
+        "France": {
+          "count": 185,
+          "percentage": 18.07
+        },
+        "Canada": {
+          "count": 56,
+          "percentage": 5.47
+        },
+        "Italy": {
+          "count": 51,
+          "percentage": 4.98
+        },
+        "Germany": {
+          "count": 33,
+          "percentage": 3.22
+        },
+        "Spain": {
+          "count": 24,
+          "percentage": 2.34
+        },
+        "Poland": {
+          "count": 18,
+          "percentage": 1.76
+        },
+        "Portugal": {
+          "count": 8,
+          "percentage": 0.78
+        },
+        "United States": {
+          "count": 4,
+          "percentage": 0.39
+        },
+        "Ie": {
+          "count": 3,
+          "percentage": 0.29
+        },
+        "Belgium": {
+          "count": 2,
+          "percentage": 0.2
+        },
+        "Ro": {
+          "count": 2,
+          "percentage": 0.2
+        },
+        "Sa": {
+          "count": 2,
+          "percentage": 0.2
+        },
+        "Hr": {
+          "count": 2,
+          "percentage": 0.2
+        },
+        "Ua": {
+          "count": 2,
+          "percentage": 0.2
+        },
+        "Sweden": {
+          "count": 2,
+          "percentage": 0.2
+        },
+        "Fi": {
+          "count": 1,
+          "percentage": 0.1
+        },
+        "Australia": {
+          "count": 1,
+          "percentage": 0.1
+        },
+        "Indonesia": {
+          "count": 1,
+          "percentage": 0.1
+        },
+        "China": {
+          "count": 1,
+          "percentage": 0.1
+        }
+      },
+      "unit": "cases",
+      "source_fields": [
+        "primarysourcecountry"
+      ],
+      "calculation_definition": "COUNT(cases) GROUP BY primarysourcecountry (normalized)",
+      "scope": "case-level",
+      "supporting_case_ids": null,
+      "notes": "primarysourcecountry is selected as the primary geographic field; ISO 2-letter codes mapped to full country names."
+    }
+  ],
+  "metadata": {
+    "selected_country_field": "primarysourcecountry",
+    "age_conversion_units_handled": [
+      "year",
+      "month",
+      "week",
+      "day",
+      "800 (decade)"
+    ]
+  },
+  "computed_at": "2026-08-15T17:04:30.018268+00:00"
+}

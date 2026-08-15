@@ -1,0 +1,26 @@
+{
+  "section_id": "history_of_actions",
+  "report_type": "PADER",
+  "product_name": "Bisoprolol",
+  "reporting_period": {
+    "start_date": "2024-12-27",
+    "end_date": "2025-12-26",
+    "duration_days": 364
+  },
+  "analyses": {},
+  "metadata": {
+    "dataset_file": "Bisoprolol_icsr_sample_1068rows.xlsx",
+    "total_rows": 1068,
+    "unique_cases": 1024,
+    "dedup_method": "keep latest safetyreportversion per safetyreportid",
+    "generated_at": "2026-08-15T15:56:50.036515+00:00"
+  },
+  "unavailable_data": [
+    "System Organ Class (SOC) \u2014 no SOC column in dataset",
+    "Expectedness (labelled/unlabelled) \u2014 no product label/CCDS supplied",
+    "Clinical narratives \u2014 all narrative fields are date stubs only",
+    "Exposure data \u2014 no patient-years or denominator available",
+    "Prior period data \u2014 this is the first reporting period",
+    "History of actions \u2014 no action data supplied"
+  ]
+}

@@ -1,0 +1,450 @@
+{
+  "dataset_file": "Bisoprolol_icsr_sample_1068rows.csv",
+  "total_raw_rows": 1068,
+  "unique_cases": 1024,
+  "duplicate_rows_count": 44,
+  "columns_count": 67,
+  "required_columns_checked": [
+    "safetyreportid",
+    "safetyreportversion",
+    "serious",
+    "receivedate",
+    "patient_patientsex",
+    "patient_patientonsetage",
+    "patient_patientonsetageunit",
+    "patient_reaction_reactionmeddrapt",
+    "patient_reaction_reactionoutcome",
+    "patient_drug_drugcharacterization",
+    "patient_drug_medicinalproduct",
+    "primarysourcecountry",
+    "primarysource_qualification",
+    "reporttype",
+    "fulfillexpeditecriteria",
+    "seriousnessdeath",
+    "seriousnesslifethreatening",
+    "seriousnesshospitalization",
+    "seriousnessdisabling",
+    "seriousnesscongenitalanomali",
+    "seriousnessother"
+  ],
+  "missing_required_columns": [],
+  "date_range_start": "2024-12-27",
+  "date_range_end": "2025-12-26",
+  "missing_value_summary": {
+    "safetyreportversion": {
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "non_null_count": 1068
+    },
+    "safetyreportid": {
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "non_null_count": 1068
+    },
+    "primarysourcecountry": {
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "non_null_count": 1068
+    },
+    "occurcountry": {
+      "null_count": 7,
+      "null_percentage": 0.66,
+      "non_null_count": 1061
+    },
+    "transmissiondateformat": {
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "non_null_count": 1068
+    },
+    "transmissiondate": {
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "non_null_count": 1068
+    },
+    "reporttype": {
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "non_null_count": 1068
+    },
+    "serious": {
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "non_null_count": 1068
+    },
+    "seriousnessdeath": {
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "non_null_count": 1068
+    },
+    "seriousnesslifethreatening": {
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "non_null_count": 1068
+    },
+    "seriousnesshospitalization": {
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "non_null_count": 1068
+    },
+    "seriousnessdisabling": {
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "non_null_count": 1068
+    },
+    "seriousnesscongenitalanomali": {
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "non_null_count": 1068
+    },
+    "seriousnessother": {
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "non_null_count": 1068
+    },
+    "receivedateformat": {
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "non_null_count": 1068
+    },
+    "receivedate": {
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "non_null_count": 1068
+    },
+    "receiptdateformat": {
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "non_null_count": 1068
+    },
+    "receiptdate": {
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "non_null_count": 1068
+    },
+    "fulfillexpeditecriteria": {
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "non_null_count": 1068
+    },
+    "companynumb": {
+      "null_count": 1,
+      "null_percentage": 0.09,
+      "non_null_count": 1067
+    },
+    "primarysource_reportercountry": {
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "non_null_count": 1068
+    },
+    "primarysource_qualification": {
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "non_null_count": 1068
+    },
+    "sender_sendertype": {
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "non_null_count": 1068
+    },
+    "sender_senderorganization": {
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "non_null_count": 1068
+    },
+    "receiver_receivertype": {
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "non_null_count": 1068
+    },
+    "receiver_receiverorganization": {
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "non_null_count": 1068
+    },
+    "patient_patientonsetage": {
+      "null_count": 91,
+      "null_percentage": 8.52,
+      "non_null_count": 977
+    },
+    "patient_patientonsetageunit": {
+      "null_count": 81,
+      "null_percentage": 7.58,
+      "non_null_count": 987
+    },
+    "patient_patientsex": {
+      "null_count": 30,
+      "null_percentage": 2.81,
+      "non_null_count": 1038
+    },
+    "patient_reaction_reactionmeddraversionpt": {
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "non_null_count": 1068
+    },
+    "patient_reaction_reactionmeddrapt": {
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "non_null_count": 1068
+    },
+    "patient_reaction_reactionoutcome": {
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "non_null_count": 1068
+    },
+    "patient_drug_drugcharacterization": {
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "non_null_count": 1068
+    },
+    "patient_drug_medicinalproduct": {
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "non_null_count": 1068
+    },
+    "patient_drug_drugauthorizationnumb": {
+      "null_count": 4,
+      "null_percentage": 0.37,
+      "non_null_count": 1064
+    },
+    "patient_drug_drugstructuredosagenumb": {
+      "null_count": 153,
+      "null_percentage": 14.33,
+      "non_null_count": 915
+    },
+    "patient_drug_drugstructuredosageunit": {
+      "null_count": 153,
+      "null_percentage": 14.33,
+      "non_null_count": 915
+    },
+    "patient_drug_drugseparatedosagenumb": {
+      "null_count": 290,
+      "null_percentage": 27.15,
+      "non_null_count": 778
+    },
+    "patient_drug_drugintervaldosageunitnumb": {
+      "null_count": 330,
+      "null_percentage": 30.9,
+      "non_null_count": 738
+    },
+    "patient_drug_drugintervaldosagedefinition": {
+      "null_count": 330,
+      "null_percentage": 30.9,
+      "non_null_count": 738
+    },
+    "patient_drug_drugdosagetext": {
+      "null_count": 244,
+      "null_percentage": 22.85,
+      "non_null_count": 824
+    },
+    "patient_drug_drugdosageform": {
+      "null_count": 378,
+      "null_percentage": 35.39,
+      "non_null_count": 690
+    },
+    "patient_drug_drugadministrationroute": {
+      "null_count": 23,
+      "null_percentage": 2.15,
+      "non_null_count": 1045
+    },
+    "patient_drug_drugindication": {
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "non_null_count": 1068
+    },
+    "patient_drug_actiondrug": {
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "non_null_count": 1068
+    },
+    "patient_drug_drugadditional": {
+      "null_count": 21,
+      "null_percentage": 1.97,
+      "non_null_count": 1047
+    },
+    "patient_drug_activesubstance_activesubstancename": {
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "non_null_count": 1068
+    },
+    "patient_summary_narrativeincludeclinical": {
+      "null_count": 355,
+      "null_percentage": 33.24,
+      "non_null_count": 713
+    },
+    "drugs": {
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "non_null_count": 1068
+    },
+    "report_date": {
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "non_null_count": 1068
+    },
+    "patient_patientweight": {
+      "null_count": 579,
+      "null_percentage": 54.21,
+      "non_null_count": 489
+    },
+    "patient_drug_drugstartdateformat": {
+      "null_count": 417,
+      "null_percentage": 39.04,
+      "non_null_count": 651
+    },
+    "patient_drug_drugstartdate": {
+      "null_count": 417,
+      "null_percentage": 39.04,
+      "non_null_count": 651
+    },
+    "patient_drug_drugenddateformat": {
+      "null_count": 532,
+      "null_percentage": 49.81,
+      "non_null_count": 536
+    },
+    "patient_drug_drugenddate": {
+      "null_count": 532,
+      "null_percentage": 49.81,
+      "non_null_count": 536
+    },
+    "patient_drug_drugtreatmentduration": {
+      "null_count": 622,
+      "null_percentage": 58.24,
+      "non_null_count": 446
+    },
+    "patient_drug_drugtreatmentdurationunit": {
+      "null_count": 622,
+      "null_percentage": 58.24,
+      "non_null_count": 446
+    },
+    "patient_drug_drugcumulativedosagenumb": {
+      "null_count": 880,
+      "null_percentage": 82.4,
+      "non_null_count": 188
+    },
+    "patient_drug_drugcumulativedosageunit": {
+      "null_count": 880,
+      "null_percentage": 82.4,
+      "non_null_count": 188
+    },
+    "primarysource_literaturereference": {
+      "null_count": 911,
+      "null_percentage": 85.3,
+      "non_null_count": 157
+    },
+    "duplicate": {
+      "null_count": 850,
+      "null_percentage": 79.59,
+      "non_null_count": 218
+    },
+    "reportduplicate_duplicatesource": {
+      "null_count": 890,
+      "null_percentage": 83.33,
+      "non_null_count": 178
+    },
+    "reportduplicate_duplicatenumb": {
+      "null_count": 850,
+      "null_percentage": 79.59,
+      "non_null_count": 218
+    },
+    "patient_drug_drugrecurreadministration": {
+      "null_count": 971,
+      "null_percentage": 90.92,
+      "non_null_count": 97
+    },
+    "patient_drug_drugbatchnumb": {
+      "null_count": 1021,
+      "null_percentage": 95.6,
+      "non_null_count": 47
+    },
+    "patient_patientagegroup": {
+      "null_count": 1037,
+      "null_percentage": 97.1,
+      "non_null_count": 31
+    },
+    "authoritynumb": {
+      "null_count": 1067,
+      "null_percentage": 99.91,
+      "non_null_count": 1
+    }
+  },
+  "column_dtypes": {
+    "safetyreportversion": "int64",
+    "safetyreportid": "int64",
+    "primarysourcecountry": "object",
+    "occurcountry": "object",
+    "transmissiondateformat": "object",
+    "transmissiondate": "object",
+    "reporttype": "object",
+    "serious": "object",
+    "seriousnessdeath": "object",
+    "seriousnesslifethreatening": "object",
+    "seriousnesshospitalization": "object",
+    "seriousnessdisabling": "object",
+    "seriousnesscongenitalanomali": "object",
+    "seriousnessother": "object",
+    "receivedateformat": "object",
+    "receivedate": "object",
+    "receiptdateformat": "object",
+    "receiptdate": "object",
+    "fulfillexpeditecriteria": "object",
+    "companynumb": "object",
+    "primarysource_reportercountry": "object",
+    "primarysource_qualification": "object",
+    "sender_sendertype": "object",
+    "sender_senderorganization": "object",
+    "receiver_receivertype": "object",
+    "receiver_receiverorganization": "object",
+    "patient_patientonsetage": "float64",
+    "patient_patientonsetageunit": "object",
+    "patient_patientsex": "object",
+    "patient_reaction_reactionmeddraversionpt": "object",
+    "patient_reaction_reactionmeddrapt": "object",
+    "patient_reaction_reactionoutcome": "object",
+    "patient_drug_drugcharacterization": "object",
+    "patient_drug_medicinalproduct": "object",
+    "patient_drug_drugauthorizationnumb": "object",
+    "patient_drug_drugstructuredosagenumb": "object",
+    "patient_drug_drugstructuredosageunit": "object",
+    "patient_drug_drugseparatedosagenumb": "object",
+    "patient_drug_drugintervaldosageunitnumb": "object",
+    "patient_drug_drugintervaldosagedefinition": "object",
+    "patient_drug_drugdosagetext": "object",
+    "patient_drug_drugdosageform": "object",
+    "patient_drug_drugadministrationroute": "object",
+    "patient_drug_drugindication": "object",
+    "patient_drug_actiondrug": "object",
+    "patient_drug_drugadditional": "object",
+    "patient_drug_activesubstance_activesubstancename": "object",
+    "patient_summary_narrativeincludeclinical": "object",
+    "drugs": "object",
+    "report_date": "object",
+    "patient_patientweight": "object",
+    "patient_drug_drugstartdateformat": "object",
+    "patient_drug_drugstartdate": "object",
+    "patient_drug_drugenddateformat": "object",
+    "patient_drug_drugenddate": "object",
+    "patient_drug_drugtreatmentduration": "object",
+    "patient_drug_drugtreatmentdurationunit": "object",
+    "patient_drug_drugcumulativedosagenumb": "object",
+    "patient_drug_drugcumulativedosageunit": "object",
+    "primarysource_literaturereference": "object",
+    "duplicate": "object",
+    "reportduplicate_duplicatesource": "object",
+    "reportduplicate_duplicatenumb": "object",
+    "patient_drug_drugrecurreadministration": "object",
+    "patient_drug_drugbatchnumb": "object",
+    "patient_patientagegroup": "object",
+    "authoritynumb": "object",
+    "parsed_receivedate": "datetime64[ns]",
+    "parsed_receiptdate": "datetime64[ns]",
+    "parsed_transmissiondate": "datetime64[ns]"
+  },
+  "structural_discrepancies": [
+    "Row count (1068) exceeds unique safetyreportid count (1024). 44 rows represent subsequent version updates (latest version retained for case-level analysis).",
+    "No System Organ Class (SOC) column found. Analysis must proceed exclusively at MedDRA Preferred Term (PT) level.",
+    "Narrative field contains only date stubs (average length: 25.0 chars). Clinical narratives cannot be extracted directly from this field.",
+    "Patient age is missing in 8.52% of records."
+  ],
+  "validation_status": "WARNING",
+  "validated_at": "2026-08-15T17:04:29.969086+00:00"
+}

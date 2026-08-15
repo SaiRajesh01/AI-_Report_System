@@ -1,0 +1,85 @@
+{
+  "started_at": "2026-08-15T15:56:50.063778+00:00",
+  "decisions": [
+    {
+      "section_id": "reporting_period",
+      "section_title": "1. Reporting Period",
+      "decision": "approve",
+      "reason": "auto-approved (non-interactive mode)",
+      "reviewer": "auto",
+      "timestamp": "2026-08-15T15:56:50.063815+00:00",
+      "evidence_hash": "77a6a215c7176b43",
+      "generated_text_hash": "ea20a3ee3d44d24a"
+    },
+    {
+      "section_id": "narrative_summary",
+      "section_title": "2. Narrative Summary and Analysis",
+      "decision": "approve",
+      "reason": "auto-approved (non-interactive mode)",
+      "reviewer": "auto",
+      "timestamp": "2026-08-15T15:56:50.063892+00:00",
+      "evidence_hash": "d508b47a8c191b33",
+      "generated_text_hash": "b321e2f975af9b55"
+    },
+    {
+      "section_id": "case_summary",
+      "section_title": "3. Summary Analysis of Cases",
+      "decision": "approve",
+      "reason": "auto-approved (non-interactive mode)",
+      "reviewer": "auto",
+      "timestamp": "2026-08-15T15:56:50.063917+00:00",
+      "evidence_hash": "5c2980a797150976",
+      "generated_text_hash": "f76faefaee52b07f"
+    },
+    {
+      "section_id": "reaction_analysis",
+      "section_title": "4. Reaction / Adverse Event Analysis",
+      "decision": "approve",
+      "reason": "auto-approved (non-interactive mode)",
+      "reviewer": "auto",
+      "timestamp": "2026-08-15T15:56:50.063936+00:00",
+      "evidence_hash": "8871842593eacbc7",
+      "generated_text_hash": "0078a6343c096727"
+    },
+    {
+      "section_id": "serious_cases",
+      "section_title": "5. Serious Cases / 15-Day Alerts",
+      "decision": "approve",
+      "reason": "auto-approved (non-interactive mode)",
+      "reviewer": "auto",
+      "timestamp": "2026-08-15T15:56:50.063950+00:00",
+      "evidence_hash": "4a672e8b3b5b6350",
+      "generated_text_hash": "88dc907d734ff063"
+    },
+    {
+      "section_id": "trends",
+      "section_title": "6. Trends and Important Observations",
+      "decision": "approve",
+      "reason": "auto-approved (non-interactive mode)",
+      "reviewer": "auto",
+      "timestamp": "2026-08-15T15:56:50.063963+00:00",
+      "evidence_hash": "9a67292483eb7663",
+      "generated_text_hash": "d3a6d40d602c9a24"
+    },
+    {
+      "section_id": "history_of_actions",
+      "section_title": "7. History of Actions",
+      "decision": "approve",
+      "reason": "auto-approved (non-interactive mode)",
+      "reviewer": "auto",
+      "timestamp": "2026-08-15T15:56:50.063975+00:00",
+      "evidence_hash": "4ba581c0cd07ff5c",
+      "generated_text_hash": "85830b84ce1be340"
+    },
+    {
+      "section_id": "case_listing",
+      "section_title": "8. Case Index / Listing",
+      "decision": "approve",
+      "reason": "auto-approved (non-interactive mode)",
+      "reviewer": "auto",
+      "timestamp": "2026-08-15T15:56:50.063985+00:00",
+      "evidence_hash": "866565db36972b18",
+      "generated_text_hash": "60508e55f8a10a0a"
+    }
+  ]
+}

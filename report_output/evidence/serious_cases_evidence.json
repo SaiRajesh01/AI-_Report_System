@@ -1,0 +1,429 @@
+{
+  "section_id": "serious_cases",
+  "report_type": "PADER",
+  "product_name": "Bisoprolol",
+  "reporting_period": {
+    "start_date": "2024-12-27",
+    "end_date": "2025-12-26",
+    "duration_days": 364
+  },
+  "analyses": {
+    "case_overview": {
+      "analysis_name": "case_overview",
+      "computed_at": "2026-08-15T15:56:49.703722+00:00",
+      "figures": {
+        "total_cases": 1024,
+        "serious_cases": 1023,
+        "non_serious_cases": 1,
+        "serious_pct": 99.9,
+        "expedited_cases": 1023,
+        "non_expedited_cases": 1,
+        "report_type": {
+          "spontaneous report": 1014,
+          "report from study": 10
+        },
+        "reporter_qualification": {
+          "physician": 492,
+          "pharmacist": 255,
+          "other health professional": 162,
+          "consumer or non-health professional": 115
+        },
+        "reporting_period": {
+          "start_date": "2024-12-27",
+          "end_date": "2025-12-26",
+          "duration_days": 364
+        }
+      },
+      "notes": [
+        "Case counts based on deduplicated dataset (latest version per safetyreportid).",
+        "Seriousness field values: 'serious' / 'not serious'.",
+        "Almost all cases (99.9%) are classified as serious \u2014 typical for spontaneous ICSR data."
+      ]
+    },
+    "seriousness": {
+      "analysis_name": "seriousness",
+      "computed_at": "2026-08-15T15:56:49.764205+00:00",
+      "figures": {
+        "criteria_breakdown": {
+          "Death": {
+            "count": 68,
+            "pct": 6.6,
+            "column": "seriousnessdeath"
+          },
+          "Life-threatening": {
+            "count": 105,
+            "pct": 10.3,
+            "column": "seriousnesslifethreatening"
+          },
+          "Hospitalization": {
+            "count": 482,
+            "pct": 47.1,
+            "column": "seriousnesshospitalization"
+          },
+          "Disability/incapacity": {
+            "count": 44,
+            "pct": 4.3,
+            "column": "seriousnessdisabling"
+          },
+          "Congenital anomaly": {
+            "count": 7,
+            "pct": 0.7,
+            "column": "seriousnesscongenitalanomali"
+          },
+          "Other medically important": {
+            "count": 905,
+            "pct": 88.4,
+            "column": "seriousnessother"
+          }
+        },
+        "multi_criteria_distribution": {
+          "cases_with_0_criteria": 1,
+          "cases_with_1_criterion": 528,
+          "cases_with_2_criteria": 414,
+          "cases_with_3_plus_criteria": 81
+        },
+        "fatal_cases": 68,
+        "fatal_pct": 6.6
+      },
+      "notes": [
+        "Seriousness criteria are independent yes/no flags, not mutually exclusive.",
+        "A single case can meet multiple seriousness criteria.",
+        "'Other medically important' is the most common criterion in this dataset."
+      ]
+    },
+    "reactions": {
+      "analysis_name": "reactions",
+      "computed_at": "2026-08-15T15:56:49.761833+00:00",
+      "figures": {
+        "total_reactions": 3429,
+        "unique_pts": 1122,
+        "top_pts": [
+          {
+            "pt": "Acute kidney injury",
+            "count": 80,
+            "pct": 2.3
+          },
+          {
+            "pt": "Drug ineffective",
+            "count": 54,
+            "pct": 1.6
+          },
+          {
+            "pt": "Hypotension",
+            "count": 46,
+            "pct": 1.3
+          },
+          {
+            "pt": "Drug interaction",
+            "count": 43,
+            "pct": 1.3
+          },
+          {
+            "pt": "Dyspnoea",
+            "count": 38,
+            "pct": 1.1
+          },
+          {
+            "pt": "Bradycardia",
+            "count": 37,
+            "pct": 1.1
+          },
+          {
+            "pt": "Dizziness",
+            "count": 36,
+            "pct": 1.0
+          },
+          {
+            "pt": "Fatigue",
+            "count": 33,
+            "pct": 1.0
+          },
+          {
+            "pt": "Off label use",
+            "count": 31,
+            "pct": 0.9
+          },
+          {
+            "pt": "Diarrhoea",
+            "count": 30,
+            "pct": 0.9
+          },
+          {
+            "pt": "Fall",
+            "count": 30,
+            "pct": 0.9
+          },
+          {
+            "pt": "Condition aggravated",
+            "count": 27,
+            "pct": 0.8
+          },
+          {
+            "pt": "Hypokalaemia",
+            "count": 27,
+            "pct": 0.8
+          },
+          {
+            "pt": "Medication error",
+            "count": 25,
+            "pct": 0.7
+          },
+          {
+            "pt": "Asthenia",
+            "count": 25,
+            "pct": 0.7
+          },
+          {
+            "pt": "Hyponatraemia",
+            "count": 24,
+            "pct": 0.7
+          },
+          {
+            "pt": "Toxicity to various agents",
+            "count": 23,
+            "pct": 0.7
+          },
+          {
+            "pt": "Confusional state",
+            "count": 23,
+            "pct": 0.7
+          },
+          {
+            "pt": "Arthralgia",
+            "count": 22,
+            "pct": 0.6
+          },
+          {
+            "pt": "Syncope",
+            "count": 20,
+            "pct": 0.6
+          }
+        ],
+        "top_serious_pts": [
+          {
+            "pt": "Acute kidney injury",
+            "count": 80
+          },
+          {
+            "pt": "Drug ineffective",
+            "count": 53
+          },
+          {
+            "pt": "Hypotension",
+            "count": 46
+          },
+          {
+            "pt": "Drug interaction",
+            "count": 43
+          },
+          {
+            "pt": "Dyspnoea",
+            "count": 38
+          },
+          {
+            "pt": "Bradycardia",
+            "count": 37
+          },
+          {
+            "pt": "Dizziness",
+            "count": 36
+          },
+          {
+            "pt": "Fatigue",
+            "count": 33
+          },
+          {
+            "pt": "Off label use",
+            "count": 31
+          },
+          {
+            "pt": "Fall",
+            "count": 30
+          },
+          {
+            "pt": "Diarrhoea",
+            "count": 30
+          },
+          {
+            "pt": "Hypokalaemia",
+            "count": 27
+          },
+          {
+            "pt": "Condition aggravated",
+            "count": 27
+          },
+          {
+            "pt": "Asthenia",
+            "count": 25
+          },
+          {
+            "pt": "Medication error",
+            "count": 25
+          },
+          {
+            "pt": "Hyponatraemia",
+            "count": 24
+          },
+          {
+            "pt": "Confusional state",
+            "count": 23
+          },
+          {
+            "pt": "Toxicity to various agents",
+            "count": 23
+          },
+          {
+            "pt": "Arthralgia",
+            "count": 22
+          },
+          {
+            "pt": "Syncope",
+            "count": 20
+          }
+        ],
+        "pt_outcome_crosstab": {
+          "Acute kidney injury": {
+            "recovered/resolved": 44,
+            "recovering/resolving": 14,
+            "unknown": 8,
+            "fatal": 7,
+            "not recovered/not resolved/ongoing": 5,
+            "recovered/resolved with sequelae": 2
+          },
+          "Drug ineffective": {
+            "unknown": 40,
+            "recovered/resolved": 7,
+            "recovering/resolving": 5,
+            "not recovered/not resolved/ongoing": 2
+          },
+          "Hypotension": {
+            "recovered/resolved": 24,
+            "unknown": 9,
+            "recovering/resolving": 8,
+            "not recovered/not resolved/ongoing": 3,
+            "recovered/resolved with sequelae": 1,
+            "fatal": 1
+          },
+          "Drug interaction": {
+            "unknown": 22,
+            "recovered/resolved": 18,
+            "recovering/resolving": 1,
+            "not recovered/not resolved/ongoing": 1,
+            "fatal": 1
+          },
+          "Dyspnoea": {
+            "recovered/resolved": 14,
+            "unknown": 10,
+            "not recovered/not resolved/ongoing": 5,
+            "recovering/resolving": 4,
+            "fatal": 3,
+            "recovered/resolved with sequelae": 2
+          },
+          "Bradycardia": {
+            "recovered/resolved": 21,
+            "unknown": 8,
+            "recovering/resolving": 5,
+            "not recovered/not resolved/ongoing": 2,
+            "recovered/resolved with sequelae": 1
+          },
+          "Dizziness": {
+            "recovered/resolved": 16,
+            "unknown": 11,
+            "not recovered/not resolved/ongoing": 6,
+            "recovering/resolving": 2,
+            "recovered/resolved with sequelae": 1
+          },
+          "Fatigue": {
+            "not recovered/not resolved/ongoing": 12,
+            "unknown": 10,
+            "recovered/resolved": 7,
+            "recovering/resolving": 4
+          },
+          "Off label use": {
+            "unknown": 19,
+            "recovered/resolved": 9,
+            "not recovered/not resolved/ongoing": 2,
+            "recovering/resolving": 1
+          },
+          "Diarrhoea": {
+            "recovered/resolved": 12,
+            "not recovered/not resolved/ongoing": 7,
+            "recovering/resolving": 5,
+            "unknown": 5,
+            "fatal": 1
+          }
+        },
+        "pt_sex_crosstab": {
+          "Acute kidney injury": {
+            "male": 45,
+            "female": 32,
+            "unknown": 3
+          },
+          "Drug ineffective": {
+            "male": 27,
+            "female": 26,
+            "unknown": 1
+          },
+          "Hypotension": {
+            "male": 22,
+            "female": 22,
+            "unknown": 2
+          },
+          "Drug interaction": {
+            "female": 22,
+            "male": 21
+          },
+          "Dyspnoea": {
+            "male": 22,
+            "female": 14,
+            "unknown": 2
+          },
+          "Bradycardia": {
+            "female": 21,
+            "male": 14,
+            "unknown": 2
+          },
+          "Dizziness": {
+            "female": 27,
+            "male": 8,
+            "unknown": 1
+          },
+          "Fatigue": {
+            "female": 17,
+            "male": 16
+          },
+          "Off label use": {
+            "male": 15,
+            "female": 14,
+            "unknown": 2
+          },
+          "Diarrhoea": {
+            "male": 17,
+            "female": 13
+          }
+        }
+      },
+      "notes": [
+        "Reactions are at PT (Preferred Term) level \u2014 no SOC field in dataset.",
+        "Comma-separated PTs are exploded: one row per reaction per case.",
+        "Reaction counts are from the deduplicated case set.",
+        "Top 20 PTs shown by frequency."
+      ]
+    }
+  },
+  "metadata": {
+    "dataset_file": "Bisoprolol_icsr_sample_1068rows.xlsx",
+    "total_rows": 1068,
+    "unique_cases": 1024,
+    "dedup_method": "keep latest safetyreportversion per safetyreportid",
+    "generated_at": "2026-08-15T15:56:50.036509+00:00"
+  },
+  "unavailable_data": [
+    "System Organ Class (SOC) \u2014 no SOC column in dataset",
+    "Expectedness (labelled/unlabelled) \u2014 no product label/CCDS supplied",
+    "Clinical narratives \u2014 all narrative fields are date stubs only",
+    "Exposure data \u2014 no patient-years or denominator available",
+    "Prior period data \u2014 this is the first reporting period",
+    "History of actions \u2014 no action data supplied"
+  ]
+}
